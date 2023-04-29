@@ -1,0 +1,15 @@
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Addcourse.resources
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Admin.resources
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Login_page.resources
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form2.resources
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DeleteCourse.resources
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditCourse.resources
