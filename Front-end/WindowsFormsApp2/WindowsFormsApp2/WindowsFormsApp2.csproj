@@ -66,6 +66,12 @@
     <Compile Include="EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewCourse.resx">
       <DependentUpon>ViewCourse.cs</DependentUpon>
     </EmbeddedResource>
