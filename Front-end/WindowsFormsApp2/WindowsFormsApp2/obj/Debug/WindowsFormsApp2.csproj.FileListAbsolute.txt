@@ -14,3 +14,5 @@ E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\Windo
 E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DeleteCourse.resources
 E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditCourse.resources
 E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Register.resources
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Home.resources
+E:\GP\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.CourseView.resources

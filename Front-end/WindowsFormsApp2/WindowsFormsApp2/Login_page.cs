@@ -13,6 +13,8 @@ using System.Security.Cryptography;
 
 namespace WindowsFormsApp2
 {
+    
+
     public partial class Login_page : Form
     {
         
@@ -20,13 +22,17 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-
+        public bool Islogin = false;
+        public bool IsAdmin = false;
         private void Login_btn_Click(object sender, EventArgs e)
         {
            
                 string username = textBox1.Text;
                 string password = textBox2.Text;
-
+            if (username == "Admin" && password == "Admin")
+            {
+                IsAdmin = true;
+            }
                 // Validate inputs
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
@@ -38,9 +44,22 @@ namespace WindowsFormsApp2
                 if (AuthenticateUser(username, password))
                 {
                     MessageBox.Show("Login successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                      Admin f2 = new Admin();
-                      f2.Show();
-                      this.Hide();
+                if (IsAdmin) {
+
+                    Islogin = true;
+                    Admin f2 = new Admin();
+                    f2.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    Islogin = true;
+                    Home home = new Home(Islogin);
+                    home.Show();
+                    this.Hide();
+
+                }
+
                 }
                 else
                 {
@@ -50,8 +69,8 @@ namespace WindowsFormsApp2
 
             private bool AuthenticateUser(string username, string password)
             {
-                // Retrieve user from database by username
-                User user = GetUserByUsername(username);
+            // Retrieve user from database by username
+            UserInfo user = GetUserByUsername(username);
                 if (user == null)
                 {
                     return false;
@@ -67,7 +86,7 @@ namespace WindowsFormsApp2
                 return false;
             }
 
-            private User GetUserByUsername(string username)
+            private UserInfo GetUserByUsername(string username)
             {
                 // Query database for user by username
                 string connectionString = "Data Source=DESKTOP-PUEEIEJ\\MSSQLSERVER01;Initial Catalog=Users_Info;Integrated Security=True";
@@ -81,7 +100,7 @@ namespace WindowsFormsApp2
 
                     if (reader.Read())
                     {
-                        User user = new User();
+                    UserInfo user = new UserInfo();
                         user.Id = reader.GetInt32(0);
                         user.Username = reader.GetString(1);
                         user.Password = reader.GetString(2);
@@ -124,7 +143,7 @@ namespace WindowsFormsApp2
     }
 }
 
-public class User
+public class UserInfo
 {
     public int Id { get; set; }
     public string Username { get; set; }

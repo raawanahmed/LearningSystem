@@ -54,17 +54,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="DeleteCourse.cs">
+    <Compile Include="Admin\DeleteCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteCourse.Designer.cs">
+    <Compile Include="Admin\DeleteCourse.Designer.cs">
       <DependentUpon>DeleteCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditCourse.cs">
+    <Compile Include="Admin\EditCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditCourse.Designer.cs">
+    <Compile Include="Admin\EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\CourseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\CourseView.Designer.cs">
+      <DependentUpon>CourseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Myaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Myaccount.Designer.cs">
+      <DependentUpon>Myaccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -78,39 +96,45 @@
     <Compile Include="Login_page.Designer.cs">
       <DependentUpon>Login_page.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin.cs">
+    <Compile Include="Admin\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin.Designer.cs">
+    <Compile Include="Admin\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Addcourse.cs">
+    <Compile Include="Admin\Addcourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Addcourse.Designer.cs">
+    <Compile Include="Admin\Addcourse.Designer.cs">
       <DependentUpon>Addcourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewCourse.cs">
+    <Compile Include="Admin\ViewCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewCourse.Designer.cs">
+    <Compile Include="Admin\ViewCourse.Designer.cs">
       <DependentUpon>ViewCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Addcourse.resx">
+    <EmbeddedResource Include="Admin\Addcourse.resx">
       <DependentUpon>Addcourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteCourse.resx">
+    <EmbeddedResource Include="Admin\DeleteCourse.resx">
       <DependentUpon>DeleteCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditCourse.resx">
+    <EmbeddedResource Include="Admin\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\CourseView.resx">
+      <DependentUpon>CourseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_page.resx">
       <DependentUpon>Login_page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin.resx">
+    <EmbeddedResource Include="Admin\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -125,7 +149,7 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewCourse.resx">
+    <EmbeddedResource Include="Admin\ViewCourse.resx">
       <DependentUpon>ViewCourse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
