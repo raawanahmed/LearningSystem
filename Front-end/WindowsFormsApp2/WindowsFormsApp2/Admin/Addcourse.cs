@@ -19,9 +19,9 @@ namespace WindowsFormsApp2
 
         private void onAddCourseBtn(object sender, EventArgs e)
         {
-            ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
-            obj.AddCourses(courseNameTextBox.Text, descriptionTextBox.Text, int.Parse(priceTextBox.Text));
-            MessageBox.Show("Course Add successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
+            // obj.AddCourses(courseNameTextBox.Text, descriptionTextBox.Text, int.Parse(priceTextBox.Text));
+            //MessageBox.Show("Course Add successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

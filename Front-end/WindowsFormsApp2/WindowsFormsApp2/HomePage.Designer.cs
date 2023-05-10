@@ -45,7 +45,7 @@
             this.SignUp.Location = new System.Drawing.Point(405, 274);
             this.SignUp.Margin = new System.Windows.Forms.Padding(4);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(170, 50);
+            this.SignUp.Size = new System.Drawing.Size(197, 57);
             this.SignUp.TabIndex = 11;
             this.SignUp.Text = "Sign Up";
             this.SignUp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -61,10 +61,10 @@
             this.LogIn.ForeColor = System.Drawing.Color.White;
             this.LogIn.Image = ((System.Drawing.Image)(resources.GetObject("LogIn.Image")));
             this.LogIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogIn.Location = new System.Drawing.Point(208, 267);
+            this.LogIn.Location = new System.Drawing.Point(191, 274);
             this.LogIn.Margin = new System.Windows.Forms.Padding(4);
             this.LogIn.Name = "LogIn";
-            this.LogIn.Size = new System.Drawing.Size(151, 57);
+            this.LogIn.Size = new System.Drawing.Size(176, 57);
             this.LogIn.TabIndex = 10;
             this.LogIn.Text = "Log In";
             this.LogIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

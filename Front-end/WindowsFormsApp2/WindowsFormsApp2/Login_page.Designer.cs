@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_page));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userNameTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.SignUp = new System.Windows.Forms.Button();
@@ -40,19 +40,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // userNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(332, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 22);
-            this.textBox1.TabIndex = 2;
+            this.userNameTextBox.Location = new System.Drawing.Point(332, 117);
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.Size = new System.Drawing.Size(259, 22);
+            this.userNameTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(332, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(259, 22);
-            this.textBox2.TabIndex = 3;
+            this.passwordTextBox.Location = new System.Drawing.Point(332, 174);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(259, 22);
+            this.passwordTextBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -89,10 +89,10 @@
             this.SignUp.ForeColor = System.Drawing.Color.White;
             this.SignUp.Image = ((System.Drawing.Image)(resources.GetObject("SignUp.Image")));
             this.SignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SignUp.Location = new System.Drawing.Point(382, 236);
+            this.SignUp.Location = new System.Drawing.Point(425, 247);
             this.SignUp.Margin = new System.Windows.Forms.Padding(4);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(170, 50);
+            this.SignUp.Size = new System.Drawing.Size(192, 64);
             this.SignUp.TabIndex = 22;
             this.SignUp.Text = "Sign Up";
             this.SignUp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -108,10 +108,10 @@
             this.LogIn.ForeColor = System.Drawing.Color.White;
             this.LogIn.Image = ((System.Drawing.Image)(resources.GetObject("LogIn.Image")));
             this.LogIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogIn.Location = new System.Drawing.Point(185, 229);
+            this.LogIn.Location = new System.Drawing.Point(165, 247);
             this.LogIn.Margin = new System.Windows.Forms.Padding(4);
             this.LogIn.Name = "LogIn";
-            this.LogIn.Size = new System.Drawing.Size(151, 57);
+            this.LogIn.Size = new System.Drawing.Size(171, 64);
             this.LogIn.TabIndex = 21;
             this.LogIn.Text = "Log In";
             this.LogIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -159,8 +159,8 @@
             this.Controls.Add(this.LogIn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.userNameTextBox);
             this.Name = "Login_page";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -170,8 +170,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox userNameTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button SignUp;

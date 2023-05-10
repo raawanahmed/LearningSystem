@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using WindowsFormsApp2.userServicesReference;
 
 namespace WindowsFormsApp2
 {
@@ -18,16 +19,20 @@ namespace WindowsFormsApp2
             emailAlertLabel.Text = " ";
             confirmPasswordAlertLabel.Text = " ";
             passwordAlertLabel.Text = " ";
-
-            string userName = userNameTextBox.Text;
-            string email = emailTextBox.Text;
-            string password = passwordTeaxtBox.Text;
+            UserData user = new UserData();
+            user.FirstName = firstNameTextBox.Text;
+            user.LastName = lastNameTextBox.Text;
+            user.UserName = userNameTextBox.Text;
+            user.Email = emailTextBox.Text;
+            user.Password = passwordTeaxtBox.Text;
             string comfirmPassword = comfirmPasswordTextBox.Text;
 
-            if (string.IsNullOrWhiteSpace(userName) ||
-                string.IsNullOrWhiteSpace(email) ||
-                string.IsNullOrWhiteSpace(password) ||
-                string.IsNullOrWhiteSpace(comfirmPassword))
+            if (string.IsNullOrWhiteSpace(user.FirstName) ||
+                string.IsNullOrWhiteSpace(user.Email) ||
+                string.IsNullOrWhiteSpace(user.Password) ||
+                string.IsNullOrWhiteSpace(comfirmPassword) ||
+                string.IsNullOrWhiteSpace(user.FirstName) ||
+                string.IsNullOrWhiteSpace(user.LastName))
             {
                 allFieldsAlertLabel.Text = "Please fill in all fields";
                 allFieldsAlertLabel.ForeColor = Color.Red;
@@ -36,7 +41,7 @@ namespace WindowsFormsApp2
             }
 
             // Check if email is valid
-            if (!IsValidEmail(email))
+            if (!IsValidEmail(user.Email))
             {
                 emailAlertLabel.Text = "Please enter a valid email address";
                 emailAlertLabel.ForeColor = Color.Red;
@@ -45,7 +50,7 @@ namespace WindowsFormsApp2
             }
 
             // Check if Password is valid
-            if (!ValidPassword(password))
+            if (!ValidPassword(user.Password))
             {
                 passwordAlertLabel.Text = "Please enter a valid password ";
                 passwordAlertLabel.ForeColor = Color.Red;
@@ -54,7 +59,7 @@ namespace WindowsFormsApp2
             }
 
             // Check if password and confirm password match
-            if (password != comfirmPassword)
+            if (user.Password != comfirmPassword)
             {
                 confirmPasswordAlertLabel.Text = "Passwords do not match";
                 confirmPasswordAlertLabel.ForeColor = Color.Red;
@@ -63,7 +68,7 @@ namespace WindowsFormsApp2
             }
 
             // All validation and verification passed, so proceed with signup
-            SignupUser(userName, email, password);
+            SignupUser(user);
             MessageBox.Show("Signup successful!");
             Login_page login_Page = new Login_page();
             login_Page.Show();
@@ -85,15 +90,15 @@ namespace WindowsFormsApp2
         }
 
 
-        private void SignupUser(string firstName, string email, string password)
+        private void SignupUser(UserData user)
         {
             // Add code here to store user information in database or perform other actions
+            userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
+            usersServices.insertUser(user);
         }
 
         private bool ValidPassword(string password)
         {
-
-
             if (password.Length < 8)
             {
                 MessageBox.Show("Password must be at least 8 characters long.");
@@ -114,7 +119,6 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Password must contain at least one digit.");
                 return false;
             }
-
             return true;
         }
     }

@@ -35,3 +35,4 @@ D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\De
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.HomePage.resources
+D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
