@@ -1,50 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    
+
 
     public partial class Login_page : Form
     {
-        
+
         public Login_page()
         {
             InitializeComponent();
         }
         public bool Islogin = false;
         public bool IsAdmin = false;
-        private void Login_btn_Click(object sender, EventArgs e)
+        private void onLoginBtn(object sender, EventArgs e)
         {
-           
-                string username = textBox1.Text;
-                string password = textBox2.Text;
+
+            string username = textBox1.Text;
+            string password = textBox2.Text;
             if (username == "Admin" && password == "Admin")
             {
                 IsAdmin = true;
             }
-                // Validate inputs
-                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-                {
-                    MessageBox.Show("Please enter a username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+            // Validate inputs
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter a username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                // Authenticate user
-                if (AuthenticateUser(username, password))
+            // Authenticate user
+            if (AuthenticateUser(username, password))
+            {
+                MessageBox.Show("Login successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (IsAdmin)
                 {
-                    MessageBox.Show("Login successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (IsAdmin) {
 
                     Islogin = true;
                     Admin f2 = new Admin();
@@ -60,56 +53,56 @@ namespace WindowsFormsApp2
 
                 }
 
-                }
-                else
-                {
-                    MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
-
-            private bool AuthenticateUser(string username, string password)
+            else
             {
+                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool AuthenticateUser(string username, string password)
+        {
             // Retrieve user from database by username
             UserInfo user = GetUserByUsername(username);
-                if (user == null)
-                {
-                    return false;
-                }
-              
-                // Verify password
-                if (password ==user.Password)
-                {
-                    return true;
-                }
-
-                // User is authenticated
+            if (user == null)
+            {
                 return false;
             }
 
-            private UserInfo GetUserByUsername(string username)
+            // Verify password
+            if (password == user.Password)
             {
-                // Query database for user by username
-                string connectionString = "Data Source=DESKTOP-PUEEIEJ\\MSSQLSERVER01;Initial Catalog=Users_Info;Integrated Security=True";
-                string query = string.Format("SELECT * FROM Users WHERE Username = '{0}'", username);
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    SqlCommand command = new SqlCommand(query, connection);
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.Read())
-                    {
-                    UserInfo user = new UserInfo();
-                        user.Id = reader.GetInt32(0);
-                        user.Username = reader.GetString(1);
-                        user.Password = reader.GetString(2);
-                        return user;
-                    }
-                }
-
-                return null;
+                return true;
             }
+
+            // User is authenticated
+            return false;
+        }
+
+        private UserInfo GetUserByUsername(string username)
+        {
+            // Query database for user by username
+            string connectionString = "Data Source=DESKTOP-PUEEIEJ\\MSSQLSERVER01;Initial Catalog=Users_Info;Integrated Security=True";
+            string query = string.Format("SELECT * FROM Users WHERE Username = '{0}'", username);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    UserInfo user = new UserInfo();
+                    user.Id = reader.GetInt32(0);
+                    user.Username = reader.GetString(1);
+                    user.Password = reader.GetString(2);
+                    return user;
+                }
+            }
+
+            return null;
+        }
         public static bool VerifyPassword(string password, string hash)
         {
             byte[] hashBytes = Convert.FromBase64String(hash);
@@ -134,7 +127,7 @@ namespace WindowsFormsApp2
             return true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void onSignupBtn(object sender, EventArgs e)
         {
             Register register = new Register();
             register.Show();
