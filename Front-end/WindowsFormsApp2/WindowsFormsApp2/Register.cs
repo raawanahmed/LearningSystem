@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2
@@ -17,78 +12,63 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void onSignupBtn(object sender, EventArgs e)
         {
+            allFieldsAlertLabel.Text = " ";
+            emailAlertLabel.Text = " ";
+            confirmPasswordAlertLabel.Text = " ";
+            passwordAlertLabel.Text = " ";
 
-        }
+            string userName = userNameTextBox.Text;
+            string email = emailTextBox.Text;
+            string password = passwordTeaxtBox.Text;
+            string comfirmPassword = comfirmPasswordTextBox.Text;
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            label6.Text = " ";
-            label7.Text = " ";
-            label8.Text = " ";
-            label9.Text = " ";
-
-            string username = textBox1.Text;
-            string Email = textBox2.Text;
-            string password = textBox3.Text;
-            string comfirmPassword = textBox4.Text;
-
-            if (string.IsNullOrWhiteSpace(username) ||
-       string.IsNullOrWhiteSpace(Email) ||
-       string.IsNullOrWhiteSpace(password) ||
-       string.IsNullOrWhiteSpace(comfirmPassword))
+            if (string.IsNullOrWhiteSpace(userName) ||
+                string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(comfirmPassword))
             {
-                label6.Text = "Please fill in all fields";
-                label6.ForeColor =Color.Red;
-                label6.Font = new Font("Arial", 13);
+                allFieldsAlertLabel.Text = "Please fill in all fields";
+                allFieldsAlertLabel.ForeColor = Color.Red;
+                allFieldsAlertLabel.Font = new Font("Arial", 13);
                 return;
             }
 
             // Check if email is valid
-            if (!IsValidEmail(Email))
+            if (!IsValidEmail(email))
             {
-                label7.Text = "Please enter a valid email address";
-                label7.ForeColor = Color.Red;
-                label7.Font = new Font("Arial", 13);
+                emailAlertLabel.Text = "Please enter a valid email address";
+                emailAlertLabel.ForeColor = Color.Red;
+                emailAlertLabel.Font = new Font("Arial", 13);
                 return;
             }
 
             // Check if Password is valid
             if (!ValidPassword(password))
             {
-                label9.Text = "Please enter a valid password ";
-                label9.ForeColor = Color.Red;
-                label9.Font = new Font("Arial", 13);
+                passwordAlertLabel.Text = "Please enter a valid password ";
+                passwordAlertLabel.ForeColor = Color.Red;
+                passwordAlertLabel.Font = new Font("Arial", 13);
                 return;
             }
 
             // Check if password and confirm password match
             if (password != comfirmPassword)
             {
-                label8.Text = "Passwords do not match";
-                label8.ForeColor = Color.Red;
-                label8.Font = new Font("Arial", 13);
+                confirmPasswordAlertLabel.Text = "Passwords do not match";
+                confirmPasswordAlertLabel.ForeColor = Color.Red;
+                confirmPasswordAlertLabel.Font = new Font("Arial", 13);
                 return;
             }
 
             // All validation and verification passed, so proceed with signup
-            SignupUser(username, Email, password);
-             MessageBox.Show( "Signup successful!");
+            SignupUser(userName, email, password);
+            MessageBox.Show("Signup successful!");
             Login_page login_Page = new Login_page();
             login_Page.Show();
             this.Hide();
-            
+
         }
 
         private bool IsValidEmail(string email)
@@ -110,14 +90,10 @@ namespace WindowsFormsApp2
             // Add code here to store user information in database or perform other actions
         }
 
-        private void textBox2_KeyUp(object sender, KeyEventArgs e)
+        private bool ValidPassword(string password)
         {
 
-        }
 
-        private bool ValidPassword( string password) {
-
-        
             if (password.Length < 8)
             {
                 MessageBox.Show("Password must be at least 8 characters long.");
@@ -142,8 +118,4 @@ namespace WindowsFormsApp2
             return true;
         }
     }
-
-
 }
-
-

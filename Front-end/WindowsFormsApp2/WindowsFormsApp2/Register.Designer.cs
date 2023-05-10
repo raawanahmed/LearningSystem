@@ -28,165 +28,211 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
+            this.userNameTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTeaxtBox = new System.Windows.Forms.TextBox();
+            this.comfirmPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.emailAlertLabel = new System.Windows.Forms.Label();
+            this.confirmPasswordAlertLabel = new System.Windows.Forms.Label();
+            this.allFieldsAlertLabel = new System.Windows.Forms.Label();
+            this.passwordAlertLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.SignUp = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // userNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(173, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 22);
-            this.textBox1.TabIndex = 0;
+            this.userNameTextBox.Location = new System.Drawing.Point(390, 142);
+            this.userNameTextBox.Name = "userNameTextBox";
+            this.userNameTextBox.Size = new System.Drawing.Size(226, 22);
+            this.userNameTextBox.TabIndex = 0;
             // 
-            // label1
+            // emailTextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "UserName";
+            this.emailTextBox.Location = new System.Drawing.Point(390, 199);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(226, 22);
+            this.emailTextBox.TabIndex = 3;
             // 
-            // label2
+            // passwordTeaxtBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 189);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Pasword";
+            this.passwordTeaxtBox.Location = new System.Drawing.Point(390, 260);
+            this.passwordTeaxtBox.Name = "passwordTeaxtBox";
+            this.passwordTeaxtBox.Size = new System.Drawing.Size(226, 22);
+            this.passwordTeaxtBox.TabIndex = 5;
             // 
-            // textBox2
+            // comfirmPasswordTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(173, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(226, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.textBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyUp);
+            this.comfirmPasswordTextBox.Location = new System.Drawing.Point(390, 331);
+            this.comfirmPasswordTextBox.Name = "comfirmPasswordTextBox";
+            this.comfirmPasswordTextBox.Size = new System.Drawing.Size(226, 22);
+            this.comfirmPasswordTextBox.TabIndex = 7;
             // 
-            // textBox3
+            // emailAlertLabel
             // 
-            this.textBox3.Location = new System.Drawing.Point(173, 189);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 22);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.emailAlertLabel.AutoSize = true;
+            this.emailAlertLabel.Location = new System.Drawing.Point(391, 225);
+            this.emailAlertLabel.Name = "emailAlertLabel";
+            this.emailAlertLabel.Size = new System.Drawing.Size(10, 16);
+            this.emailAlertLabel.TabIndex = 11;
+            this.emailAlertLabel.Text = " ";
             // 
-            // label3
+            // confirmPasswordAlertLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 265);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Confirm Password";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.confirmPasswordAlertLabel.AutoSize = true;
+            this.confirmPasswordAlertLabel.Location = new System.Drawing.Point(391, 357);
+            this.confirmPasswordAlertLabel.Name = "confirmPasswordAlertLabel";
+            this.confirmPasswordAlertLabel.Size = new System.Drawing.Size(10, 16);
+            this.confirmPasswordAlertLabel.TabIndex = 12;
+            this.confirmPasswordAlertLabel.Text = " ";
             // 
-            // button1
+            // allFieldsAlertLabel
             // 
-            this.button1.Location = new System.Drawing.Point(268, 358);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Signup";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.allFieldsAlertLabel.AutoSize = true;
+            this.allFieldsAlertLabel.Location = new System.Drawing.Point(391, 403);
+            this.allFieldsAlertLabel.Name = "allFieldsAlertLabel";
+            this.allFieldsAlertLabel.Size = new System.Drawing.Size(10, 16);
+            this.allFieldsAlertLabel.TabIndex = 13;
+            this.allFieldsAlertLabel.Text = " ";
             // 
-            // label4
+            // passwordAlertLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Email";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(173, 260);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 22);
-            this.textBox4.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(170, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 17);
-            this.label5.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(170, 153);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(12, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = " ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(170, 285);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(12, 17);
-            this.label8.TabIndex = 12;
-            this.label8.Text = " ";
+            this.passwordAlertLabel.AutoSize = true;
+            this.passwordAlertLabel.Location = new System.Drawing.Point(391, 286);
+            this.passwordAlertLabel.Name = "passwordAlertLabel";
+            this.passwordAlertLabel.Size = new System.Drawing.Size(10, 16);
+            this.passwordAlertLabel.TabIndex = 14;
+            this.passwordAlertLabel.Text = " ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(170, 331);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(108, 246);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(12, 17);
-            this.label6.TabIndex = 13;
-            this.label6.Text = " ";
+            this.label6.Size = new System.Drawing.Size(147, 38);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Password:";
             // 
-            // label9
+            // label2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(170, 214);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(12, 17);
-            this.label9.TabIndex = 14;
-            this.label9.Text = " ";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(108, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 38);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Username:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(108, 185);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 38);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Email:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(108, 317);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(262, 38);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Confirm Password:";
+            // 
+            // SignUp
+            // 
+            this.SignUp.BackColor = System.Drawing.Color.Transparent;
+            this.SignUp.FlatAppearance.BorderSize = 0;
+            this.SignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SignUp.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUp.ForeColor = System.Drawing.Color.White;
+            this.SignUp.Image = ((System.Drawing.Image)(resources.GetObject("SignUp.Image")));
+            this.SignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SignUp.Location = new System.Drawing.Point(306, 438);
+            this.SignUp.Margin = new System.Windows.Forms.Padding(4);
+            this.SignUp.Name = "SignUp";
+            this.SignUp.Size = new System.Drawing.Size(180, 75);
+            this.SignUp.TabIndex = 20;
+            this.SignUp.Text = "Sign Up";
+            this.SignUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SignUp.UseVisualStyleBackColor = false;
+            this.SignUp.Click += new System.EventHandler(this.onSignupBtn);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label3.Location = new System.Drawing.Point(326, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 46);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Signup";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(287, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 42);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(831, 562);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SignUp);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.passwordAlertLabel);
+            this.Controls.Add(this.allFieldsAlertLabel);
+            this.Controls.Add(this.confirmPasswordAlertLabel);
+            this.Controls.Add(this.emailAlertLabel);
+            this.Controls.Add(this.comfirmPasswordTextBox);
+            this.Controls.Add(this.passwordTeaxtBox);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.userNameTextBox);
             this.Name = "Register";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,19 +240,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox userNameTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox passwordTeaxtBox;
+        private System.Windows.Forms.TextBox comfirmPasswordTextBox;
+        private System.Windows.Forms.Label emailAlertLabel;
+        private System.Windows.Forms.Label confirmPasswordAlertLabel;
+        private System.Windows.Forms.Label allFieldsAlertLabel;
+        private System.Windows.Forms.Label passwordAlertLabel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button SignUp;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
