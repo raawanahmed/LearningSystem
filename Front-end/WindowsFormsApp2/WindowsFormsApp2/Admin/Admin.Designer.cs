@@ -28,65 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
+            this.addCourse = new System.Windows.Forms.Button();
+            this.viewCourses = new System.Windows.Forms.Button();
+            this.editCourse = new System.Windows.Forms.Button();
+            this.deleteCourses = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // addCourse
             // 
-            this.button1.Location = new System.Drawing.Point(138, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 59);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "AddCourse";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.addCourse.BackColor = System.Drawing.Color.Transparent;
+            this.addCourse.FlatAppearance.BorderSize = 0;
+            this.addCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addCourse.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addCourse.ForeColor = System.Drawing.Color.White;
+            this.addCourse.Image = ((System.Drawing.Image)(resources.GetObject("addCourse.Image")));
+            this.addCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addCourse.Location = new System.Drawing.Point(88, 62);
+            this.addCourse.Margin = new System.Windows.Forms.Padding(4);
+            this.addCourse.Name = "addCourse";
+            this.addCourse.Size = new System.Drawing.Size(211, 71);
+            this.addCourse.TabIndex = 21;
+            this.addCourse.Text = "Add Course";
+            this.addCourse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addCourse.UseVisualStyleBackColor = false;
+            this.addCourse.Click += new System.EventHandler(this.onAddCourseBtn);
             // 
-            // button2
+            // viewCourses
             // 
-            this.button2.Location = new System.Drawing.Point(444, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 59);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "ViewCourse";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.viewCourses.BackColor = System.Drawing.Color.Transparent;
+            this.viewCourses.FlatAppearance.BorderSize = 0;
+            this.viewCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewCourses.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewCourses.ForeColor = System.Drawing.Color.White;
+            this.viewCourses.Image = ((System.Drawing.Image)(resources.GetObject("viewCourses.Image")));
+            this.viewCourses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.viewCourses.Location = new System.Drawing.Point(393, 71);
+            this.viewCourses.Margin = new System.Windows.Forms.Padding(4);
+            this.viewCourses.Name = "viewCourses";
+            this.viewCourses.Size = new System.Drawing.Size(234, 71);
+            this.viewCourses.TabIndex = 22;
+            this.viewCourses.Text = "View Courses";
+            this.viewCourses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.viewCourses.UseVisualStyleBackColor = false;
+            this.viewCourses.Click += new System.EventHandler(this.onViewCoursesBtn);
             // 
-            // button3
+            // editCourse
             // 
-            this.button3.Location = new System.Drawing.Point(138, 219);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 59);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "EditeCourse";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.editCourse.BackColor = System.Drawing.Color.Transparent;
+            this.editCourse.FlatAppearance.BorderSize = 0;
+            this.editCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editCourse.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editCourse.ForeColor = System.Drawing.Color.White;
+            this.editCourse.Image = ((System.Drawing.Image)(resources.GetObject("editCourse.Image")));
+            this.editCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.editCourse.Location = new System.Drawing.Point(88, 275);
+            this.editCourse.Margin = new System.Windows.Forms.Padding(4);
+            this.editCourse.Name = "editCourse";
+            this.editCourse.Size = new System.Drawing.Size(211, 71);
+            this.editCourse.TabIndex = 23;
+            this.editCourse.Text = "Edit Course";
+            this.editCourse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.editCourse.UseVisualStyleBackColor = false;
+            this.editCourse.Click += new System.EventHandler(this.onEditCourse);
             // 
-            // button4
+            // deleteCourses
             // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.button4.Location = new System.Drawing.Point(444, 219);
-            this.button4.Name = "button4";
-            this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(123, 59);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "DeleteCourses";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.deleteCourses.BackColor = System.Drawing.Color.Transparent;
+            this.deleteCourses.FlatAppearance.BorderSize = 0;
+            this.deleteCourses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteCourses.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteCourses.ForeColor = System.Drawing.Color.White;
+            this.deleteCourses.Image = ((System.Drawing.Image)(resources.GetObject("deleteCourses.Image")));
+            this.deleteCourses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteCourses.Location = new System.Drawing.Point(393, 268);
+            this.deleteCourses.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteCourses.Name = "deleteCourses";
+            this.deleteCourses.Size = new System.Drawing.Size(265, 85);
+            this.deleteCourses.TabIndex = 24;
+            this.deleteCourses.Text = "Delete Courses";
+            this.deleteCourses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.deleteCourses.UseVisualStyleBackColor = false;
+            this.deleteCourses.Click += new System.EventHandler(this.onDeleteCourses);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.deleteCourses);
+            this.Controls.Add(this.editCourse);
+            this.Controls.Add(this.viewCourses);
+            this.Controls.Add(this.addCourse);
             this.Name = "Admin";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -94,10 +130,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button addCourse;
+        private System.Windows.Forms.Button viewCourses;
+        private System.Windows.Forms.Button editCourse;
+        private System.Windows.Forms.Button deleteCourses;
     }
 }
