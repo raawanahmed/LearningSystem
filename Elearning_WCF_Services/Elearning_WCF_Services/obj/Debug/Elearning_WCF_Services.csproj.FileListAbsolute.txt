@@ -1,0 +1,7 @@
+D:\My projects\LearningSystem\Elearning_WCF_Services\Elearning_WCF_Services\bin\Elearning_WCF_Services.dll.config
+D:\My projects\LearningSystem\Elearning_WCF_Services\Elearning_WCF_Services\bin\Elearning_WCF_Services.dll
+D:\My projects\LearningSystem\Elearning_WCF_Services\Elearning_WCF_Services\bin\Elearning_WCF_Services.pdb
+D:\My projects\LearningSystem\Elearning_WCF_Services\Elearning_WCF_Services\obj\Debug\Elearning_WCF_Services.csproj.AssemblyReference.cache
+D:\My projects\LearningSystem\Elearning_WCF_Services\Elearning_WCF_Services\obj\Debug\Elearning_WCF_Services.csproj.CoreCompileInputs.cache
+D:\My projects\LearningSystem\Elearning_WCF_Services\Elearning_WCF_Services\obj\Debug\Elearning_WCF_Services.dll
+D:\My projects\LearningSystem\Elearning_WCF_Services\Elearning_WCF_Services\obj\Debug\Elearning_WCF_Services.pdb

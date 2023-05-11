@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Elearning_WCF_Services.DataModels" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Elearning_WCF_Services.DataModels" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CourseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CourseDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CourseGenre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CourseInstructor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CourseName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoursePrice" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CourseData" nillable="true" type="tns:CourseData" />
+  <xs:complexType name="ArrayOfCourseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CourseData" nillable="true" type="tns:CourseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCourseData" nillable="true" type="tns:ArrayOfCourseData" />
+</xs:schema>

@@ -62,10 +62,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adminServices.svc" />
     <Content Include="Service1.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminServices.svc.cs">
+      <DependentUpon>adminServices.svc</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\CourseData.cs" />
+    <Compile Include="IadminServices.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

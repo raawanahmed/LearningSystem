@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="adminServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55215/adminServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55215/adminServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55215/adminServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Elearning_WCF_Services.DataModels" />
+      <xsd:import schemaLocation="http://localhost:55215/adminServices.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IadminServices_addCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCourse" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_addCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_editCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:editCourse" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_editCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_deleteCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCourse" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_deleteCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_getAllCourses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCourses" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_getAllCourses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_getCourseData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCourseData" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_getCourseData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCourseDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_getAllCoursesIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesIDs" />
+  </wsdl:message>
+  <wsdl:message name="IadminServices_getAllCoursesIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesIDsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IadminServices">
+    <wsdl:operation name="addCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/addCourse" message="tns:IadminServices_addCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/addCourseResponse" message="tns:IadminServices_addCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/editCourse" message="tns:IadminServices_editCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/editCourseResponse" message="tns:IadminServices_editCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/deleteCourse" message="tns:IadminServices_deleteCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/deleteCourseResponse" message="tns:IadminServices_deleteCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCourses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/getAllCourses" message="tns:IadminServices_getAllCourses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/getAllCoursesResponse" message="tns:IadminServices_getAllCourses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCourseData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/getCourseData" message="tns:IadminServices_getCourseData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/getCourseDataResponse" message="tns:IadminServices_getCourseData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/getAllCoursesIDs" message="tns:IadminServices_getAllCoursesIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/getAllCoursesIDsResponse" message="tns:IadminServices_getAllCoursesIDs_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IadminServices" type="tns:IadminServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addCourse">
+      <soap:operation soapAction="http://tempuri.org/IadminServices/addCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editCourse">
+      <soap:operation soapAction="http://tempuri.org/IadminServices/editCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCourse">
+      <soap:operation soapAction="http://tempuri.org/IadminServices/deleteCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCourses">
+      <soap:operation soapAction="http://tempuri.org/IadminServices/getAllCourses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourseData">
+      <soap:operation soapAction="http://tempuri.org/IadminServices/getCourseData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesIDs">
+      <soap:operation soapAction="http://tempuri.org/IadminServices/getAllCoursesIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="adminServices">
+    <wsdl:port name="BasicHttpBinding_IadminServices" binding="tns:BasicHttpBinding_IadminServices">
+      <soap:address location="http://localhost:55215/adminServices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

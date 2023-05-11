@@ -61,6 +61,11 @@
     <Compile Include="Admin\EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\adminServicesReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\userServicesReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,6 +169,22 @@
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
+    <None Include="Connected Services\adminServicesReference\adminServices.wsdl" />
+    <None Include="Connected Services\adminServicesReference\adminServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\adminServicesReference\adminServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\adminServicesReference\adminServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\adminServicesReference\adminServices3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\adminServicesReference\WindowsFormsApp2.adminServicesReference.CourseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\userServicesReference\usersServices.wsdl" />
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.GetUserByUsernameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -191,6 +212,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\adminServicesReference\" />
     <WCFMetadataStorage Include="Connected Services\userServicesReference\" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +226,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\userServicesReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\adminServicesReference\adminServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\adminServicesReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\adminServicesReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\adminServicesReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

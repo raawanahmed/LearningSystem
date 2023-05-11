@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Addcourse));
-            this.priceTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.coursePriceTextBox = new System.Windows.Forms.TextBox();
+            this.courseDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.courseNameTextBox = new System.Windows.Forms.TextBox();
             this.homePage = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,24 +38,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.courseInstructorNameTextBox = new System.Windows.Forms.TextBox();
+            this.courseGenre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // priceTextBox
             // 
-            this.priceTextBox.Location = new System.Drawing.Point(554, 221);
-            this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(100, 22);
-            this.priceTextBox.TabIndex = 2;
+            this.coursePriceTextBox.Location = new System.Drawing.Point(554, 221);
+            this.coursePriceTextBox.Name = "priceTextBox";
+            this.coursePriceTextBox.Size = new System.Drawing.Size(100, 22);
+            this.coursePriceTextBox.TabIndex = 2;
             // 
-            // descriptionTextBox
+            // courseDescriptionTextBox
             // 
-            this.descriptionTextBox.Location = new System.Drawing.Point(655, 142);
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(100, 22);
-            this.descriptionTextBox.TabIndex = 1;
+            this.courseDescriptionTextBox.Location = new System.Drawing.Point(655, 142);
+            this.courseDescriptionTextBox.Name = "courseDescriptionTextBox";
+            this.courseDescriptionTextBox.Size = new System.Drawing.Size(100, 22);
+            this.courseDescriptionTextBox.TabIndex = 1;
             // 
             // courseNameTextBox
             // 
@@ -154,19 +154,19 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Price:";
             // 
-            // textBox1
+            // courseInstructorNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 221);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 28;
+            this.courseInstructorNameTextBox.Location = new System.Drawing.Point(215, 221);
+            this.courseInstructorNameTextBox.Name = "courseInstructorNameTextBox";
+            this.courseInstructorNameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.courseInstructorNameTextBox.TabIndex = 28;
             // 
-            // textBox2
+            // courseGenre
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 297);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 30;
+            this.courseGenre.Location = new System.Drawing.Point(103, 297);
+            this.courseGenre.Name = "courseGenre";
+            this.courseGenre.Size = new System.Drawing.Size(100, 22);
+            this.courseGenre.TabIndex = 30;
             // 
             // label5
             // 
@@ -188,9 +188,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.courseGenre);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.courseInstructorNameTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -198,8 +198,8 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.homePage);
             this.Controls.Add(this.courseNameTextBox);
-            this.Controls.Add(this.descriptionTextBox);
-            this.Controls.Add(this.priceTextBox);
+            this.Controls.Add(this.courseDescriptionTextBox);
+            this.Controls.Add(this.coursePriceTextBox);
             this.Name = "Addcourse";
             this.Text = "Form2";
             this.ResumeLayout(false);
@@ -208,8 +208,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox priceTextBox;
-        private System.Windows.Forms.TextBox descriptionTextBox;
+        private System.Windows.Forms.TextBox coursePriceTextBox;
+        private System.Windows.Forms.TextBox courseDescriptionTextBox;
         private System.Windows.Forms.TextBox courseNameTextBox;
         private System.Windows.Forms.Button homePage;
         private System.Windows.Forms.Button button3;
@@ -217,8 +217,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox courseInstructorNameTextBox;
+        private System.Windows.Forms.TextBox courseGenre;
         private System.Windows.Forms.Label label5;
     }
 }

@@ -18,7 +18,7 @@ namespace WindowsFormsApp2
 
             string username = userNameTextBox.Text;
             string password = passwordTextBox.Text;
-            if (username == "Admin" && password == "Admin")
+            if (username == "admin" && password == "Admin123")
             {
                 IsAdmin = true;
             }

@@ -1,89 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2.User
 {
-    
+
     public partial class CourseView : Form
     {
         bool Islogin;
-       
 
-        List<CourseDetails> coursesDetails= new List<CourseDetails>(); 
 
-         
-        public CourseView(bool islogin,string CourseName)
+        List<CourseDetails> coursesDetails = new List<CourseDetails>();
+
+
+        public CourseView(bool islogin, string CourseName)
         {
-          
+
             InitializeComponent();
-           
             this.Islogin = islogin;
             Viewdetails(CourseName);
         }
 
-        public CourseView()
+        private void onCourseViewFormLoad(object sender, EventArgs e)
         {
 
         }
-
-
-        private void CourseView_Load(object sender, EventArgs e)
+        public void Viewdetails(string CourseName)
         {
-          
-           
-           
-            if (Islogin == true)
-            {
-                this.button2.Visible = false;
-                this.comboBox1.Visible = true;
-
-            }
-            else
-            {
-                this.button2.Visible = true;
-                this.comboBox1.Visible = false;
-
-            }
-
-        }
-    
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            Login_page login_Page = new Login_page();
-            if (comboBox1.SelectedIndex == 0)
-            {
-                Myaccount myaccount = new Myaccount();
-                myaccount.Show();
-                this.Hide();
-            }
-
-            if (comboBox1.SelectedIndex == 1)
-            {
-                login_Page.Hide();
-                this.Show();
-            }
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Login_page login_Page = new Login_page();
-            login_Page.Show();
-            this.Hide();
-        }
-
-        public void Viewdetails( string CourseName)
-        {
-            List<CourseDetails> course= new List<CourseDetails>();
+            List<CourseDetails> course = new List<CourseDetails>();
 
             CourseDetails course1 = new CourseDetails
             {
@@ -118,9 +62,9 @@ namespace WindowsFormsApp2.User
             };
 
             coursesDetails.Add(course3);
-            for (int i=0;i<coursesDetails.Count;i++)
+            for (int i = 0; i < coursesDetails.Count; i++)
             {
-                
+
                 if (CourseName == coursesDetails[i].CourseName)
                 {
                     course.Add(coursesDetails[i]);
@@ -128,8 +72,13 @@ namespace WindowsFormsApp2.User
                     dataGridView1.DataSource = course;
                 }
             }
+        }
 
-            
+        private void onLogoutBtn(object sender, EventArgs e)
+        {
+            Login_page login_Page = new Login_page();
+            login_Page.Show();
+            this.Hide();
         }
     }
 }

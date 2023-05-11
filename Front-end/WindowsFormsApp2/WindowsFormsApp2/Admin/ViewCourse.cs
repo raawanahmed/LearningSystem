@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using WindowsFormsApp2.adminServicesReference;
 
 namespace WindowsFormsApp2
 {
@@ -9,28 +10,43 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void onLoadViewCoursesForm(object sender, EventArgs e)
         {
-            //ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
+            adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
 
-            // List<string> columns = new List<string>();
-
-            // columns = obj.Viewcourse(int.Parse(textBox1.Text));
-
-            // ListViewItem listView = new ListViewItem(columns[0]);
-
-            // listView.SubItems.Add(columns[1]);
-            //  listView.SubItems.Add(columns[2]);
-            // listView1.Items.Add(listView);
-
-
+            CourseData[] courses = adminServices.getAllCourses();
+            foreach (CourseData course in courses)
+            {
+                ListViewItem item = new ListViewItem(course.CourseName);
+                item.SubItems.Add(course.Id.ToString());
+                item.SubItems.Add(course.CourseDescription);
+                item.SubItems.Add(course.CoursePrice.ToString());
+                item.SubItems.Add(course.CourseInstructor);
+                item.SubItems.Add(course.CourseGenre);
+                item.SubItems.Add(course.CreatedAt.ToString());
+                listOfCourses.Items.Add(item);
+                /* Button editButton = new Button();
+                 editButton.Text = "Edit";
+                 editButton.Tag = course.Id;
+                 editButton.Click += new EventHandler(editCourseBtn);
+                 item.SubItems.Add("");
+                 listOfCourses.Items.Add(item);
+                 listOfCourses.Controls.Add(editButton);
+                */
+            }
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void onHomePageBtn(object sender, EventArgs e)
         {
             Admin admin = new Admin();
             admin.Show();
+            this.Hide();
+        }
+        private void editCourseBtn(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            int courseId = (int)button.Tag;
+            EditCourse editCourse = new EditCourse();
+            editCourse.ShowDialog();
             this.Hide();
         }
     }
