@@ -133,7 +133,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Name = "CartOfCourses";
-            this.Text = "cartOfCourses";
+            this.Text = "CartOfCourses";
             this.Load += new System.EventHandler(this.onCartOfCoursesFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.coursesInCartGridView)).EndInit();
             this.ResumeLayout(false);

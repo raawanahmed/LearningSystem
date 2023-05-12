@@ -103,6 +103,7 @@
             this.allCoursesGridView.RowTemplate.Height = 24;
             this.allCoursesGridView.Size = new System.Drawing.Size(846, 354);
             this.allCoursesGridView.TabIndex = 34;
+            this.allCoursesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allUserCoursesGridViewCellClick);
             // 
             // UserCourses
             // 

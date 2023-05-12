@@ -53,7 +53,8 @@ namespace WindowsFormsApp2
 
         private void allCoursesGridViewCellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ViewCourseDetails courseView;
+            // AddRatingsAndCommentsToCourse courseView;
+            ViewCourseRatingsAndComments courseView;
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
 
             if (e.ColumnIndex == 7)
@@ -65,7 +66,7 @@ namespace WindowsFormsApp2
                     {
                         if (e.RowIndex == i)
                         {
-                            courseView = new ViewCourseDetails(courses[i], this.userId);
+                            courseView = new ViewCourseRatingsAndComments(courses[i], this.userId);
                             courseView.Show();
                             this.Hide();
                             break;

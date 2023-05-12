@@ -33,10 +33,11 @@ D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\bin\De
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.cartOfCourses.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.pay.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.UserCourses.resources
-D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.ViewCourseDetails.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ViewAllCourses.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UserAccount.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.UserHomePage.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.LoginPage.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Admin.ViewCourses.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminHomePage.resources
+D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.ViewCourseRatingsAndComments.resources
+D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.AddRatingsAndCommentsToCourse.resources

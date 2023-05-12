@@ -222,7 +222,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Name = "UserAccount";
-            this.Text = "Myaccount";
+            this.Text = "UserAccount";
             this.Load += new System.EventHandler(this.onUserAccountFormLoad);
             this.ResumeLayout(false);
             this.PerformLayout();
