@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2.User
 {
-    public partial class pay : Form
+    public partial class Pay : Form
     {
-        public pay()
+        public Pay()
         {
             InitializeComponent();
         }

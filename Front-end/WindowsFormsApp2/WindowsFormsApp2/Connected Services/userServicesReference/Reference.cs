@@ -137,6 +137,266 @@ namespace WindowsFormsApp2.userServicesReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CourseData", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class CourseData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CourseNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CourseDescriptionField;
+        
+        private int CoursePriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CourseInstructorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CourseGenreField;
+        
+        private System.DateTime CreatedAtField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string CourseName {
+            get {
+                return this.CourseNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CourseNameField, value) != true)) {
+                    this.CourseNameField = value;
+                    this.RaisePropertyChanged("CourseName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string CourseDescription {
+            get {
+                return this.CourseDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CourseDescriptionField, value) != true)) {
+                    this.CourseDescriptionField = value;
+                    this.RaisePropertyChanged("CourseDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int CoursePrice {
+            get {
+                return this.CoursePriceField;
+            }
+            set {
+                if ((this.CoursePriceField.Equals(value) != true)) {
+                    this.CoursePriceField = value;
+                    this.RaisePropertyChanged("CoursePrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string CourseInstructor {
+            get {
+                return this.CourseInstructorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CourseInstructorField, value) != true)) {
+                    this.CourseInstructorField = value;
+                    this.RaisePropertyChanged("CourseInstructor");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string CourseGenre {
+            get {
+                return this.CourseGenreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CourseGenreField, value) != true)) {
+                    this.CourseGenreField = value;
+                    this.RaisePropertyChanged("CourseGenre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public System.DateTime CreatedAt {
+            get {
+                return this.CreatedAtField;
+            }
+            set {
+                if ((this.CreatedAtField.Equals(value) != true)) {
+                    this.CreatedAtField = value;
+                    this.RaisePropertyChanged("CreatedAt");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserCoursesData", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class UserCoursesData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int IdField;
+        
+        private int CourseIdField;
+        
+        private int UserIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CourseRatingScoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CourseCommentsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CourseStatusField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int CourseId {
+            get {
+                return this.CourseIdField;
+            }
+            set {
+                if ((this.CourseIdField.Equals(value) != true)) {
+                    this.CourseIdField = value;
+                    this.RaisePropertyChanged("CourseId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int UserId {
+            get {
+                return this.UserIdField;
+            }
+            set {
+                if ((this.UserIdField.Equals(value) != true)) {
+                    this.UserIdField = value;
+                    this.RaisePropertyChanged("UserId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string CourseRatingScore {
+            get {
+                return this.CourseRatingScoreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CourseRatingScoreField, value) != true)) {
+                    this.CourseRatingScoreField = value;
+                    this.RaisePropertyChanged("CourseRatingScore");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string CourseComments {
+            get {
+                return this.CourseCommentsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CourseCommentsField, value) != true)) {
+                    this.CourseCommentsField = value;
+                    this.RaisePropertyChanged("CourseComments");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string CourseStatus {
+            get {
+                return this.CourseStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CourseStatusField, value) != true)) {
+                    this.CourseStatusField = value;
+                    this.RaisePropertyChanged("CourseStatus");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="userServicesReference.usersServicesSoap")]
     public interface usersServicesSoap {
@@ -154,6 +414,73 @@ namespace WindowsFormsApp2.userServicesReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserByUsername", ReplyAction="*")]
         System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.GetUserByUsernameResponse> GetUserByUsernameAsync(WindowsFormsApp2.userServicesReference.GetUserByUsernameRequest request);
+        
+        // CODEGEN: Generating message contract since element name getAllCoursesResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAllCourses", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.getAllCoursesResponse getAllCourses(WindowsFormsApp2.userServicesReference.getAllCoursesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAllCourses", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesResponse> getAllCoursesAsync(WindowsFormsApp2.userServicesReference.getAllCoursesRequest request);
+        
+        // CODEGEN: Generating message contract since element name getAllCoursesForUserResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAllCoursesForUser", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse getAllCoursesForUser(WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAllCoursesForUser", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse> getAllCoursesForUserAsync(WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest request);
+        
+        // CODEGEN: Generating message contract since element name getCourseDetailsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getCourseDetails", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.getCourseDetailsResponse getCourseDetails(WindowsFormsApp2.userServicesReference.getCourseDetailsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getCourseDetails", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getCourseDetailsResponse> getCourseDetailsAsync(WindowsFormsApp2.userServicesReference.getCourseDetailsRequest request);
+        
+        // CODEGEN: Generating message contract since element name getEnrolledCoursesForUserResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getEnrolledCoursesForUser", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse getEnrolledCoursesForUser(WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getEnrolledCoursesForUser", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse> getEnrolledCoursesForUserAsync(WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest request);
+        
+        // CODEGEN: Generating message contract since element name getCoursesInCartResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getCoursesInCart", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.getCoursesInCartResponse getCoursesInCart(WindowsFormsApp2.userServicesReference.getCoursesInCartRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getCoursesInCart", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getCoursesInCartResponse> getCoursesInCartAsync(WindowsFormsApp2.userServicesReference.getCoursesInCartRequest request);
+        
+        // CODEGEN: Generating message contract since element name courseStatus from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/enrollUserToCourse", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse enrollUserToCourse(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/enrollUserToCourse", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse> enrollUserToCourseAsync(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addRatingScoreToCourse", ReplyAction="*")]
+        void addRatingScoreToCourse(float courseRatingScore, int userId, int courseId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addRatingScoreToCourse", ReplyAction="*")]
+        System.Threading.Tasks.Task addRatingScoreToCourseAsync(float courseRatingScore, int userId, int courseId);
+        
+        // CODEGEN: Generating message contract since element name courseComments from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCommentToCourse", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.addCommentToCourseResponse addCommentToCourse(WindowsFormsApp2.userServicesReference.addCommentToCourseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCommentToCourse", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.addCommentToCourseResponse> addCommentToCourseAsync(WindowsFormsApp2.userServicesReference.addCommentToCourseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCourseToCart", ReplyAction="*")]
+        void addCourseToCart(int userId, int courseId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCourseToCart", ReplyAction="*")]
+        System.Threading.Tasks.Task addCourseToCartAsync(int userId, int courseId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/removeCourseFromCart", ReplyAction="*")]
+        void removeCourseFromCart(int userId, int courseId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/removeCourseFromCart", ReplyAction="*")]
+        System.Threading.Tasks.Task removeCourseFromCartAsync(int userId, int courseId);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -285,6 +612,470 @@ namespace WindowsFormsApp2.userServicesReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getAllCoursesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getAllCourses", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getAllCoursesRequestBody Body;
+        
+        public getAllCoursesRequest() {
+        }
+        
+        public getAllCoursesRequest(WindowsFormsApp2.userServicesReference.getAllCoursesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class getAllCoursesRequestBody {
+        
+        public getAllCoursesRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getAllCoursesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getAllCoursesResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getAllCoursesResponseBody Body;
+        
+        public getAllCoursesResponse() {
+        }
+        
+        public getAllCoursesResponse(WindowsFormsApp2.userServicesReference.getAllCoursesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getAllCoursesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WindowsFormsApp2.userServicesReference.CourseData[] getAllCoursesResult;
+        
+        public getAllCoursesResponseBody() {
+        }
+        
+        public getAllCoursesResponseBody(WindowsFormsApp2.userServicesReference.CourseData[] getAllCoursesResult) {
+            this.getAllCoursesResult = getAllCoursesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getAllCoursesForUserRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getAllCoursesForUser", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequestBody Body;
+        
+        public getAllCoursesForUserRequest() {
+        }
+        
+        public getAllCoursesForUserRequest(WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class getAllCoursesForUserRequestBody {
+        
+        public getAllCoursesForUserRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getAllCoursesForUserResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getAllCoursesForUserResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponseBody Body;
+        
+        public getAllCoursesForUserResponse() {
+        }
+        
+        public getAllCoursesForUserResponse(WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getAllCoursesForUserResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WindowsFormsApp2.userServicesReference.CourseData[] getAllCoursesForUserResult;
+        
+        public getAllCoursesForUserResponseBody() {
+        }
+        
+        public getAllCoursesForUserResponseBody(WindowsFormsApp2.userServicesReference.CourseData[] getAllCoursesForUserResult) {
+            this.getAllCoursesForUserResult = getAllCoursesForUserResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getCourseDetailsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCourseDetails", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getCourseDetailsRequestBody Body;
+        
+        public getCourseDetailsRequest() {
+        }
+        
+        public getCourseDetailsRequest(WindowsFormsApp2.userServicesReference.getCourseDetailsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getCourseDetailsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int courseId;
+        
+        public getCourseDetailsRequestBody() {
+        }
+        
+        public getCourseDetailsRequestBody(int courseId) {
+            this.courseId = courseId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getCourseDetailsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCourseDetailsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getCourseDetailsResponseBody Body;
+        
+        public getCourseDetailsResponse() {
+        }
+        
+        public getCourseDetailsResponse(WindowsFormsApp2.userServicesReference.getCourseDetailsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getCourseDetailsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WindowsFormsApp2.userServicesReference.UserCoursesData[] getCourseDetailsResult;
+        
+        public getCourseDetailsResponseBody() {
+        }
+        
+        public getCourseDetailsResponseBody(WindowsFormsApp2.userServicesReference.UserCoursesData[] getCourseDetailsResult) {
+            this.getCourseDetailsResult = getCourseDetailsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getEnrolledCoursesForUserRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getEnrolledCoursesForUser", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequestBody Body;
+        
+        public getEnrolledCoursesForUserRequest() {
+        }
+        
+        public getEnrolledCoursesForUserRequest(WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getEnrolledCoursesForUserRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int userId;
+        
+        public getEnrolledCoursesForUserRequestBody() {
+        }
+        
+        public getEnrolledCoursesForUserRequestBody(int userId) {
+            this.userId = userId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getEnrolledCoursesForUserResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getEnrolledCoursesForUserResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponseBody Body;
+        
+        public getEnrolledCoursesForUserResponse() {
+        }
+        
+        public getEnrolledCoursesForUserResponse(WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getEnrolledCoursesForUserResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WindowsFormsApp2.userServicesReference.CourseData[] getEnrolledCoursesForUserResult;
+        
+        public getEnrolledCoursesForUserResponseBody() {
+        }
+        
+        public getEnrolledCoursesForUserResponseBody(WindowsFormsApp2.userServicesReference.CourseData[] getEnrolledCoursesForUserResult) {
+            this.getEnrolledCoursesForUserResult = getEnrolledCoursesForUserResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getCoursesInCartRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCoursesInCart", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getCoursesInCartRequestBody Body;
+        
+        public getCoursesInCartRequest() {
+        }
+        
+        public getCoursesInCartRequest(WindowsFormsApp2.userServicesReference.getCoursesInCartRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getCoursesInCartRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int userId;
+        
+        public getCoursesInCartRequestBody() {
+        }
+        
+        public getCoursesInCartRequestBody(int userId) {
+            this.userId = userId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getCoursesInCartResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getCoursesInCartResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getCoursesInCartResponseBody Body;
+        
+        public getCoursesInCartResponse() {
+        }
+        
+        public getCoursesInCartResponse(WindowsFormsApp2.userServicesReference.getCoursesInCartResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getCoursesInCartResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WindowsFormsApp2.userServicesReference.CourseData[] getCoursesInCartResult;
+        
+        public getCoursesInCartResponseBody() {
+        }
+        
+        public getCoursesInCartResponseBody(WindowsFormsApp2.userServicesReference.CourseData[] getCoursesInCartResult) {
+            this.getCoursesInCartResult = getCoursesInCartResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class enrollUserToCourseRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="enrollUserToCourse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.enrollUserToCourseRequestBody Body;
+        
+        public enrollUserToCourseRequest() {
+        }
+        
+        public enrollUserToCourseRequest(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class enrollUserToCourseRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int userId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int courseId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string courseStatus;
+        
+        public enrollUserToCourseRequestBody() {
+        }
+        
+        public enrollUserToCourseRequestBody(int userId, int courseId, string courseStatus) {
+            this.userId = userId;
+            this.courseId = courseId;
+            this.courseStatus = courseStatus;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class enrollUserToCourseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="enrollUserToCourseResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.enrollUserToCourseResponseBody Body;
+        
+        public enrollUserToCourseResponse() {
+        }
+        
+        public enrollUserToCourseResponse(WindowsFormsApp2.userServicesReference.enrollUserToCourseResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class enrollUserToCourseResponseBody {
+        
+        public enrollUserToCourseResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class addCommentToCourseRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="addCommentToCourse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.addCommentToCourseRequestBody Body;
+        
+        public addCommentToCourseRequest() {
+        }
+        
+        public addCommentToCourseRequest(WindowsFormsApp2.userServicesReference.addCommentToCourseRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class addCommentToCourseRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string courseComments;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int userId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public int courseId;
+        
+        public addCommentToCourseRequestBody() {
+        }
+        
+        public addCommentToCourseRequestBody(string courseComments, int userId, int courseId) {
+            this.courseComments = courseComments;
+            this.userId = userId;
+            this.courseId = courseId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class addCommentToCourseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="addCommentToCourseResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.addCommentToCourseResponseBody Body;
+        
+        public addCommentToCourseResponse() {
+        }
+        
+        public addCommentToCourseResponse(WindowsFormsApp2.userServicesReference.addCommentToCourseResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class addCommentToCourseResponseBody {
+        
+        public addCommentToCourseResponseBody() {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface usersServicesSoapChannel : WindowsFormsApp2.userServicesReference.usersServicesSoap, System.ServiceModel.IClientChannel {
     }
@@ -359,6 +1150,207 @@ namespace WindowsFormsApp2.userServicesReference {
             inValue.Body = new WindowsFormsApp2.userServicesReference.GetUserByUsernameRequestBody();
             inValue.Body.username = username;
             return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).GetUserByUsernameAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.getAllCoursesResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.getAllCourses(WindowsFormsApp2.userServicesReference.getAllCoursesRequest request) {
+            return base.Channel.getAllCourses(request);
+        }
+        
+        public WindowsFormsApp2.userServicesReference.CourseData[] getAllCourses() {
+            WindowsFormsApp2.userServicesReference.getAllCoursesRequest inValue = new WindowsFormsApp2.userServicesReference.getAllCoursesRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getAllCoursesRequestBody();
+            WindowsFormsApp2.userServicesReference.getAllCoursesResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getAllCourses(inValue);
+            return retVal.Body.getAllCoursesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.getAllCoursesAsync(WindowsFormsApp2.userServicesReference.getAllCoursesRequest request) {
+            return base.Channel.getAllCoursesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesResponse> getAllCoursesAsync() {
+            WindowsFormsApp2.userServicesReference.getAllCoursesRequest inValue = new WindowsFormsApp2.userServicesReference.getAllCoursesRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getAllCoursesRequestBody();
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getAllCoursesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.getAllCoursesForUser(WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest request) {
+            return base.Channel.getAllCoursesForUser(request);
+        }
+        
+        public WindowsFormsApp2.userServicesReference.CourseData[] getAllCoursesForUser() {
+            WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest inValue = new WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequestBody();
+            WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getAllCoursesForUser(inValue);
+            return retVal.Body.getAllCoursesForUserResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.getAllCoursesForUserAsync(WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest request) {
+            return base.Channel.getAllCoursesForUserAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse> getAllCoursesForUserAsync() {
+            WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest inValue = new WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequestBody();
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getAllCoursesForUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.getCourseDetailsResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.getCourseDetails(WindowsFormsApp2.userServicesReference.getCourseDetailsRequest request) {
+            return base.Channel.getCourseDetails(request);
+        }
+        
+        public WindowsFormsApp2.userServicesReference.UserCoursesData[] getCourseDetails(int courseId) {
+            WindowsFormsApp2.userServicesReference.getCourseDetailsRequest inValue = new WindowsFormsApp2.userServicesReference.getCourseDetailsRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getCourseDetailsRequestBody();
+            inValue.Body.courseId = courseId;
+            WindowsFormsApp2.userServicesReference.getCourseDetailsResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getCourseDetails(inValue);
+            return retVal.Body.getCourseDetailsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getCourseDetailsResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.getCourseDetailsAsync(WindowsFormsApp2.userServicesReference.getCourseDetailsRequest request) {
+            return base.Channel.getCourseDetailsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getCourseDetailsResponse> getCourseDetailsAsync(int courseId) {
+            WindowsFormsApp2.userServicesReference.getCourseDetailsRequest inValue = new WindowsFormsApp2.userServicesReference.getCourseDetailsRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getCourseDetailsRequestBody();
+            inValue.Body.courseId = courseId;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getCourseDetailsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.getEnrolledCoursesForUser(WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest request) {
+            return base.Channel.getEnrolledCoursesForUser(request);
+        }
+        
+        public WindowsFormsApp2.userServicesReference.CourseData[] getEnrolledCoursesForUser(int userId) {
+            WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest inValue = new WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequestBody();
+            inValue.Body.userId = userId;
+            WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getEnrolledCoursesForUser(inValue);
+            return retVal.Body.getEnrolledCoursesForUserResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.getEnrolledCoursesForUserAsync(WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest request) {
+            return base.Channel.getEnrolledCoursesForUserAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse> getEnrolledCoursesForUserAsync(int userId) {
+            WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest inValue = new WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequestBody();
+            inValue.Body.userId = userId;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getEnrolledCoursesForUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.getCoursesInCartResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.getCoursesInCart(WindowsFormsApp2.userServicesReference.getCoursesInCartRequest request) {
+            return base.Channel.getCoursesInCart(request);
+        }
+        
+        public WindowsFormsApp2.userServicesReference.CourseData[] getCoursesInCart(int userId) {
+            WindowsFormsApp2.userServicesReference.getCoursesInCartRequest inValue = new WindowsFormsApp2.userServicesReference.getCoursesInCartRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getCoursesInCartRequestBody();
+            inValue.Body.userId = userId;
+            WindowsFormsApp2.userServicesReference.getCoursesInCartResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getCoursesInCart(inValue);
+            return retVal.Body.getCoursesInCartResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getCoursesInCartResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.getCoursesInCartAsync(WindowsFormsApp2.userServicesReference.getCoursesInCartRequest request) {
+            return base.Channel.getCoursesInCartAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getCoursesInCartResponse> getCoursesInCartAsync(int userId) {
+            WindowsFormsApp2.userServicesReference.getCoursesInCartRequest inValue = new WindowsFormsApp2.userServicesReference.getCoursesInCartRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getCoursesInCartRequestBody();
+            inValue.Body.userId = userId;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getCoursesInCartAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.enrollUserToCourse(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest request) {
+            return base.Channel.enrollUserToCourse(request);
+        }
+        
+        public void enrollUserToCourse(int userId, int courseId, string courseStatus) {
+            WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest inValue = new WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.enrollUserToCourseRequestBody();
+            inValue.Body.userId = userId;
+            inValue.Body.courseId = courseId;
+            inValue.Body.courseStatus = courseStatus;
+            WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).enrollUserToCourse(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.enrollUserToCourseAsync(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest request) {
+            return base.Channel.enrollUserToCourseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse> enrollUserToCourseAsync(int userId, int courseId, string courseStatus) {
+            WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest inValue = new WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.enrollUserToCourseRequestBody();
+            inValue.Body.userId = userId;
+            inValue.Body.courseId = courseId;
+            inValue.Body.courseStatus = courseStatus;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).enrollUserToCourseAsync(inValue);
+        }
+        
+        public void addRatingScoreToCourse(float courseRatingScore, int userId, int courseId) {
+            base.Channel.addRatingScoreToCourse(courseRatingScore, userId, courseId);
+        }
+        
+        public System.Threading.Tasks.Task addRatingScoreToCourseAsync(float courseRatingScore, int userId, int courseId) {
+            return base.Channel.addRatingScoreToCourseAsync(courseRatingScore, userId, courseId);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.addCommentToCourseResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.addCommentToCourse(WindowsFormsApp2.userServicesReference.addCommentToCourseRequest request) {
+            return base.Channel.addCommentToCourse(request);
+        }
+        
+        public void addCommentToCourse(string courseComments, int userId, int courseId) {
+            WindowsFormsApp2.userServicesReference.addCommentToCourseRequest inValue = new WindowsFormsApp2.userServicesReference.addCommentToCourseRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.addCommentToCourseRequestBody();
+            inValue.Body.courseComments = courseComments;
+            inValue.Body.userId = userId;
+            inValue.Body.courseId = courseId;
+            WindowsFormsApp2.userServicesReference.addCommentToCourseResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).addCommentToCourse(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.addCommentToCourseResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.addCommentToCourseAsync(WindowsFormsApp2.userServicesReference.addCommentToCourseRequest request) {
+            return base.Channel.addCommentToCourseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.addCommentToCourseResponse> addCommentToCourseAsync(string courseComments, int userId, int courseId) {
+            WindowsFormsApp2.userServicesReference.addCommentToCourseRequest inValue = new WindowsFormsApp2.userServicesReference.addCommentToCourseRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.addCommentToCourseRequestBody();
+            inValue.Body.courseComments = courseComments;
+            inValue.Body.userId = userId;
+            inValue.Body.courseId = courseId;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).addCommentToCourseAsync(inValue);
+        }
+        
+        public void addCourseToCart(int userId, int courseId) {
+            base.Channel.addCourseToCart(userId, courseId);
+        }
+        
+        public System.Threading.Tasks.Task addCourseToCartAsync(int userId, int courseId) {
+            return base.Channel.addCourseToCartAsync(userId, courseId);
+        }
+        
+        public void removeCourseFromCart(int userId, int courseId) {
+            base.Channel.removeCourseFromCart(userId, courseId);
+        }
+        
+        public System.Threading.Tasks.Task removeCourseFromCartAsync(int userId, int courseId) {
+            return base.Channel.removeCourseFromCartAsync(userId, courseId);
         }
     }
 }

@@ -53,6 +53,7 @@ namespace Elearning_WCF_Services
 
         public void editCourse(int courseId, CourseData course)
         {
+            // check this function
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
             string query = "UPDATE CoursesTable SET courseName = @courseName, courseDescription = @courseDescription, coursePrice = @coursePrice, courseInstructor = @courseInstructor, courseGenre = @courseGenre WHERE id = @courseId";
 

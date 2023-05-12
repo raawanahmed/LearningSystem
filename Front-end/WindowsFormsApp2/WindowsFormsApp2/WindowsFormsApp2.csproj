@@ -77,29 +77,29 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\cartOfCourses.cs">
+    <Compile Include="User\CartOfCourses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\cartOfCourses.Designer.cs">
-      <DependentUpon>cartOfCourses.cs</DependentUpon>
+    <Compile Include="User\CartOfCourses.Designer.cs">
+      <DependentUpon>CartOfCourses.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\CourseView.cs">
+    <Compile Include="User\ViewCourseDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\CourseView.Designer.cs">
-      <DependentUpon>CourseView.cs</DependentUpon>
+    <Compile Include="User\ViewCourseDetails.Designer.cs">
+      <DependentUpon>ViewCourseDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\Home.cs">
+    <Compile Include="User\ViewAllCourses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="User\ViewAllCourses.Designer.cs">
+      <DependentUpon>ViewAllCourses.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\Myaccount.cs">
+    <Compile Include="User\UserAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\Myaccount.Designer.cs">
-      <DependentUpon>Myaccount.cs</DependentUpon>
+    <Compile Include="User\UserAccount.Designer.cs">
+      <DependentUpon>UserAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -133,17 +133,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User\pay.cs">
+    <Compile Include="User\Pay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\pay.Designer.cs">
-      <DependentUpon>pay.cs</DependentUpon>
+    <Compile Include="User\Pay.Designer.cs">
+      <DependentUpon>Pay.cs</DependentUpon>
     </Compile>
     <Compile Include="User\UserCourses.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User\UserCourses.Designer.cs">
       <DependentUpon>UserCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserHomePage.Designer.cs">
+      <DependentUpon>UserHomePage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\Addcourse.resx">
       <DependentUpon>Addcourse.cs</DependentUpon>
@@ -157,14 +163,14 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\cartOfCourses.resx">
-      <DependentUpon>cartOfCourses.cs</DependentUpon>
+    <EmbeddedResource Include="User\CartOfCourses.resx">
+      <DependentUpon>CartOfCourses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\CourseView.resx">
-      <DependentUpon>CourseView.cs</DependentUpon>
+    <EmbeddedResource Include="User\ViewCourseDetails.resx">
+      <DependentUpon>ViewCourseDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="User\ViewAllCourses.resx">
+      <DependentUpon>ViewAllCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_page.resx">
       <DependentUpon>Login_page.cs</DependentUpon>
@@ -187,14 +193,17 @@
     <EmbeddedResource Include="Admin\ViewCourse.resx">
       <DependentUpon>ViewCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Myaccount.resx">
-      <DependentUpon>Myaccount.cs</DependentUpon>
+    <EmbeddedResource Include="User\UserAccount.resx">
+      <DependentUpon>UserAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\pay.resx">
-      <DependentUpon>pay.cs</DependentUpon>
+    <EmbeddedResource Include="User\Pay.resx">
+      <DependentUpon>Pay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UserCourses.resx">
       <DependentUpon>UserCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserHomePage.resx">
+      <DependentUpon>UserHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
@@ -216,10 +225,37 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\userServicesReference\usersServices.wsdl" />
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.addCommentToCourseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.CourseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getAllCoursesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getCourseDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getCoursesInCartResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.GetUserByUsernameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.insertUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.UserCoursesData.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.UserData.datasource">
@@ -246,21 +282,6 @@
     <WCFMetadataStorage Include="Connected Services\userServicesReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\userServicesReference\usersServices.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\userServicesReference\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\userServicesReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\userServicesReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Connected Services\adminServicesReference\adminServices.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +292,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\adminServicesReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\userServicesReference\usersServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\userServicesReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\userServicesReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\userServicesReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

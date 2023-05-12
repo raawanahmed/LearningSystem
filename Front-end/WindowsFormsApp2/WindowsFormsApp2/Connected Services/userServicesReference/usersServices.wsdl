@@ -36,6 +36,157 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getAllCourses">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllCoursesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllCoursesResult" type="tns:ArrayOfCourseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCourseData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CourseData" nillable="true" type="tns:CourseData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CourseData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoursePrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseInstructor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseGenre" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedAt" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAllCoursesForUser">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllCoursesForUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllCoursesForUserResult" type="tns:ArrayOfCourseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCourseDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="courseId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCourseDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCourseDetailsResult" type="tns:ArrayOfUserCoursesData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserCoursesData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserCoursesData" nillable="true" type="tns:UserCoursesData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserCoursesData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CourseId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseRatingScore" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseComments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CourseStatus" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getEnrolledCoursesForUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEnrolledCoursesForUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEnrolledCoursesForUserResult" type="tns:ArrayOfCourseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCoursesInCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCoursesInCartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCoursesInCartResult" type="tns:ArrayOfCourseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enrollUserToCourse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="courseId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="courseStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="enrollUserToCourseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="addRatingScoreToCourse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="courseRatingScore" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="courseId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addRatingScoreToCourseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="addCommentToCourse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="courseComments" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="courseId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addCommentToCourseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="addCourseToCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="courseId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addCourseToCartResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="removeCourseFromCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="courseId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="removeCourseFromCartResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="insertUserSoapIn">
@@ -50,6 +201,66 @@
   <wsdl:message name="GetUserByUsernameSoapOut">
     <wsdl:part name="parameters" element="tns:GetUserByUsernameResponse" />
   </wsdl:message>
+  <wsdl:message name="getAllCoursesSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllCourses" />
+  </wsdl:message>
+  <wsdl:message name="getAllCoursesSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllCoursesForUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllCoursesForUser" />
+  </wsdl:message>
+  <wsdl:message name="getAllCoursesForUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllCoursesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCourseDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCourseDetails" />
+  </wsdl:message>
+  <wsdl:message name="getCourseDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCourseDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEnrolledCoursesForUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getEnrolledCoursesForUser" />
+  </wsdl:message>
+  <wsdl:message name="getEnrolledCoursesForUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getEnrolledCoursesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCoursesInCartSoapIn">
+    <wsdl:part name="parameters" element="tns:getCoursesInCart" />
+  </wsdl:message>
+  <wsdl:message name="getCoursesInCartSoapOut">
+    <wsdl:part name="parameters" element="tns:getCoursesInCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="enrollUserToCourseSoapIn">
+    <wsdl:part name="parameters" element="tns:enrollUserToCourse" />
+  </wsdl:message>
+  <wsdl:message name="enrollUserToCourseSoapOut">
+    <wsdl:part name="parameters" element="tns:enrollUserToCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="addRatingScoreToCourseSoapIn">
+    <wsdl:part name="parameters" element="tns:addRatingScoreToCourse" />
+  </wsdl:message>
+  <wsdl:message name="addRatingScoreToCourseSoapOut">
+    <wsdl:part name="parameters" element="tns:addRatingScoreToCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="addCommentToCourseSoapIn">
+    <wsdl:part name="parameters" element="tns:addCommentToCourse" />
+  </wsdl:message>
+  <wsdl:message name="addCommentToCourseSoapOut">
+    <wsdl:part name="parameters" element="tns:addCommentToCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="addCourseToCartSoapIn">
+    <wsdl:part name="parameters" element="tns:addCourseToCart" />
+  </wsdl:message>
+  <wsdl:message name="addCourseToCartSoapOut">
+    <wsdl:part name="parameters" element="tns:addCourseToCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="removeCourseFromCartSoapIn">
+    <wsdl:part name="parameters" element="tns:removeCourseFromCart" />
+  </wsdl:message>
+  <wsdl:message name="removeCourseFromCartSoapOut">
+    <wsdl:part name="parameters" element="tns:removeCourseFromCartResponse" />
+  </wsdl:message>
   <wsdl:portType name="usersServicesSoap">
     <wsdl:operation name="insertUser">
       <wsdl:input message="tns:insertUserSoapIn" />
@@ -58,6 +269,46 @@
     <wsdl:operation name="GetUserByUsername">
       <wsdl:input message="tns:GetUserByUsernameSoapIn" />
       <wsdl:output message="tns:GetUserByUsernameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCourses">
+      <wsdl:input message="tns:getAllCoursesSoapIn" />
+      <wsdl:output message="tns:getAllCoursesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesForUser">
+      <wsdl:input message="tns:getAllCoursesForUserSoapIn" />
+      <wsdl:output message="tns:getAllCoursesForUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCourseDetails">
+      <wsdl:input message="tns:getCourseDetailsSoapIn" />
+      <wsdl:output message="tns:getCourseDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEnrolledCoursesForUser">
+      <wsdl:input message="tns:getEnrolledCoursesForUserSoapIn" />
+      <wsdl:output message="tns:getEnrolledCoursesForUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCoursesInCart">
+      <wsdl:input message="tns:getCoursesInCartSoapIn" />
+      <wsdl:output message="tns:getCoursesInCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="enrollUserToCourse">
+      <wsdl:input message="tns:enrollUserToCourseSoapIn" />
+      <wsdl:output message="tns:enrollUserToCourseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addRatingScoreToCourse">
+      <wsdl:input message="tns:addRatingScoreToCourseSoapIn" />
+      <wsdl:output message="tns:addRatingScoreToCourseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addCommentToCourse">
+      <wsdl:input message="tns:addCommentToCourseSoapIn" />
+      <wsdl:output message="tns:addCommentToCourseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addCourseToCart">
+      <wsdl:input message="tns:addCourseToCartSoapIn" />
+      <wsdl:output message="tns:addCourseToCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="removeCourseFromCart">
+      <wsdl:input message="tns:removeCourseFromCartSoapIn" />
+      <wsdl:output message="tns:removeCourseFromCartSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="usersServicesSoap" type="tns:usersServicesSoap">
@@ -80,6 +331,96 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="getAllCourses">
+      <soap:operation soapAction="http://tempuri.org/getAllCourses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesForUser">
+      <soap:operation soapAction="http://tempuri.org/getAllCoursesForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourseDetails">
+      <soap:operation soapAction="http://tempuri.org/getCourseDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEnrolledCoursesForUser">
+      <soap:operation soapAction="http://tempuri.org/getEnrolledCoursesForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoursesInCart">
+      <soap:operation soapAction="http://tempuri.org/getCoursesInCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enrollUserToCourse">
+      <soap:operation soapAction="http://tempuri.org/enrollUserToCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addRatingScoreToCourse">
+      <soap:operation soapAction="http://tempuri.org/addRatingScoreToCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCommentToCourse">
+      <soap:operation soapAction="http://tempuri.org/addCommentToCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCourseToCart">
+      <soap:operation soapAction="http://tempuri.org/addCourseToCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCourseFromCart">
+      <soap:operation soapAction="http://tempuri.org/removeCourseFromCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="usersServicesSoap12" type="tns:usersServicesSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -94,6 +435,96 @@
     </wsdl:operation>
     <wsdl:operation name="GetUserByUsername">
       <soap12:operation soapAction="http://tempuri.org/GetUserByUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCourses">
+      <soap12:operation soapAction="http://tempuri.org/getAllCourses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesForUser">
+      <soap12:operation soapAction="http://tempuri.org/getAllCoursesForUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourseDetails">
+      <soap12:operation soapAction="http://tempuri.org/getCourseDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEnrolledCoursesForUser">
+      <soap12:operation soapAction="http://tempuri.org/getEnrolledCoursesForUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCoursesInCart">
+      <soap12:operation soapAction="http://tempuri.org/getCoursesInCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enrollUserToCourse">
+      <soap12:operation soapAction="http://tempuri.org/enrollUserToCourse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addRatingScoreToCourse">
+      <soap12:operation soapAction="http://tempuri.org/addRatingScoreToCourse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCommentToCourse">
+      <soap12:operation soapAction="http://tempuri.org/addCommentToCourse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCourseToCart">
+      <soap12:operation soapAction="http://tempuri.org/addCourseToCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCourseFromCart">
+      <soap12:operation soapAction="http://tempuri.org/removeCourseFromCart" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

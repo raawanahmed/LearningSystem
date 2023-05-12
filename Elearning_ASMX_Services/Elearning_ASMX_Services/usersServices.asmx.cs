@@ -1,4 +1,5 @@
 ﻿using Elearning_ASMX_Services.DataModels;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Web.Services;
 
@@ -60,6 +61,277 @@ namespace Elearning_ASMX_Services
                 }
             }
             return null;
+        }
+
+        [WebMethod]
+        public CourseData[] getAllCourses()
+        {
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "SELECT * FROM CoursesTable";
+            List<CourseData> courses = new List<CourseData>();
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    CourseData course = new CourseData();
+                    course.Id = reader.GetInt32(0);
+                    course.CourseName = reader.GetString(1);
+                    course.CourseDescription = reader.GetString(2);
+                    course.CoursePrice = reader.GetInt32(3);
+                    course.CourseInstructor = reader.GetString(4);
+                    course.CourseGenre = reader.GetString(5);
+                    course.CreatedAt = reader.GetDateTime(6);
+                    courses.Add(course);
+                }
+            }
+            return courses.ToArray();
+        }
+
+        [WebMethod]
+        public CourseData[] getAllCoursesForUser()
+        {
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "SELECT * FROM CoursesTable";
+            List<CourseData> courses = new List<CourseData>();
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    CourseData course = new CourseData();
+                    course.Id = reader.GetInt32(0);
+                    course.CourseName = reader.GetString(1);
+                    course.CourseDescription = reader.GetString(2);
+                    course.CoursePrice = reader.GetInt32(3);
+                    course.CourseInstructor = reader.GetString(4);
+                    course.CourseGenre = reader.GetString(5);
+                    course.CreatedAt = reader.GetDateTime(6);
+                    courses.Add(course);
+                }
+            }
+            return courses.ToArray();
+        }
+
+        [WebMethod]
+        public UserCoursesData[] getCourseDetails(int courseId)
+        {
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "SELECT * FROM UserCoursesTable WHERE courseId = @courseId";
+            List<UserCoursesData> courseDetailsOfAllUsers = new List<UserCoursesData>();
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@courseId", courseId); // add parameter to command
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    UserCoursesData courseDetails = new UserCoursesData();
+                    courseDetails.CourseId = reader.GetInt32(1);
+                    courseDetails.UserId = reader.GetInt32(2);
+
+                    if (!reader.IsDBNull(3)) // check if CourseRatingScore is not null
+                    {
+                        courseDetails.CourseRatingScore = reader.GetString(3);
+                    }
+
+                    if (!reader.IsDBNull(4)) // check if CourseComments is not null
+                    {
+                        courseDetails.CourseComments = reader.GetString(4);
+                    }
+
+                    if (!reader.IsDBNull(5)) // check if CourseStatus is not null
+                    {
+                        courseDetails.CourseStatus = reader.GetString(5);
+                    }
+
+                    courseDetailsOfAllUsers.Add(courseDetails);
+                }
+            }
+            return courseDetailsOfAllUsers.ToArray();
+        }
+
+        public int[] getAllCoursesIDsForUser(int userId)
+        {
+            // helper function
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "SELECT * FROM UserCoursesTable WHERE userId = @userId AND courseStatus = 'enrolled'";
+            List<int> coursesIDs = new List<int>();
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    coursesIDs.Add(reader.GetInt32(1));
+                }
+            }
+            return coursesIDs.ToArray();
+        }
+
+        [WebMethod]
+        public CourseData[] getEnrolledCoursesForUser(int userId)
+        {
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            int[] courseIds = getAllCoursesIDsForUser(userId);
+            string query = "SELECT * FROM CoursesTable WHERE Id IN (" + string.Join(",", courseIds) + ")";
+            List<CourseData> courses = new List<CourseData>();
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    CourseData course = new CourseData();
+                    course.Id = reader.GetInt32(0);
+                    course.CourseName = reader.GetString(1);
+                    course.CourseDescription = reader.GetString(2);
+                    course.CoursePrice = reader.GetInt32(3);
+                    course.CourseInstructor = reader.GetString(4);
+                    course.CourseGenre = reader.GetString(5);
+                    course.CreatedAt = reader.GetDateTime(6);
+                    courses.Add(course);
+                }
+            }
+            return courses.ToArray();
+        }
+        public int[] getAllCoursesInCartForUser(int userId)
+        {
+            // helper function
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "SELECT * FROM UserCoursesTable WHERE userId = @userId  AND courseStatus = 'in cart'";
+            List<int> coursesIDs = new List<int>();
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    coursesIDs.Add(reader.GetInt32(1));
+                }
+            }
+            return coursesIDs.ToArray();
+        }
+
+        [WebMethod]
+        public CourseData[] getCoursesInCart(int userId)
+        {
+            // get courses with status inCart 
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            int[] courseIds = getAllCoursesInCartForUser(userId);
+            string query = "SELECT * FROM CoursesTable WHERE Id IN (" + string.Join(",", courseIds) + ")";
+            List<CourseData> courses = new List<CourseData>();
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    CourseData course = new CourseData();
+                    course.Id = reader.GetInt32(0);
+                    course.CourseName = reader.GetString(1);
+                    course.CourseDescription = reader.GetString(2);
+                    course.CoursePrice = reader.GetInt32(3);
+                    course.CourseInstructor = reader.GetString(4);
+                    course.CourseGenre = reader.GetString(5);
+                    course.CreatedAt = reader.GetDateTime(6);
+                    courses.Add(course);
+                }
+            }
+            return courses.ToArray();
+        }
+
+        [WebMethod]
+        public void enrollUserToCourse(int userId, int courseId, string courseStatus)
+        {
+            // add user with courseId when pay and status will be enrolled
+            SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True");
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("insert into UserCoursesTable (courseId, userId, courseStatus) values (@courseId, @userId, @courseStatus)", conn);
+            SqlParameter p1 = new SqlParameter("@courseId", courseId);
+            SqlParameter p2 = new SqlParameter("@userId", userId);
+            SqlParameter p3 = new SqlParameter("@courseStatus", courseStatus);
+            cmd.Parameters.Add(p1);
+            cmd.Parameters.Add(p2);
+            cmd.Parameters.Add(p3);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
+
+        [WebMethod]
+        public void addRatingScoreToCourse(float courseRatingScore, int userId, int courseId)
+        {
+            // edit in rating score in row of userId
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "UPDATE UserCoursesTable SET courseRatingScore = @courseRatingScore WHERE userId = @userId AND courseId = @courseId";
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userId", userId);
+                command.Parameters.AddWithValue("@courseId", courseId);
+                command.Parameters.AddWithValue("@courseRatingScore", courseRatingScore);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+        [WebMethod]
+        public void addCommentToCourse(string courseComments, int userId, int courseId)
+        {
+            // edit in comment score in row of userId
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "UPDATE UserCoursesTable SET courseComments = @courseComments WHERE userId = @userId AND courseId = @courseId";
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userId", userId);
+                command.Parameters.AddWithValue("@courseId", courseId);
+                command.Parameters.AddWithValue("@courseComments", courseComments);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+        [WebMethod]
+        public void addCourseToCart(int userId, int courseId)
+        {
+            // edit in course status to incart
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "UPDATE UserCoursesTable SET courseStatus = 'in cart' WHERE userId = @userId AND courseId = @courseId";
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userId", userId);
+                command.Parameters.AddWithValue("@courseId", courseId);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+        [WebMethod]
+        public void removeCourseFromCart(int userId, int courseId)
+        {
+            // edit in course status to available
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = "UPDATE UserCoursesTable SET courseStatus = 'available' WHERE userId = @userId AND courseId = @courseId";
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userId", userId);
+                command.Parameters.AddWithValue("@courseId", courseId);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
         }
     }
 }

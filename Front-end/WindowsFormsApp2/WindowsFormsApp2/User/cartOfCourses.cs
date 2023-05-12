@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2.User
 {
-    public partial class cartOfCourses : Form
+    public partial class CartOfCourses : Form
     {
-        public cartOfCourses()
+        public CartOfCourses()
         {
             InitializeComponent();
         }

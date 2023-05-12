@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Windows.Forms;
+using WindowsFormsApp2.User;
 using WindowsFormsApp2.userServicesReference;
 
 namespace WindowsFormsApp2
@@ -43,8 +44,8 @@ namespace WindowsFormsApp2
                 else
                 {
                     Islogin = true;
-                    Home home = new Home(Islogin);
-                    home.Show();
+                    UserHomePage userHomePage = new UserHomePage();
+                    userHomePage.Show();
                     this.Hide();
 
                 }
