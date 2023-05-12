@@ -11,7 +11,6 @@ namespace WindowsFormsApp2.Admin
         {
             InitializeComponent();
         }
-
         private void onViewCoursesFormLoad(object sender, EventArgs e)
         {
             adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
@@ -20,7 +19,6 @@ namespace WindowsFormsApp2.Admin
         }
         public void GridViewData(CourseData[] courses)
         {
-
             allCoursesGridView.DataSource = courses;
 
             DataGridViewButtonColumn editCourseBtn = new DataGridViewButtonColumn();
@@ -30,16 +28,13 @@ namespace WindowsFormsApp2.Admin
             editCourseBtn.UseColumnTextForButtonValue = true;
             allCoursesGridView.Columns.Add(editCourseBtn);
 
-
             DataGridViewButtonColumn deleteCourseBtn = new DataGridViewButtonColumn();
             deleteCourseBtn.HeaderText = "Delete Course";
             deleteCourseBtn.Name = "Delete Course";
             deleteCourseBtn.Text = "Delete Course";
             deleteCourseBtn.UseColumnTextForButtonValue = true;
             allCoursesGridView.Columns.Add(deleteCourseBtn);
-
         }
-
         private void onHomePageBtn(object sender, EventArgs e)
         {
             AdminHomePage admin = new AdminHomePage();

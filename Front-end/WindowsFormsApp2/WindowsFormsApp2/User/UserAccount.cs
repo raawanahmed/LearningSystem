@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using WindowsFormsApp2.Helpers;
 using WindowsFormsApp2.User;
 using WindowsFormsApp2.userServicesReference;
 
@@ -8,6 +9,7 @@ namespace WindowsFormsApp2
     public partial class UserAccount : Form
     {
         private int userId;
+        HelperFunctionsForUser helperFunctions = new HelperFunctionsForUser();
         public UserAccount()
         {
             InitializeComponent();
@@ -43,6 +45,14 @@ namespace WindowsFormsApp2
             emailTextBox.Text = userData.Email;
             passwordTeaxtBox.Text = userData.Password;
         }
+        private bool isValid(string firstName, string lastName, string userName, string email, string password)
+        {
+
+            bool checkNames = helperFunctions.isValidNames(firstName, lastName, userName);
+            bool validPass = helperFunctions.isValidPassword(password);
+            bool validEmail = helperFunctions.isValidEmail(email);
+            return checkNames && validEmail && validPass;
+        }
 
         private void onEditBtn(object sender, EventArgs e)
         {
@@ -54,8 +64,11 @@ namespace WindowsFormsApp2
             userData.UserName = userNameTextBox.Text;
             userData.Email = emailTextBox.Text;
             userData.Password = passwordTeaxtBox.Text;
-            usersServices.updateUserData(this.userId, userData);
-            MessageBox.Show("User Edited successfully!");
+            if (isValid(userData.FirstName, userData.LastName, userData.UserName, userData.Email, userData.Password))
+            {
+                usersServices.updateUserData(this.userId, userData);
+                MessageBox.Show("User Edited successfully!");
+            }
         }
     }
 }

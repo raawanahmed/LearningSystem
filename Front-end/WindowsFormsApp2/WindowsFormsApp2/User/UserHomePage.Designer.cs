@@ -34,7 +34,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SignUp = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button4
@@ -132,13 +131,6 @@
             this.SignUp.UseVisualStyleBackColor = false;
             this.SignUp.Click += new System.EventHandler(this.onViewMyCartBtn);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(360, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 34;
-            // 
             // UserHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -146,7 +138,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -155,7 +146,6 @@
             this.Name = "UserHomePage";
             this.Text = "UserHomePage";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -166,6 +156,5 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button SignUp;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

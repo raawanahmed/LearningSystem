@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 using WindowsFormsApp2.adminServicesReference;
+using WindowsFormsApp2.Helpers;
 
 namespace WindowsFormsApp2
 {
     public partial class EditCourse : Form
     {
         CourseData courseToBeEdited;
+        HelperFunctionsForAdmin helperFunctionsForAdmin = new HelperFunctionsForAdmin();
         public EditCourse()
         {
             InitializeComponent();
@@ -22,36 +24,6 @@ namespace WindowsFormsApp2
             admin.Show();
             this.Hide();
         }
-        private bool validateCourseData(CourseData course)
-        {
-            bool tmam = true;
-            if (course == null)
-            {
-                MessageBox.Show("Please fill all the fields.");
-                tmam = false;
-            }
-            else if (course.CourseName.Length == 0)
-            {
-                MessageBox.Show("Please enter the course name.");
-                tmam = false;
-            }
-            else if (course.CourseDescription.Length == 0)
-            {
-                MessageBox.Show("Please enter the course description.");
-                tmam = false;
-            }
-            else if (course.CoursePrice == 0)
-            {
-                MessageBox.Show("Please enter the course price.");
-                tmam = false;
-            }
-            else if (course.CourseGenre.Length == 0)
-            {
-                MessageBox.Show("Please enter the course genre.");
-                tmam = false;
-            }
-            return tmam ? true : false;
-        }
         private void onEditCourseBtn(object sender, EventArgs e)
         {
             adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
@@ -62,7 +34,7 @@ namespace WindowsFormsApp2
             courseData.CourseInstructor = courseInstructorNameTextBox.Text;
             courseData.CourseGenre = courseGenreTextBox.Text;
             courseData.CreatedAt = DateTime.Now;
-            if (validateCourseData(courseData))
+            if (helperFunctionsForAdmin.validateCourseData(courseData))
             {
                 adminServices.editCourse(this.courseToBeEdited.Id, courseData);
                 MessageBox.Show("Course Edit successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -18,7 +18,6 @@ namespace WindowsFormsApp2
         public bool IsAdmin = false;
         private void onLoginBtn(object sender, EventArgs e)
         {
-
             string username = userNameTextBox.Text;
             string password = passwordTextBox.Text;
             if (username == "admin" && password == "Admin123")
@@ -31,7 +30,6 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Please enter a username and password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
             // Authenticate user
             if (AuthenticateUser(username, password))
             {
@@ -39,8 +37,8 @@ namespace WindowsFormsApp2
                 if (IsAdmin)
                 {
                     Islogin = true;
-                    AdminHomePage f2 = new AdminHomePage();
-                    f2.Show();
+                    AdminHomePage adminHomePage = new AdminHomePage();
+                    adminHomePage.Show();
                     this.Hide();
                 }
                 else
@@ -49,7 +47,6 @@ namespace WindowsFormsApp2
                     UserHomePage userHomePage = new UserHomePage(user.Id);
                     userHomePage.Show();
                     this.Hide();
-
                 }
             }
             else
@@ -66,15 +63,18 @@ namespace WindowsFormsApp2
             {
                 return false;
             }
-            // Verify password
             if (password == user.Password)
             {
                 return true;
             }
-            // User is authenticated
             return false;
         }
-
+        private void onSignupBtn(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Hide();
+        }
         public static bool VerifyPassword(string password, string hash)
         {
             byte[] hashBytes = Convert.FromBase64String(hash);
@@ -96,12 +96,6 @@ namespace WindowsFormsApp2
                 }
             }
             return true;
-        }
-        private void onSignupBtn(object sender, EventArgs e)
-        {
-            Register register = new Register();
-            register.Show();
-            this.Hide();
         }
     }
 }

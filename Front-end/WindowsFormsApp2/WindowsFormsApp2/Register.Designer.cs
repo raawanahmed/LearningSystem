@@ -65,53 +65,65 @@
             this.emailTextBox.Size = new System.Drawing.Size(226, 22);
             this.emailTextBox.TabIndex = 3;
             // 
-            // passwordTeaxtBox
+            // passwordTextBox
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(394, 337);
-            this.passwordTextBox.Name = "passwordTeaxtBox";
+            this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(226, 22);
             this.passwordTextBox.TabIndex = 5;
             // 
-            // comfirmPasswordTextBox
+            // confirmPasswordTextBox
             // 
             this.confirmPasswordTextBox.Location = new System.Drawing.Point(394, 408);
-            this.confirmPasswordTextBox.Name = "comfirmPasswordTextBox";
+            this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(226, 22);
             this.confirmPasswordTextBox.TabIndex = 7;
             // 
             // emailAlertLabel
             // 
             this.emailAlertLabel.AutoSize = true;
+            this.emailAlertLabel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.emailAlertLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailAlertLabel.ForeColor = System.Drawing.Color.Red;
             this.emailAlertLabel.Location = new System.Drawing.Point(395, 302);
             this.emailAlertLabel.Name = "emailAlertLabel";
-            this.emailAlertLabel.Size = new System.Drawing.Size(10, 16);
+            this.emailAlertLabel.Size = new System.Drawing.Size(13, 20);
             this.emailAlertLabel.TabIndex = 11;
             this.emailAlertLabel.Text = " ";
             // 
             // confirmPasswordAlertLabel
             // 
             this.confirmPasswordAlertLabel.AutoSize = true;
+            this.confirmPasswordAlertLabel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.confirmPasswordAlertLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmPasswordAlertLabel.ForeColor = System.Drawing.Color.Red;
             this.confirmPasswordAlertLabel.Location = new System.Drawing.Point(395, 434);
             this.confirmPasswordAlertLabel.Name = "confirmPasswordAlertLabel";
-            this.confirmPasswordAlertLabel.Size = new System.Drawing.Size(10, 16);
+            this.confirmPasswordAlertLabel.Size = new System.Drawing.Size(13, 20);
             this.confirmPasswordAlertLabel.TabIndex = 12;
             this.confirmPasswordAlertLabel.Text = " ";
             // 
             // allFieldsAlertLabel
             // 
             this.allFieldsAlertLabel.AutoSize = true;
+            this.allFieldsAlertLabel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.allFieldsAlertLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.allFieldsAlertLabel.ForeColor = System.Drawing.Color.Red;
             this.allFieldsAlertLabel.Location = new System.Drawing.Point(395, 480);
             this.allFieldsAlertLabel.Name = "allFieldsAlertLabel";
-            this.allFieldsAlertLabel.Size = new System.Drawing.Size(10, 16);
+            this.allFieldsAlertLabel.Size = new System.Drawing.Size(13, 20);
             this.allFieldsAlertLabel.TabIndex = 13;
             this.allFieldsAlertLabel.Text = " ";
             // 
             // passwordAlertLabel
             // 
             this.passwordAlertLabel.AutoSize = true;
+            this.passwordAlertLabel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.passwordAlertLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordAlertLabel.ForeColor = System.Drawing.Color.Red;
             this.passwordAlertLabel.Location = new System.Drawing.Point(395, 363);
             this.passwordAlertLabel.Name = "passwordAlertLabel";
-            this.passwordAlertLabel.Size = new System.Drawing.Size(10, 16);
+            this.passwordAlertLabel.Size = new System.Drawing.Size(13, 20);
             this.passwordAlertLabel.TabIndex = 14;
             this.passwordAlertLabel.Text = " ";
             // 

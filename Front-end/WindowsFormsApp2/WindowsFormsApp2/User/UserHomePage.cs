@@ -14,7 +14,6 @@ namespace WindowsFormsApp2.User
         {
             InitializeComponent();
             this.UserId = userId;
-            textBox1.Text = this.UserId.ToString();
         }
         private void onLogoutBtn(object sender, EventArgs e)
         {
