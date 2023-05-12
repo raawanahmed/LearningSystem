@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllCourses));
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.allCoursesGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.SignUp = new System.Windows.Forms.Button();
+            this.viewCart = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // searchTextBox
             // 
             this.searchTextBox.Location = new System.Drawing.Point(335, 101);
-            this.searchTextBox.Name = "textBox1";
+            this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(252, 22);
             this.searchTextBox.TabIndex = 3;
             this.searchTextBox.TextChanged += new System.EventHandler(this.onSearchTextChange);
             // 
-            // dataGridView1
+            // allCoursesGridView
             // 
             this.allCoursesGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.allCoursesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.allCoursesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.allCoursesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.allCoursesGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.allCoursesGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.allCoursesGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.allCoursesGridView.Location = new System.Drawing.Point(12, 151);
-            this.allCoursesGridView.Name = "dataGridView1";
+            this.allCoursesGridView.Name = "allCoursesGridView";
             this.allCoursesGridView.RowHeadersWidth = 51;
             this.allCoursesGridView.RowTemplate.Height = 24;
             this.allCoursesGridView.Size = new System.Drawing.Size(809, 316);
@@ -110,23 +110,24 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.onLogoutBtn);
             // 
-            // SignUp
+            // viewCart
             // 
-            this.SignUp.BackColor = System.Drawing.Color.Transparent;
-            this.SignUp.FlatAppearance.BorderSize = 0;
-            this.SignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SignUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignUp.ForeColor = System.Drawing.Color.White;
-            this.SignUp.Image = ((System.Drawing.Image)(resources.GetObject("SignUp.Image")));
-            this.SignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SignUp.Location = new System.Drawing.Point(699, 82);
-            this.SignUp.Margin = new System.Windows.Forms.Padding(4);
-            this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(120, 62);
-            this.SignUp.TabIndex = 23;
-            this.SignUp.Text = "Cart";
-            this.SignUp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SignUp.UseVisualStyleBackColor = false;
+            this.viewCart.BackColor = System.Drawing.Color.Transparent;
+            this.viewCart.FlatAppearance.BorderSize = 0;
+            this.viewCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewCart.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewCart.ForeColor = System.Drawing.Color.White;
+            this.viewCart.Image = ((System.Drawing.Image)(resources.GetObject("viewCart.Image")));
+            this.viewCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.viewCart.Location = new System.Drawing.Point(650, 82);
+            this.viewCart.Margin = new System.Windows.Forms.Padding(4);
+            this.viewCart.Name = "viewCart";
+            this.viewCart.Size = new System.Drawing.Size(169, 62);
+            this.viewCart.TabIndex = 23;
+            this.viewCart.Text = "View Cart";
+            this.viewCart.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.viewCart.UseVisualStyleBackColor = false;
+            this.viewCart.Click += new System.EventHandler(this.onViewCartBtn);
             // 
             // button1
             // 
@@ -145,8 +146,9 @@
             this.button1.Text = "Back";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.onBackBtn);
             // 
-            // Home
+            // ViewAllCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,11 +157,11 @@
             this.ClientSize = new System.Drawing.Size(832, 485);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.SignUp);
+            this.Controls.Add(this.viewCart);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.allCoursesGridView);
             this.Controls.Add(this.searchTextBox);
-            this.Name = "Home";
+            this.Name = "ViewAllCourses";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.onViewAllCoursesFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).EndInit();
@@ -173,7 +175,7 @@
         private System.Windows.Forms.DataGridView allCoursesGridView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button SignUp;
+        private System.Windows.Forms.Button viewCart;
         private System.Windows.Forms.Button button1;
     }
 }

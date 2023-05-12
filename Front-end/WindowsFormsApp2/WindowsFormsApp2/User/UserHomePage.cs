@@ -5,29 +5,33 @@ namespace WindowsFormsApp2.User
 {
     public partial class UserHomePage : Form
     {
+        public int UserId { get; set; }
         public UserHomePage()
         {
             InitializeComponent();
         }
-
+        public UserHomePage(int userId)
+        {
+            InitializeComponent();
+            this.UserId = userId;
+        }
         private void onLogoutBtn(object sender, EventArgs e)
         {
-            Login_page login_Page = new Login_page();
+            LoginPage login_Page = new LoginPage();
             login_Page.Show();
             this.Hide();
         }
 
         private void onViewMyCoursesBtn(object sender, EventArgs e)
         {
-            UserCourses userCourses = new UserCourses();
+            UserCourses userCourses = new UserCourses(this.UserId);
             userCourses.Show();
             this.Hide();
-
         }
 
         private void onViewAllCoursesBtn(object sender, EventArgs e)
         {
-            ViewAllCourses viewAllCourses = new ViewAllCourses();
+            ViewAllCourses viewAllCourses = new ViewAllCourses(this.UserId);
             viewAllCourses.Show();
             this.Hide();
         }
@@ -41,7 +45,7 @@ namespace WindowsFormsApp2.User
 
         private void onViewMyAccountBtn(object sender, EventArgs e)
         {
-            UserAccount myaccount = new UserAccount();
+            UserAccount myaccount = new UserAccount(this.UserId);
             myaccount.Show();
             this.Hide();
         }

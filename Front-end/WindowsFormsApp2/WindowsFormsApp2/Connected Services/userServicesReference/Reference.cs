@@ -408,6 +408,20 @@ namespace WindowsFormsApp2.userServicesReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/insertUser", ReplyAction="*")]
         System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.insertUserResponse> insertUserAsync(WindowsFormsApp2.userServicesReference.insertUserRequest request);
         
+        // CODEGEN: Generating message contract since element name user from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/updateUserData", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.updateUserDataResponse updateUserData(WindowsFormsApp2.userServicesReference.updateUserDataRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/updateUserData", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.updateUserDataResponse> updateUserDataAsync(WindowsFormsApp2.userServicesReference.updateUserDataRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetUserByIdResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserById", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.GetUserByIdResponse GetUserById(WindowsFormsApp2.userServicesReference.GetUserByIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserById", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.GetUserByIdResponse> GetUserByIdAsync(WindowsFormsApp2.userServicesReference.GetUserByIdRequest request);
+        
         // CODEGEN: Generating message contract since element name username from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserByUsername", ReplyAction="*")]
         WindowsFormsApp2.userServicesReference.GetUserByUsernameResponse GetUserByUsername(WindowsFormsApp2.userServicesReference.GetUserByUsernameRequest request);
@@ -541,6 +555,139 @@ namespace WindowsFormsApp2.userServicesReference {
     public partial class insertUserResponseBody {
         
         public insertUserResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class updateUserDataRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="updateUserData", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.updateUserDataRequestBody Body;
+        
+        public updateUserDataRequest() {
+        }
+        
+        public updateUserDataRequest(WindowsFormsApp2.userServicesReference.updateUserDataRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class updateUserDataRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int userId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public WindowsFormsApp2.userServicesReference.UserData user;
+        
+        public updateUserDataRequestBody() {
+        }
+        
+        public updateUserDataRequestBody(int userId, WindowsFormsApp2.userServicesReference.UserData user) {
+            this.userId = userId;
+            this.user = user;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class updateUserDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="updateUserDataResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.updateUserDataResponseBody Body;
+        
+        public updateUserDataResponse() {
+        }
+        
+        public updateUserDataResponse(WindowsFormsApp2.userServicesReference.updateUserDataResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class updateUserDataResponseBody {
+        
+        public updateUserDataResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetUserByIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUserById", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.GetUserByIdRequestBody Body;
+        
+        public GetUserByIdRequest() {
+        }
+        
+        public GetUserByIdRequest(WindowsFormsApp2.userServicesReference.GetUserByIdRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetUserByIdRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int userId;
+        
+        public GetUserByIdRequestBody() {
+        }
+        
+        public GetUserByIdRequestBody(int userId) {
+            this.userId = userId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetUserByIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUserByIdResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.GetUserByIdResponseBody Body;
+        
+        public GetUserByIdResponse() {
+        }
+        
+        public GetUserByIdResponse(WindowsFormsApp2.userServicesReference.GetUserByIdResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetUserByIdResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WindowsFormsApp2.userServicesReference.UserData GetUserByIdResult;
+        
+        public GetUserByIdResponseBody() {
+        }
+        
+        public GetUserByIdResponseBody(WindowsFormsApp2.userServicesReference.UserData GetUserByIdResult) {
+            this.GetUserByIdResult = GetUserByIdResult;
         }
     }
     
@@ -1125,6 +1272,57 @@ namespace WindowsFormsApp2.userServicesReference {
             inValue.Body = new WindowsFormsApp2.userServicesReference.insertUserRequestBody();
             inValue.Body.user = user;
             return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).insertUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.updateUserDataResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.updateUserData(WindowsFormsApp2.userServicesReference.updateUserDataRequest request) {
+            return base.Channel.updateUserData(request);
+        }
+        
+        public void updateUserData(int userId, WindowsFormsApp2.userServicesReference.UserData user) {
+            WindowsFormsApp2.userServicesReference.updateUserDataRequest inValue = new WindowsFormsApp2.userServicesReference.updateUserDataRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.updateUserDataRequestBody();
+            inValue.Body.userId = userId;
+            inValue.Body.user = user;
+            WindowsFormsApp2.userServicesReference.updateUserDataResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).updateUserData(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.updateUserDataResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.updateUserDataAsync(WindowsFormsApp2.userServicesReference.updateUserDataRequest request) {
+            return base.Channel.updateUserDataAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.updateUserDataResponse> updateUserDataAsync(int userId, WindowsFormsApp2.userServicesReference.UserData user) {
+            WindowsFormsApp2.userServicesReference.updateUserDataRequest inValue = new WindowsFormsApp2.userServicesReference.updateUserDataRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.updateUserDataRequestBody();
+            inValue.Body.userId = userId;
+            inValue.Body.user = user;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).updateUserDataAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.GetUserByIdResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.GetUserById(WindowsFormsApp2.userServicesReference.GetUserByIdRequest request) {
+            return base.Channel.GetUserById(request);
+        }
+        
+        public WindowsFormsApp2.userServicesReference.UserData GetUserById(int userId) {
+            WindowsFormsApp2.userServicesReference.GetUserByIdRequest inValue = new WindowsFormsApp2.userServicesReference.GetUserByIdRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.GetUserByIdRequestBody();
+            inValue.Body.userId = userId;
+            WindowsFormsApp2.userServicesReference.GetUserByIdResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).GetUserById(inValue);
+            return retVal.Body.GetUserByIdResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.GetUserByIdResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.GetUserByIdAsync(WindowsFormsApp2.userServicesReference.GetUserByIdRequest request) {
+            return base.Channel.GetUserByIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.GetUserByIdResponse> GetUserByIdAsync(int userId) {
+            WindowsFormsApp2.userServicesReference.GetUserByIdRequest inValue = new WindowsFormsApp2.userServicesReference.GetUserByIdRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.GetUserByIdRequestBody();
+            inValue.Body.userId = userId;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).GetUserByIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

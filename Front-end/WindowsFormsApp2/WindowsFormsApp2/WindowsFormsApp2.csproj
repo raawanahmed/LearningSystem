@@ -107,11 +107,11 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login_page.cs">
+    <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login_page.Designer.cs">
-      <DependentUpon>Login_page.cs</DependentUpon>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\Admin.cs">
       <SubType>Form</SubType>
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="User\ViewAllCourses.resx">
       <DependentUpon>ViewAllCourses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login_page.resx">
-      <DependentUpon>Login_page.cs</DependentUpon>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
@@ -249,10 +249,16 @@
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.GetUserByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.GetUserByUsernameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.insertUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.updateUserDataResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.UserCoursesData.datasource">

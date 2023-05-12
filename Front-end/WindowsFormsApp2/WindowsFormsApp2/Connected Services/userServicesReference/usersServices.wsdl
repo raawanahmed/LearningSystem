@@ -22,6 +22,31 @@
       <s:element name="insertUserResponse">
         <s:complexType />
       </s:element>
+      <s:element name="updateUserData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:UserData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateUserDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByIdResult" type="tns:UserData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="GetUserByUsername">
         <s:complexType>
           <s:sequence>
@@ -195,6 +220,18 @@
   <wsdl:message name="insertUserSoapOut">
     <wsdl:part name="parameters" element="tns:insertUserResponse" />
   </wsdl:message>
+  <wsdl:message name="updateUserDataSoapIn">
+    <wsdl:part name="parameters" element="tns:updateUserData" />
+  </wsdl:message>
+  <wsdl:message name="updateUserDataSoapOut">
+    <wsdl:part name="parameters" element="tns:updateUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
   <wsdl:message name="GetUserByUsernameSoapIn">
     <wsdl:part name="parameters" element="tns:GetUserByUsername" />
   </wsdl:message>
@@ -266,6 +303,14 @@
       <wsdl:input message="tns:insertUserSoapIn" />
       <wsdl:output message="tns:insertUserSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="updateUserData">
+      <wsdl:input message="tns:updateUserDataSoapIn" />
+      <wsdl:output message="tns:updateUserDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input message="tns:GetUserByIdSoapIn" />
+      <wsdl:output message="tns:GetUserByIdSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="GetUserByUsername">
       <wsdl:input message="tns:GetUserByUsernameSoapIn" />
       <wsdl:output message="tns:GetUserByUsernameSoapOut" />
@@ -315,6 +360,24 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="insertUser">
       <soap:operation soapAction="http://tempuri.org/insertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUserData">
+      <soap:operation soapAction="http://tempuri.org/updateUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/GetUserById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -426,6 +489,24 @@
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="insertUser">
       <soap12:operation soapAction="http://tempuri.org/insertUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUserData">
+      <soap12:operation soapAction="http://tempuri.org/updateUserData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap12:operation soapAction="http://tempuri.org/GetUserById" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -29,18 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CartOfCourses));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
-            this.homePage = new System.Windows.Forms.Button();
-            this.listOfCourses = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.allCoursesGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -50,84 +45,13 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(218, 113);
+            this.label3.Location = new System.Drawing.Point(224, 86);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(410, 45);
             this.label3.TabIndex = 27;
             this.label3.Text = "List of courses in the cart";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // homePage
-            // 
-            this.homePage.BackColor = System.Drawing.Color.Transparent;
-            this.homePage.FlatAppearance.BorderSize = 0;
-            this.homePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homePage.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homePage.ForeColor = System.Drawing.Color.White;
-            this.homePage.Image = ((System.Drawing.Image)(resources.GetObject("homePage.Image")));
-            this.homePage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homePage.Location = new System.Drawing.Point(13, 73);
-            this.homePage.Margin = new System.Windows.Forms.Padding(4);
-            this.homePage.Name = "homePage";
-            this.homePage.Size = new System.Drawing.Size(218, 47);
-            this.homePage.TabIndex = 26;
-            this.homePage.Text = "Home Page";
-            this.homePage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.homePage.UseVisualStyleBackColor = false;
-            // 
-            // listOfCourses
-            // 
-            this.listOfCourses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader8,
-            this.columnHeader9});
-            this.listOfCourses.HideSelection = false;
-            this.listOfCourses.Location = new System.Drawing.Point(21, 196);
-            this.listOfCourses.Name = "listOfCourses";
-            this.listOfCourses.Size = new System.Drawing.Size(831, 301);
-            this.listOfCourses.TabIndex = 25;
-            this.listOfCourses.UseCompatibleStateImageBehavior = false;
-            this.listOfCourses.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Course Id";
-            this.columnHeader1.Width = 80;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Course Name";
-            this.columnHeader2.Width = 120;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Course Description";
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Course Price";
-            this.columnHeader4.Width = 90;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Course Instructor";
-            this.columnHeader5.Width = 130;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Course Genre";
-            this.columnHeader8.Width = 120;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Coruse Created At";
-            this.columnHeader9.Width = 150;
             // 
             // button2
             // 
@@ -146,6 +70,7 @@
             this.button2.Text = "Back";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.onBackBtn);
             // 
             // button3
             // 
@@ -164,21 +89,51 @@
             this.button3.Text = "Logout";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.onLogoutBtn);
             // 
-            // cartOfCourses
+            // allCoursesGridView
+            // 
+            this.allCoursesGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.allCoursesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.allCoursesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.allCoursesGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.allCoursesGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.allCoursesGridView.Location = new System.Drawing.Point(35, 167);
+            this.allCoursesGridView.Name = "allCoursesGridView";
+            this.allCoursesGridView.RowHeadersWidth = 51;
+            this.allCoursesGridView.RowTemplate.Height = 24;
+            this.allCoursesGridView.Size = new System.Drawing.Size(809, 316);
+            this.allCoursesGridView.TabIndex = 33;
+            // 
+            // CartOfCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(882, 509);
+            this.Controls.Add(this.allCoursesGridView);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.homePage);
-            this.Controls.Add(this.listOfCourses);
-            this.Name = "cartOfCourses";
+            this.Name = "CartOfCourses";
             this.Text = "cartOfCourses";
+            ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,16 +142,8 @@
         #endregion
 
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button homePage;
-        private System.Windows.Forms.ListView listOfCourses;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView allCoursesGridView;
     }
 }

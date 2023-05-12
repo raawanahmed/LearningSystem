@@ -35,6 +35,49 @@ namespace Elearning_ASMX_Services
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+        [WebMethod]
+        public void updateUserData(int userId, UserData user)
+        {
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = string.Format("UPDATE UsersTable SET firstName=@FirstName, lastName=@LastName, userName=@UserName, email=@Email, password=@Password WHERE id = {0}", userId);
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@FirstName", user.FirstName);
+                command.Parameters.AddWithValue("@LastName", user.LastName);
+                command.Parameters.AddWithValue("@UserName", user.UserName);
+                command.Parameters.AddWithValue("@Email", user.Email);
+                command.Parameters.AddWithValue("@Password", user.Password);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+        [WebMethod]
+        public UserData GetUserById(int userId)
+        {
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            string query = string.Format("SELECT * FROM UsersTable WHERE id = {0}", userId);
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    UserData user = new UserData();
+                    user.Id = reader.GetInt32(0);
+                    user.FirstName = reader.GetString(1);
+                    user.LastName = reader.GetString(2);
+                    user.UserName = reader.GetString(3);
+                    user.Email = reader.GetString(4);
+                    user.Password = reader.GetString(5);
+                    return user;
+                }
+            }
+            return null;
+        }
+
 
         [WebMethod]
         public UserData GetUserByUsername(string username)
@@ -166,6 +209,7 @@ namespace Elearning_ASMX_Services
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userId", userId); // set parameter value
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -176,11 +220,16 @@ namespace Elearning_ASMX_Services
             return coursesIDs.ToArray();
         }
 
+
         [WebMethod]
         public CourseData[] getEnrolledCoursesForUser(int userId)
         {
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
             int[] courseIds = getAllCoursesIDsForUser(userId);
+            if (courseIds.Length == 0)
+            {
+                return new CourseData[0]; // return empty array if no course IDs found
+            }
             string query = "SELECT * FROM CoursesTable WHERE Id IN (" + string.Join(",", courseIds) + ")";
             List<CourseData> courses = new List<CourseData>();
             using (SqlConnection connection = new SqlConnection(conn))
@@ -203,6 +252,7 @@ namespace Elearning_ASMX_Services
             }
             return courses.ToArray();
         }
+
         public int[] getAllCoursesInCartForUser(int userId)
         {
             // helper function

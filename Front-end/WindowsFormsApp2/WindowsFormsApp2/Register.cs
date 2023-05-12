@@ -70,7 +70,7 @@ namespace WindowsFormsApp2
             // All validation and verification passed, so proceed with signup
             SignupUser(user);
             MessageBox.Show("Signup successful!");
-            Login_page login_Page = new Login_page();
+            LoginPage login_Page = new LoginPage();
             login_Page.Show();
             this.Hide();
 

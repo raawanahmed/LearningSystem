@@ -1,20 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp2.userServicesReference;
 
 namespace WindowsFormsApp2.User
 {
     public partial class UserCourses : Form
     {
+        private int userId;
+        CourseData[] coursesForUser;
         public UserCourses()
         {
             InitializeComponent();
+            allCoursesGridView.ReadOnly = true;
+        }
+        public UserCourses(int userId)
+        {
+            InitializeComponent();
+            this.userId = userId;
+            allCoursesGridView.ReadOnly = true;
+        }
+        private void onUserCoursesFormLoad(object sender, EventArgs e)
+        {
+            textBox1.Text = this.userId.ToString();
+            userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
+            coursesForUser = usersServices.getEnrolledCoursesForUser(this.userId);
+            allCoursesGridView.DataSource = coursesForUser;
+        }
+        private void onLogoutBtn(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
+        private void onBackBtn(object sender, EventArgs e)
+        {
+            UserHomePage userHomePage = new UserHomePage();
+            userHomePage.Show();
+            this.Hide();
         }
     }
 }

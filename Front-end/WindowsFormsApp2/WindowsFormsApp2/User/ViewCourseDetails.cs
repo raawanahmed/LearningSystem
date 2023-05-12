@@ -27,7 +27,7 @@ namespace WindowsFormsApp2.User
 
         private void onLogoutBtn(object sender, EventArgs e)
         {
-            Login_page login_Page = new Login_page();
+            LoginPage login_Page = new LoginPage();
             login_Page.Show();
             this.Hide();
         }

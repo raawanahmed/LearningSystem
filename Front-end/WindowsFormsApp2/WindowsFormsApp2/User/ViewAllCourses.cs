@@ -3,18 +3,25 @@ using System.Windows.Forms;
 using WindowsFormsApp2.User;
 using WindowsFormsApp2.userServicesReference;
 
-
 namespace WindowsFormsApp2
 {
     public partial class ViewAllCourses : Form
     {
 
         CourseData[] courses;
+        private int userId;
         public ViewAllCourses()
         {
             InitializeComponent();
             allCoursesGridView.ReadOnly = true;
         }
+        public ViewAllCourses(int userId)
+        {
+            InitializeComponent();
+            allCoursesGridView.ReadOnly = true;
+            this.userId = userId;
+        }
+
         private void onViewAllCoursesFormLoad(object sender, EventArgs e)
         {
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
@@ -28,16 +35,16 @@ namespace WindowsFormsApp2
             allCoursesGridView.DataSource = courses;
 
             DataGridViewButtonColumn viewCourseDetailsBtn = new DataGridViewButtonColumn();
-            viewCourseDetailsBtn.HeaderText = "ViewCourseDetails";
-            viewCourseDetailsBtn.Name = "ViewCourseDetails";
+            viewCourseDetailsBtn.HeaderText = "View Course Details";
+            viewCourseDetailsBtn.Name = "View Course Details";
             viewCourseDetailsBtn.Text = "View Course Details";
             viewCourseDetailsBtn.UseColumnTextForButtonValue = true;
             allCoursesGridView.Columns.Add(viewCourseDetailsBtn);
 
 
             DataGridViewButtonColumn addToCartBtn = new DataGridViewButtonColumn();
-            addToCartBtn.HeaderText = "AddToCart";
-            addToCartBtn.Name = "AddToCart";
+            addToCartBtn.HeaderText = "Add To Cart";
+            addToCartBtn.Name = "Add To Cart";
             addToCartBtn.Text = "Add To Cart";
             addToCartBtn.UseColumnTextForButtonValue = true;
             allCoursesGridView.Columns.Add(addToCartBtn);
@@ -47,6 +54,7 @@ namespace WindowsFormsApp2
         private void allCoursesGridViewCellClick(object sender, DataGridViewCellEventArgs e)
         {
             ViewCourseDetails courseView;
+            userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
 
             if (e.ColumnIndex == 7)
             {
@@ -64,13 +72,21 @@ namespace WindowsFormsApp2
                         }
                     }
                 }
-
             }
-            if (e.ColumnIndex == 8)
+            else if (e.ColumnIndex == 8)
             {
                 // add course to cart 
                 // todo add check to database add course if the course is not already added
-                MessageBox.Show("Save");
+                for (int i = 0; i < courses.Length; i++)
+                {
+                    if (e.RowIndex == i)
+                    {
+                        searchTextBox.Text = this.userId.ToString();
+                        usersServices.addCourseToCart(this.userId, courses[i].Id);
+                        break;
+                    }
+                }
+                MessageBox.Show("Course Added to cart successfully!");
             }
         }
 
@@ -81,8 +97,22 @@ namespace WindowsFormsApp2
 
         private void onLogoutBtn(object sender, EventArgs e)
         {
-            Login_page login_Page = new Login_page();
-            login_Page.Show();
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
+
+        private void onBackBtn(object sender, EventArgs e)
+        {
+            UserHomePage userHomePage = new UserHomePage();
+            userHomePage.Show();
+            this.Hide();
+        }
+
+        private void onViewCartBtn(object sender, EventArgs e)
+        {
+            CartOfCourses cartOfCourses = new CartOfCourses();
+            cartOfCourses.Show();
             this.Hide();
         }
     }

@@ -12,7 +12,7 @@ namespace WindowsFormsApp2
 
         private void goToLoginForm(object sender, EventArgs e)
         {
-            Login_page loginPage = new Login_page();
+            LoginPage loginPage = new LoginPage();
             loginPage.Show();
             this.Hide();
         }

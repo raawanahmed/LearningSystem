@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp2.User
@@ -15,6 +8,21 @@ namespace WindowsFormsApp2.User
         public CartOfCourses()
         {
             InitializeComponent();
+        }
+
+        private void onLogoutBtn(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+
+        }
+
+        private void onBackBtn(object sender, EventArgs e)
+        {
+            UserHomePage userHomePage = new UserHomePage();
+            userHomePage.Show();
+            this.Hide();
         }
     }
 }
