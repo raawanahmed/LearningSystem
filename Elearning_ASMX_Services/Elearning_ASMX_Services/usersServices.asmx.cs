@@ -181,7 +181,7 @@ namespace Elearning_ASMX_Services
 
                     if (!reader.IsDBNull(3)) // check if CourseRatingScore is not null
                     {
-                        courseDetails.CourseRatingScore = reader.GetString(3);
+                        courseDetails.CourseRatingScore = (float)reader.GetDouble(3);
                     }
 
                     if (!reader.IsDBNull(4)) // check if CourseComments is not null
@@ -360,16 +360,17 @@ namespace Elearning_ASMX_Services
         }
 
         [WebMethod]
-        public bool addCourseToCart(int userId, int courseId)
+        public bool updateCourseStatus(int userId, int courseId, string courseStatus)
         {
             // edit in course status to incart
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
-            string query = "UPDATE UserCoursesTable SET courseStatus = 'in cart' WHERE userId = @userId AND courseId = @courseId";
+            string query = "UPDATE UserCoursesTable SET courseStatus = @courseStatus WHERE userId = @userId AND courseId = @courseId";
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@userId", userId);
                 command.Parameters.AddWithValue("@courseId", courseId);
+                command.Parameters.AddWithValue("@courseStatus", courseStatus);
                 connection.Open();
                 int rowsAffected = command.ExecuteNonQuery();
                 return (rowsAffected > 0); // returns true if at least one row was updated

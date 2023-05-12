@@ -290,8 +290,7 @@ namespace WindowsFormsApp2.userServicesReference {
         
         private int UserIdField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CourseRatingScoreField;
+        private float CourseRatingScoreField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CourseCommentsField;
@@ -348,13 +347,13 @@ namespace WindowsFormsApp2.userServicesReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string CourseRatingScore {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public float CourseRatingScore {
             get {
                 return this.CourseRatingScoreField;
             }
             set {
-                if ((object.ReferenceEquals(this.CourseRatingScoreField, value) != true)) {
+                if ((this.CourseRatingScoreField.Equals(value) != true)) {
                     this.CourseRatingScoreField = value;
                     this.RaisePropertyChanged("CourseRatingScore");
                 }
@@ -484,11 +483,12 @@ namespace WindowsFormsApp2.userServicesReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCommentToCourse", ReplyAction="*")]
         System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.addCommentToCourseResponse> addCommentToCourseAsync(WindowsFormsApp2.userServicesReference.addCommentToCourseRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCourseToCart", ReplyAction="*")]
-        bool addCourseToCart(int userId, int courseId);
+        // CODEGEN: Generating message contract since element name courseStatus from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/updateCourseStatus", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.updateCourseStatusResponse updateCourseStatus(WindowsFormsApp2.userServicesReference.updateCourseStatusRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCourseToCart", ReplyAction="*")]
-        System.Threading.Tasks.Task<bool> addCourseToCartAsync(int userId, int courseId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/updateCourseStatus", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.updateCourseStatusResponse> updateCourseStatusAsync(WindowsFormsApp2.userServicesReference.updateCourseStatusRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/removeCourseFromCart", ReplyAction="*")]
         void removeCourseFromCart(int userId, int courseId);
@@ -1223,6 +1223,82 @@ namespace WindowsFormsApp2.userServicesReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class updateCourseStatusRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="updateCourseStatus", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.updateCourseStatusRequestBody Body;
+        
+        public updateCourseStatusRequest() {
+        }
+        
+        public updateCourseStatusRequest(WindowsFormsApp2.userServicesReference.updateCourseStatusRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class updateCourseStatusRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int userId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int courseId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string courseStatus;
+        
+        public updateCourseStatusRequestBody() {
+        }
+        
+        public updateCourseStatusRequestBody(int userId, int courseId, string courseStatus) {
+            this.userId = userId;
+            this.courseId = courseId;
+            this.courseStatus = courseStatus;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class updateCourseStatusResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="updateCourseStatusResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.updateCourseStatusResponseBody Body;
+        
+        public updateCourseStatusResponse() {
+        }
+        
+        public updateCourseStatusResponse(WindowsFormsApp2.userServicesReference.updateCourseStatusResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class updateCourseStatusResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool updateCourseStatusResult;
+        
+        public updateCourseStatusResponseBody() {
+        }
+        
+        public updateCourseStatusResponseBody(bool updateCourseStatusResult) {
+            this.updateCourseStatusResult = updateCourseStatusResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface usersServicesSoapChannel : WindowsFormsApp2.userServicesReference.usersServicesSoap, System.ServiceModel.IClientChannel {
     }
@@ -1535,12 +1611,33 @@ namespace WindowsFormsApp2.userServicesReference {
             return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).addCommentToCourseAsync(inValue);
         }
         
-        public bool addCourseToCart(int userId, int courseId) {
-            return base.Channel.addCourseToCart(userId, courseId);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.updateCourseStatusResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.updateCourseStatus(WindowsFormsApp2.userServicesReference.updateCourseStatusRequest request) {
+            return base.Channel.updateCourseStatus(request);
         }
         
-        public System.Threading.Tasks.Task<bool> addCourseToCartAsync(int userId, int courseId) {
-            return base.Channel.addCourseToCartAsync(userId, courseId);
+        public bool updateCourseStatus(int userId, int courseId, string courseStatus) {
+            WindowsFormsApp2.userServicesReference.updateCourseStatusRequest inValue = new WindowsFormsApp2.userServicesReference.updateCourseStatusRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.updateCourseStatusRequestBody();
+            inValue.Body.userId = userId;
+            inValue.Body.courseId = courseId;
+            inValue.Body.courseStatus = courseStatus;
+            WindowsFormsApp2.userServicesReference.updateCourseStatusResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).updateCourseStatus(inValue);
+            return retVal.Body.updateCourseStatusResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.updateCourseStatusResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.updateCourseStatusAsync(WindowsFormsApp2.userServicesReference.updateCourseStatusRequest request) {
+            return base.Channel.updateCourseStatusAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.updateCourseStatusResponse> updateCourseStatusAsync(int userId, int courseId, string courseStatus) {
+            WindowsFormsApp2.userServicesReference.updateCourseStatusRequest inValue = new WindowsFormsApp2.userServicesReference.updateCourseStatusRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.updateCourseStatusRequestBody();
+            inValue.Body.userId = userId;
+            inValue.Body.courseId = courseId;
+            inValue.Body.courseStatus = courseStatus;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).updateCourseStatusAsync(inValue);
         }
         
         public void removeCourseFromCart(int userId, int courseId) {

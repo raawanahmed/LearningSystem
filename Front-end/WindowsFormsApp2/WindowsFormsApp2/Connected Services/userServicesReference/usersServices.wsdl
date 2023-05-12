@@ -121,7 +121,7 @@
           <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="CourseId" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="CourseRatingScore" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CourseRatingScore" type="s:float" />
           <s:element minOccurs="0" maxOccurs="1" name="CourseComments" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CourseStatus" type="s:string" />
         </s:sequence>
@@ -190,18 +190,19 @@
       <s:element name="addCommentToCourseResponse">
         <s:complexType />
       </s:element>
-      <s:element name="addCourseToCart">
+      <s:element name="updateCourseStatus">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="courseId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="courseStatus" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="addCourseToCartResponse">
+      <s:element name="updateCourseStatusResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="addCourseToCartResult" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="updateCourseStatusResult" type="s:boolean" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -290,11 +291,11 @@
   <wsdl:message name="addCommentToCourseSoapOut">
     <wsdl:part name="parameters" element="tns:addCommentToCourseResponse" />
   </wsdl:message>
-  <wsdl:message name="addCourseToCartSoapIn">
-    <wsdl:part name="parameters" element="tns:addCourseToCart" />
+  <wsdl:message name="updateCourseStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:updateCourseStatus" />
   </wsdl:message>
-  <wsdl:message name="addCourseToCartSoapOut">
-    <wsdl:part name="parameters" element="tns:addCourseToCartResponse" />
+  <wsdl:message name="updateCourseStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:updateCourseStatusResponse" />
   </wsdl:message>
   <wsdl:message name="removeCourseFromCartSoapIn">
     <wsdl:part name="parameters" element="tns:removeCourseFromCart" />
@@ -351,9 +352,9 @@
       <wsdl:input message="tns:addCommentToCourseSoapIn" />
       <wsdl:output message="tns:addCommentToCourseSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="addCourseToCart">
-      <wsdl:input message="tns:addCourseToCartSoapIn" />
-      <wsdl:output message="tns:addCourseToCartSoapOut" />
+    <wsdl:operation name="updateCourseStatus">
+      <wsdl:input message="tns:updateCourseStatusSoapIn" />
+      <wsdl:output message="tns:updateCourseStatusSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="removeCourseFromCart">
       <wsdl:input message="tns:removeCourseFromCartSoapIn" />
@@ -470,8 +471,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="addCourseToCart">
-      <soap:operation soapAction="http://tempuri.org/addCourseToCart" style="document" />
+    <wsdl:operation name="updateCourseStatus">
+      <soap:operation soapAction="http://tempuri.org/updateCourseStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -599,8 +600,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="addCourseToCart">
-      <soap12:operation soapAction="http://tempuri.org/addCourseToCart" style="document" />
+    <wsdl:operation name="updateCourseStatus">
+      <soap12:operation soapAction="http://tempuri.org/updateCourseStatus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

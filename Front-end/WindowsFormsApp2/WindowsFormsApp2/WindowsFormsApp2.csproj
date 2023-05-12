@@ -249,6 +249,9 @@
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.insertUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.updateCourseStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.updateUserDataResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

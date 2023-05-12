@@ -60,7 +60,7 @@ namespace WindowsFormsApp2.User
                 {
                     if (e.RowIndex == i)
                     {
-                        payForCourse = new Pay(this.userId, coursesInCart[i].Id, "enrolled");
+                        payForCourse = new Pay(this.userId, coursesInCart[i].Id, coursesInCart[i].CoursePrice);
                         payForCourse.Show();
                         this.Hide();
                         break;

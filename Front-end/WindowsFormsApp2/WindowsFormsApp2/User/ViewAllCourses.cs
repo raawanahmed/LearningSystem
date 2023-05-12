@@ -84,7 +84,7 @@ namespace WindowsFormsApp2
                         searchTextBox.Text = courses[i].Id.ToString();
                         usersServices.addUserToCourseWithStatus(this.userId, courses[i].Id, "in cart");
                         // update status of course to inCart if it already in the users table
-                        usersServices.addCourseToCart(this.userId, courses[i].Id);
+                        usersServices.updateCourseStatus(this.userId, courses[i].Id, "in cart");
                         break;
                     }
                 }
