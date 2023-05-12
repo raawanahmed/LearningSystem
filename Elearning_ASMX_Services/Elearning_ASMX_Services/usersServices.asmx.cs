@@ -253,6 +253,7 @@ namespace Elearning_ASMX_Services
             return courses.ToArray();
         }
 
+
         public int[] getAllCoursesInCartForUser(int userId)
         {
             // helper function
@@ -262,6 +263,7 @@ namespace Elearning_ASMX_Services
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@userId", userId);
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -278,7 +280,11 @@ namespace Elearning_ASMX_Services
             // get courses with status inCart 
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
             int[] courseIds = getAllCoursesInCartForUser(userId);
-            string query = "SELECT * FROM CoursesTable WHERE Id IN (" + string.Join(",", courseIds) + ")";
+            if (courseIds.Length == 0)
+            {
+                return new CourseData[0]; // return empty array if no course IDs found
+            }
+            string query = "SELECT * FROM CoursesTable WHERE id IN (" + string.Join(",", courseIds) + ")";
             List<CourseData> courses = new List<CourseData>();
             using (SqlConnection connection = new SqlConnection(conn))
             {

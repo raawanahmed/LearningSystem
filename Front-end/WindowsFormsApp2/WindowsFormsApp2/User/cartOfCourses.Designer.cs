@@ -34,8 +34,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.allCoursesGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).BeginInit();
+            this.coursesInCartGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.coursesInCartGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -91,9 +91,9 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.onLogoutBtn);
             // 
-            // allCoursesGridView
+            // coursesInCartGridView
             // 
-            this.allCoursesGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.coursesInCartGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,8 +102,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.allCoursesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.allCoursesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.coursesInCartGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.coursesInCartGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,14 +111,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.allCoursesGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.allCoursesGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.allCoursesGridView.Location = new System.Drawing.Point(35, 167);
-            this.allCoursesGridView.Name = "allCoursesGridView";
-            this.allCoursesGridView.RowHeadersWidth = 51;
-            this.allCoursesGridView.RowTemplate.Height = 24;
-            this.allCoursesGridView.Size = new System.Drawing.Size(809, 316);
-            this.allCoursesGridView.TabIndex = 33;
+            this.coursesInCartGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.coursesInCartGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.coursesInCartGridView.Location = new System.Drawing.Point(35, 167);
+            this.coursesInCartGridView.Name = "coursesInCartGridView";
+            this.coursesInCartGridView.RowHeadersWidth = 51;
+            this.coursesInCartGridView.RowTemplate.Height = 24;
+            this.coursesInCartGridView.Size = new System.Drawing.Size(809, 316);
+            this.coursesInCartGridView.TabIndex = 33;
+            this.coursesInCartGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.coursesInCartGridViewCellClick);
             // 
             // CartOfCourses
             // 
@@ -127,13 +128,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(882, 509);
-            this.Controls.Add(this.allCoursesGridView);
+            this.Controls.Add(this.coursesInCartGridView);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Name = "CartOfCourses";
             this.Text = "cartOfCourses";
-            ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).EndInit();
+            this.Load += new System.EventHandler(this.onCartOfCoursesFormLoad);
+            ((System.ComponentModel.ISupportInitialize)(this.coursesInCartGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +146,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView allCoursesGridView;
+        private System.Windows.Forms.DataGridView coursesInCartGridView;
     }
 }

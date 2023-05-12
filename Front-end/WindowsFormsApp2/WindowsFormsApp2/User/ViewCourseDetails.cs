@@ -39,5 +39,14 @@ namespace WindowsFormsApp2.User
             viewAllCourses.ShowDialog();
             this.Close();
         }
+
+        private void onAddRateToCourseBtn(object sender, EventArgs e)
+        {
+            // todo
+        }
+        private void onAddCommentToCourseBtn(object sender, EventArgs e)
+        {
+            // todo
+        }
     }
 }
