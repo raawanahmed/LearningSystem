@@ -65,7 +65,7 @@ namespace WindowsFormsApp2
                     {
                         if (e.RowIndex == i)
                         {
-                            courseView = new ViewCourseDetails(courses[i]);
+                            courseView = new ViewCourseDetails(courses[i], this.userId);
                             courseView.Show();
                             this.Hide();
                             break;
@@ -81,7 +81,9 @@ namespace WindowsFormsApp2
                 {
                     if (e.RowIndex == i)
                     {
-                        searchTextBox.Text = this.userId.ToString();
+                        searchTextBox.Text = courses[i].Id.ToString();
+                        usersServices.addUserToCourseWithStatus(this.userId, courses[i].Id, "in cart");
+                        // update status of course to inCart if it already in the users table
                         usersServices.addCourseToCart(this.userId, courses[i].Id);
                         break;
                     }
@@ -104,14 +106,14 @@ namespace WindowsFormsApp2
 
         private void onBackBtn(object sender, EventArgs e)
         {
-            UserHomePage userHomePage = new UserHomePage();
+            UserHomePage userHomePage = new UserHomePage(this.userId);
             userHomePage.Show();
             this.Hide();
         }
 
         private void onViewCartBtn(object sender, EventArgs e)
         {
-            CartOfCourses cartOfCourses = new CartOfCourses();
+            CartOfCourses cartOfCourses = new CartOfCourses(this.userId);
             cartOfCourses.Show();
             this.Hide();
         }

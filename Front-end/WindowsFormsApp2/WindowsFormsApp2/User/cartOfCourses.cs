@@ -7,7 +7,7 @@ namespace WindowsFormsApp2.User
     public partial class CartOfCourses : Form
     {
 
-        CourseData[] courses;
+        CourseData[] coursesInCart;
         private int userId;
         public CartOfCourses()
         {
@@ -20,30 +20,17 @@ namespace WindowsFormsApp2.User
             this.userId = userId;
             coursesInCartGridView.ReadOnly = true;
         }
-
-        private void onLogoutBtn(object sender, EventArgs e)
-        {
-            LoginPage loginPage = new LoginPage();
-            loginPage.Show();
-            this.Hide();
-        }
-        private void onBackBtn(object sender, EventArgs e)
-        {
-            UserHomePage userHomePage = new UserHomePage();
-            userHomePage.Show();
-            this.Hide();
-        }
         private void onCartOfCoursesFormLoad(object sender, EventArgs e)
         {
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
-            CourseData[] coursesInCart = usersServices.getCoursesInCart(this.userId);
+            coursesInCart = usersServices.getCoursesInCart(this.userId);
             GridViewData(coursesInCart);
         }
         public void GridViewData(CourseData[] courses)
         {
 
             coursesInCartGridView.DataSource = courses;
-
+            // enroll into course update the course status to enrolled
             DataGridViewButtonColumn enrollInCourseBtn = new DataGridViewButtonColumn();
             enrollInCourseBtn.HeaderText = "Enroll in the course";
             enrollInCourseBtn.Name = "Enroll in the course";
@@ -60,6 +47,7 @@ namespace WindowsFormsApp2.User
             coursesInCartGridView.Columns.Add(removeCourseFromCartBtn);
 
         }
+
         private void coursesInCartGridViewCellClick(object sender, DataGridViewCellEventArgs e)
         {
             Pay payForCourse;
@@ -68,11 +56,11 @@ namespace WindowsFormsApp2.User
             if (e.ColumnIndex == 7)
             {
                 // enroll for course -> pay for it
-                for (int i = 0; i < courses.Length; i++)
+                for (int i = 0; i < coursesInCart.Length; i++)
                 {
                     if (e.RowIndex == i)
                     {
-                        payForCourse = new Pay(this.userId, courses[i].Id, "enrolled");
+                        payForCourse = new Pay(this.userId, coursesInCart[i].Id, "enrolled");
                         payForCourse.Show();
                         this.Hide();
                         break;
@@ -82,17 +70,29 @@ namespace WindowsFormsApp2.User
             }
             else if (e.ColumnIndex == 8)
             {
-                // enroll for course -> pay for it
-                for (int i = 0; i < courses.Length; i++)
+                // remove course from cart
+                for (int i = 0; i < coursesInCart.Length; i++)
                 {
                     if (e.RowIndex == i)
                     {
-                        usersServices.removeCourseFromCart(this.userId, courses[i].Id);
+                        usersServices.removeCourseFromCart(this.userId, coursesInCart[i].Id);
                         break;
                     }
                 }
-
+                MessageBox.Show("Course removed from cart successfully!");
             }
+        }
+        private void onLogoutBtn(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
+        private void onBackBtn(object sender, EventArgs e)
+        {
+            UserHomePage userHomePage = new UserHomePage(this.userId);
+            userHomePage.Show();
+            this.Hide();
         }
     }
 }

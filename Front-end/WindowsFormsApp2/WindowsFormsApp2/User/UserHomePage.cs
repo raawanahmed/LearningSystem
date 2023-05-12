@@ -14,6 +14,7 @@ namespace WindowsFormsApp2.User
         {
             InitializeComponent();
             this.UserId = userId;
+            textBox1.Text = this.UserId.ToString();
         }
         private void onLogoutBtn(object sender, EventArgs e)
         {
@@ -38,7 +39,7 @@ namespace WindowsFormsApp2.User
 
         private void onViewMyCartBtn(object sender, EventArgs e)
         {
-            CartOfCourses cartOfCourses = new CartOfCourses();
+            CartOfCourses cartOfCourses = new CartOfCourses(this.UserId);
             cartOfCourses.Show();
             this.Hide();
         }

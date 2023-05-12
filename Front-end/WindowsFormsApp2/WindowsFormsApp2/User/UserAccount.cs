@@ -27,7 +27,7 @@ namespace WindowsFormsApp2
         }
         private void onBackBtn(object sender, EventArgs e)
         {
-            UserHomePage userHomePage = new UserHomePage();
+            UserHomePage userHomePage = new UserHomePage(this.userId);
             userHomePage.Show();
             this.Hide();
         }

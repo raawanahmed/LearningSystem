@@ -17,11 +17,12 @@ namespace WindowsFormsApp2.User
         {
             InitializeComponent();
             this.userId = userId;
+            textBox1.Text = this.userId.ToString();
             allCoursesGridView.ReadOnly = true;
         }
         private void onUserCoursesFormLoad(object sender, EventArgs e)
         {
-            textBox1.Text = this.userId.ToString();
+
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
             coursesForUser = usersServices.getEnrolledCoursesForUser(this.userId);
             allCoursesGridView.DataSource = coursesForUser;
@@ -34,7 +35,7 @@ namespace WindowsFormsApp2.User
         }
         private void onBackBtn(object sender, EventArgs e)
         {
-            UserHomePage userHomePage = new UserHomePage();
+            UserHomePage userHomePage = new UserHomePage(this.userId);
             userHomePage.Show();
             this.Hide();
         }

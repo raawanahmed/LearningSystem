@@ -308,12 +308,13 @@ namespace Elearning_ASMX_Services
         }
 
         [WebMethod]
-        public void enrollUserToCourse(int userId, int courseId, string courseStatus)
+        public void addUserToCourseWithStatus(int userId, int courseId, string courseStatus)
         {
-            // add user with courseId when pay and status will be enrolled
+            // Check if user is already enrolled in the course
             SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True");
             conn.Open();
-            SqlCommand cmd = new SqlCommand("insert into UserCoursesTable (courseId, userId, courseStatus) values (@courseId, @userId, @courseStatus)", conn);
+            SqlCommand cmd = new SqlCommand("IF NOT EXISTS (SELECT * FROM UserCoursesTable WHERE userId = @userId AND courseId = @courseId) " +
+                                             "INSERT INTO UserCoursesTable (courseId, userId, courseStatus) VALUES (@courseId, @userId, @courseStatus)", conn);
             SqlParameter p1 = new SqlParameter("@courseId", courseId);
             SqlParameter p2 = new SqlParameter("@userId", userId);
             SqlParameter p3 = new SqlParameter("@courseStatus", courseStatus);
@@ -322,8 +323,8 @@ namespace Elearning_ASMX_Services
             cmd.Parameters.Add(p3);
             cmd.ExecuteNonQuery();
             conn.Close();
-
         }
+
 
         [WebMethod]
         public void addRatingScoreToCourse(float courseRatingScore, int userId, int courseId)
@@ -359,7 +360,7 @@ namespace Elearning_ASMX_Services
         }
 
         [WebMethod]
-        public void addCourseToCart(int userId, int courseId)
+        public bool addCourseToCart(int userId, int courseId)
         {
             // edit in course status to incart
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
@@ -370,16 +371,17 @@ namespace Elearning_ASMX_Services
                 command.Parameters.AddWithValue("@userId", userId);
                 command.Parameters.AddWithValue("@courseId", courseId);
                 connection.Open();
-                command.ExecuteNonQuery();
+                int rowsAffected = command.ExecuteNonQuery();
+                return (rowsAffected > 0); // returns true if at least one row was updated
             }
         }
 
         [WebMethod]
         public void removeCourseFromCart(int userId, int courseId)
         {
-            // edit in course status to available
+            // remove the course from user's cart
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
-            string query = "UPDATE UserCoursesTable SET courseStatus = 'available' WHERE userId = @userId AND courseId = @courseId";
+            string query = "DELETE FROM UserCoursesTable WHERE userId = @userId AND courseId = @courseId";
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);

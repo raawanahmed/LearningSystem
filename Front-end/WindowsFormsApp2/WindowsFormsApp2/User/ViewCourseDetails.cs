@@ -9,12 +9,14 @@ namespace WindowsFormsApp2.User
     {
 
         // List<CourseDetails> coursesDetails = new List<CourseDetails>();
-        public ViewCourseDetails(CourseData course)
+        private int userId;
+        public ViewCourseDetails(CourseData course, int userId)
         {
 
             InitializeComponent();
             viewCourseGridView.ReadOnly = true;
             Viewdetails(course.Id);
+            this.userId = userId;
         }
         public void Viewdetails(int courseId)
         {
@@ -35,7 +37,7 @@ namespace WindowsFormsApp2.User
         private void onBackBtn(object sender, EventArgs e)
         {
             this.Hide();
-            ViewAllCourses viewAllCourses = new ViewAllCourses();
+            ViewAllCourses viewAllCourses = new ViewAllCourses(this.userId);
             viewAllCourses.ShowDialog();
             this.Close();
         }

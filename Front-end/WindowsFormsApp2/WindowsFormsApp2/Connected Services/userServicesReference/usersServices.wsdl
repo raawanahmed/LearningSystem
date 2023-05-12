@@ -154,7 +154,7 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="enrollUserToCourse">
+      <s:element name="addUserToCourseWithStatus">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
@@ -163,7 +163,7 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="enrollUserToCourseResponse">
+      <s:element name="addUserToCourseWithStatusResponse">
         <s:complexType />
       </s:element>
       <s:element name="addRatingScoreToCourse">
@@ -199,7 +199,11 @@
         </s:complexType>
       </s:element>
       <s:element name="addCourseToCartResponse">
-        <s:complexType />
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="addCourseToCartResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
       </s:element>
       <s:element name="removeCourseFromCart">
         <s:complexType>
@@ -268,11 +272,11 @@
   <wsdl:message name="getCoursesInCartSoapOut">
     <wsdl:part name="parameters" element="tns:getCoursesInCartResponse" />
   </wsdl:message>
-  <wsdl:message name="enrollUserToCourseSoapIn">
-    <wsdl:part name="parameters" element="tns:enrollUserToCourse" />
+  <wsdl:message name="addUserToCourseWithStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:addUserToCourseWithStatus" />
   </wsdl:message>
-  <wsdl:message name="enrollUserToCourseSoapOut">
-    <wsdl:part name="parameters" element="tns:enrollUserToCourseResponse" />
+  <wsdl:message name="addUserToCourseWithStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:addUserToCourseWithStatusResponse" />
   </wsdl:message>
   <wsdl:message name="addRatingScoreToCourseSoapIn">
     <wsdl:part name="parameters" element="tns:addRatingScoreToCourse" />
@@ -335,9 +339,9 @@
       <wsdl:input message="tns:getCoursesInCartSoapIn" />
       <wsdl:output message="tns:getCoursesInCartSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="enrollUserToCourse">
-      <wsdl:input message="tns:enrollUserToCourseSoapIn" />
-      <wsdl:output message="tns:enrollUserToCourseSoapOut" />
+    <wsdl:operation name="addUserToCourseWithStatus">
+      <wsdl:input message="tns:addUserToCourseWithStatusSoapIn" />
+      <wsdl:output message="tns:addUserToCourseWithStatusSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="addRatingScoreToCourse">
       <wsdl:input message="tns:addRatingScoreToCourseSoapIn" />
@@ -439,8 +443,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="enrollUserToCourse">
-      <soap:operation soapAction="http://tempuri.org/enrollUserToCourse" style="document" />
+    <wsdl:operation name="addUserToCourseWithStatus">
+      <soap:operation soapAction="http://tempuri.org/addUserToCourseWithStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -568,8 +572,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="enrollUserToCourse">
-      <soap12:operation soapAction="http://tempuri.org/enrollUserToCourse" style="document" />
+    <wsdl:operation name="addUserToCourseWithStatus">
+      <soap12:operation soapAction="http://tempuri.org/addUserToCourseWithStatus" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

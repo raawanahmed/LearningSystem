@@ -465,11 +465,11 @@ namespace WindowsFormsApp2.userServicesReference {
         System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getCoursesInCartResponse> getCoursesInCartAsync(WindowsFormsApp2.userServicesReference.getCoursesInCartRequest request);
         
         // CODEGEN: Generating message contract since element name courseStatus from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/enrollUserToCourse", ReplyAction="*")]
-        WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse enrollUserToCourse(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addUserToCourseWithStatus", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponse addUserToCourseWithStatus(WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/enrollUserToCourse", ReplyAction="*")]
-        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse> enrollUserToCourseAsync(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addUserToCourseWithStatus", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponse> addUserToCourseWithStatusAsync(WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addRatingScoreToCourse", ReplyAction="*")]
         void addRatingScoreToCourse(float courseRatingScore, int userId, int courseId);
@@ -485,10 +485,10 @@ namespace WindowsFormsApp2.userServicesReference {
         System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.addCommentToCourseResponse> addCommentToCourseAsync(WindowsFormsApp2.userServicesReference.addCommentToCourseRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCourseToCart", ReplyAction="*")]
-        void addCourseToCart(int userId, int courseId);
+        bool addCourseToCart(int userId, int courseId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/addCourseToCart", ReplyAction="*")]
-        System.Threading.Tasks.Task addCourseToCartAsync(int userId, int courseId);
+        System.Threading.Tasks.Task<bool> addCourseToCartAsync(int userId, int courseId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/removeCourseFromCart", ReplyAction="*")]
         void removeCourseFromCart(int userId, int courseId);
@@ -1089,15 +1089,15 @@ namespace WindowsFormsApp2.userServicesReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class enrollUserToCourseRequest {
+    public partial class addUserToCourseWithStatusRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="enrollUserToCourse", Namespace="http://tempuri.org/", Order=0)]
-        public WindowsFormsApp2.userServicesReference.enrollUserToCourseRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="addUserToCourseWithStatus", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequestBody Body;
         
-        public enrollUserToCourseRequest() {
+        public addUserToCourseWithStatusRequest() {
         }
         
-        public enrollUserToCourseRequest(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequestBody Body) {
+        public addUserToCourseWithStatusRequest(WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1106,7 +1106,7 @@ namespace WindowsFormsApp2.userServicesReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class enrollUserToCourseRequestBody {
+    public partial class addUserToCourseWithStatusRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
         public int userId;
@@ -1117,10 +1117,10 @@ namespace WindowsFormsApp2.userServicesReference {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
         public string courseStatus;
         
-        public enrollUserToCourseRequestBody() {
+        public addUserToCourseWithStatusRequestBody() {
         }
         
-        public enrollUserToCourseRequestBody(int userId, int courseId, string courseStatus) {
+        public addUserToCourseWithStatusRequestBody(int userId, int courseId, string courseStatus) {
             this.userId = userId;
             this.courseId = courseId;
             this.courseStatus = courseStatus;
@@ -1131,15 +1131,15 @@ namespace WindowsFormsApp2.userServicesReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class enrollUserToCourseResponse {
+    public partial class addUserToCourseWithStatusResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="enrollUserToCourseResponse", Namespace="http://tempuri.org/", Order=0)]
-        public WindowsFormsApp2.userServicesReference.enrollUserToCourseResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="addUserToCourseWithStatusResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponseBody Body;
         
-        public enrollUserToCourseResponse() {
+        public addUserToCourseWithStatusResponse() {
         }
         
-        public enrollUserToCourseResponse(WindowsFormsApp2.userServicesReference.enrollUserToCourseResponseBody Body) {
+        public addUserToCourseWithStatusResponse(WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -1148,9 +1148,9 @@ namespace WindowsFormsApp2.userServicesReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class enrollUserToCourseResponseBody {
+    public partial class addUserToCourseWithStatusResponseBody {
         
-        public enrollUserToCourseResponseBody() {
+        public addUserToCourseWithStatusResponseBody() {
         }
     }
     
@@ -1472,31 +1472,31 @@ namespace WindowsFormsApp2.userServicesReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.enrollUserToCourse(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest request) {
-            return base.Channel.enrollUserToCourse(request);
+        WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.addUserToCourseWithStatus(WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest request) {
+            return base.Channel.addUserToCourseWithStatus(request);
         }
         
-        public void enrollUserToCourse(int userId, int courseId, string courseStatus) {
-            WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest inValue = new WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest();
-            inValue.Body = new WindowsFormsApp2.userServicesReference.enrollUserToCourseRequestBody();
+        public void addUserToCourseWithStatus(int userId, int courseId, string courseStatus) {
+            WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest inValue = new WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequestBody();
             inValue.Body.userId = userId;
             inValue.Body.courseId = courseId;
             inValue.Body.courseStatus = courseStatus;
-            WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).enrollUserToCourse(inValue);
+            WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).addUserToCourseWithStatus(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.enrollUserToCourseAsync(WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest request) {
-            return base.Channel.enrollUserToCourseAsync(request);
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.addUserToCourseWithStatusAsync(WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest request) {
+            return base.Channel.addUserToCourseWithStatusAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.enrollUserToCourseResponse> enrollUserToCourseAsync(int userId, int courseId, string courseStatus) {
-            WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest inValue = new WindowsFormsApp2.userServicesReference.enrollUserToCourseRequest();
-            inValue.Body = new WindowsFormsApp2.userServicesReference.enrollUserToCourseRequestBody();
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponse> addUserToCourseWithStatusAsync(int userId, int courseId, string courseStatus) {
+            WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest inValue = new WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequestBody();
             inValue.Body.userId = userId;
             inValue.Body.courseId = courseId;
             inValue.Body.courseStatus = courseStatus;
-            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).enrollUserToCourseAsync(inValue);
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).addUserToCourseWithStatusAsync(inValue);
         }
         
         public void addRatingScoreToCourse(float courseRatingScore, int userId, int courseId) {
@@ -1535,11 +1535,11 @@ namespace WindowsFormsApp2.userServicesReference {
             return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).addCommentToCourseAsync(inValue);
         }
         
-        public void addCourseToCart(int userId, int courseId) {
-            base.Channel.addCourseToCart(userId, courseId);
+        public bool addCourseToCart(int userId, int courseId) {
+            return base.Channel.addCourseToCart(userId, courseId);
         }
         
-        public System.Threading.Tasks.Task addCourseToCartAsync(int userId, int courseId) {
+        public System.Threading.Tasks.Task<bool> addCourseToCartAsync(int userId, int courseId) {
             return base.Channel.addCourseToCartAsync(userId, courseId);
         }
         
