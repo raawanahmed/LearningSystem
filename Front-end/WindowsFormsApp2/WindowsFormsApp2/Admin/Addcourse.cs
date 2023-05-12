@@ -13,7 +13,7 @@ namespace WindowsFormsApp2
 
         private void onHomePageBtn(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+            AdminHomePage admin = new AdminHomePage();
             admin.Show();
             this.Hide();
         }
@@ -63,6 +63,19 @@ namespace WindowsFormsApp2
                 adminServices.addCourse(courseData);
                 MessageBox.Show("Course Add successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void onLogoutBtn(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
+        private void onBackBtn(object sender, EventArgs e)
+        {
+            AdminHomePage adminHomePage = new AdminHomePage();
+            adminHomePage.Show();
+            this.Hide();
         }
     }
 }

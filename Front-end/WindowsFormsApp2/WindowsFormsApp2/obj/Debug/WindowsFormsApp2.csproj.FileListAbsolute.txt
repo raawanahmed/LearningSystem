@@ -21,12 +21,9 @@ D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\bin\De
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.SuggestedBindingRedirects.cache
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Addcourse.resources
-D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DeleteCourse.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditCourse.resources
-D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Admin.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Register.resources
-D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form2.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
@@ -41,3 +38,5 @@ D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\De
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UserAccount.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User.UserHomePage.resources
 D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.LoginPage.resources
+D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Admin.ViewCourses.resources
+D:\My projects\LearningSystem\Front-end\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminHomePage.resources

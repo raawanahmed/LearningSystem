@@ -6,13 +6,19 @@ namespace WindowsFormsApp2
 {
     public partial class EditCourse : Form
     {
+        CourseData courseToBeEdited;
         public EditCourse()
         {
             InitializeComponent();
         }
+        public EditCourse(CourseData course)
+        {
+            InitializeComponent();
+            this.courseToBeEdited = course;
+        }
         private void onHomePageBtn(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+            AdminHomePage admin = new AdminHomePage();
             admin.Show();
             this.Hide();
         }
@@ -54,12 +60,11 @@ namespace WindowsFormsApp2
             courseData.CourseDescription = courseDescriptionTextBox.Text;
             courseData.CoursePrice = int.Parse(coursePriceTextBox.Text);
             courseData.CourseInstructor = courseInstructorNameTextBox.Text;
-            courseData.CourseGenre = courseGenre.Text;
+            courseData.CourseGenre = courseGenreTextBox.Text;
             courseData.CreatedAt = DateTime.Now;
             if (validateCourseData(courseData))
             {
-                // there is an error while passing selected course id
-                adminServices.editCourse(int.Parse(coursesIDsComboBox.SelectedItem.ToString()), courseData);
+                adminServices.editCourse(this.courseToBeEdited.Id, courseData);
                 MessageBox.Show("Course Edit successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -67,24 +72,26 @@ namespace WindowsFormsApp2
 
         private void onEditCourseFormLoad(object sender, EventArgs e)
         {
-            adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
-            int[] coursesIDs = adminServices.getAllCoursesIDs();
-            for (int i = 0; i < coursesIDs.Length; i++)
-            {
-                coursesIDsComboBox.Items.Add(coursesIDs[i]);
-            }
+            courseIdTextBox.Text = this.courseToBeEdited.Id.ToString();
+            courseNameTextBox.Text = this.courseToBeEdited.CourseName;
+            courseDescriptionTextBox.Text = this.courseToBeEdited.CourseDescription;
+            coursePriceTextBox.Text = this.courseToBeEdited.CoursePrice.ToString();
+            courseInstructorNameTextBox.Text = this.courseToBeEdited.CourseGenre;
+            courseInstructorNameTextBox.Text = this.courseToBeEdited.CourseInstructor;
+            courseGenreTextBox.Text = this.courseToBeEdited.CourseGenre;
         }
 
-        private void onSelectCourseId(object sender, EventArgs e)
+        private void onLogoutBtn(object sender, EventArgs e)
         {
-            adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
-            // there is an error here
-            CourseData course = adminServices.getCourseData(int.Parse(coursesIDsComboBox.SelectedItem.ToString()));
-            courseNameTextBox.Text = course.CourseName;
-            courseDescriptionTextBox.Text = course.CourseDescription;
-            coursePriceTextBox.Text = course.CoursePrice.ToString();
-            courseInstructorNameTextBox.Text = course.CourseGenre;
-            courseInstructorNameTextBox.Text = course.CourseInstructor;
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
+        private void onBackBtn(object sender, EventArgs e)
+        {
+            AdminHomePage adminHomePage = new AdminHomePage();
+            adminHomePage.Show();
+            this.Hide();
         }
     }
 }

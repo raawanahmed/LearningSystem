@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditCourse));
             this.homePage = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.courseGenre = new System.Windows.Forms.TextBox();
+            this.courseGenreTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.courseInstructorNameTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,7 +42,9 @@
             this.courseDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.coursePriceTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.coursesIDsComboBox = new System.Windows.Forms.ComboBox();
+            this.courseIdTextBox = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // homePage
@@ -54,7 +56,7 @@
             this.homePage.ForeColor = System.Drawing.Color.White;
             this.homePage.Image = ((System.Drawing.Image)(resources.GetObject("homePage.Image")));
             this.homePage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homePage.Location = new System.Drawing.Point(13, 13);
+            this.homePage.Location = new System.Drawing.Point(290, 5);
             this.homePage.Margin = new System.Windows.Forms.Padding(4);
             this.homePage.Name = "homePage";
             this.homePage.Size = new System.Drawing.Size(233, 54);
@@ -83,12 +85,12 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.onEditCourseBtn);
             // 
-            // courseGenre
+            // courseGenreTextBox
             // 
-            this.courseGenre.Location = new System.Drawing.Point(128, 332);
-            this.courseGenre.Name = "courseGenre";
-            this.courseGenre.Size = new System.Drawing.Size(100, 22);
-            this.courseGenre.TabIndex = 40;
+            this.courseGenreTextBox.Location = new System.Drawing.Point(128, 332);
+            this.courseGenreTextBox.Name = "courseGenreTextBox";
+            this.courseGenreTextBox.Size = new System.Drawing.Size(100, 22);
+            this.courseGenreTextBox.TabIndex = 40;
             // 
             // label5
             // 
@@ -196,14 +198,50 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "Courses IDs:";
             // 
-            // coursesIDsComboBox
+            // courseIdTextBox
             // 
-            this.coursesIDsComboBox.FormattingEnabled = true;
-            this.coursesIDsComboBox.Location = new System.Drawing.Point(402, 94);
-            this.coursesIDsComboBox.Name = "coursesIDsComboBox";
-            this.coursesIDsComboBox.Size = new System.Drawing.Size(121, 24);
-            this.coursesIDsComboBox.TabIndex = 42;
-            this.coursesIDsComboBox.SelectedIndexChanged += new System.EventHandler(this.onSelectCourseId);
+            this.courseIdTextBox.Location = new System.Drawing.Point(401, 97);
+            this.courseIdTextBox.Name = "courseIdTextBox";
+            this.courseIdTextBox.Size = new System.Drawing.Size(100, 22);
+            this.courseIdTextBox.TabIndex = 42;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(641, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(146, 61);
+            this.button3.TabIndex = 44;
+            this.button3.Text = "Logout";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.onLogoutBtn);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(9, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 61);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Back";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.onBackBtn);
             // 
             // EditCourse
             // 
@@ -212,9 +250,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.coursesIDsComboBox);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.courseIdTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.courseGenre);
+            this.Controls.Add(this.courseGenreTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.courseInstructorNameTextBox);
             this.Controls.Add(this.label6);
@@ -237,7 +277,7 @@
         #endregion
         private System.Windows.Forms.Button homePage;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox courseGenre;
+        private System.Windows.Forms.TextBox courseGenreTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox courseInstructorNameTextBox;
         private System.Windows.Forms.Label label6;
@@ -248,6 +288,8 @@
         private System.Windows.Forms.TextBox courseDescriptionTextBox;
         private System.Windows.Forms.TextBox coursePriceTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox coursesIDsComboBox;
+        private System.Windows.Forms.TextBox courseIdTextBox;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }

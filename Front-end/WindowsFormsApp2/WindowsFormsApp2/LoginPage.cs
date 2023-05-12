@@ -38,7 +38,7 @@ namespace WindowsFormsApp2
                 if (IsAdmin)
                 {
                     Islogin = true;
-                    Admin f2 = new Admin();
+                    AdminHomePage f2 = new AdminHomePage();
                     f2.Show();
                     this.Hide();
                 }

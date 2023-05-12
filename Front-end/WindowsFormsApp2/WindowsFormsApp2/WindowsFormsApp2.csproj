@@ -49,17 +49,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\DeleteCourse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\DeleteCourse.Designer.cs">
-      <DependentUpon>DeleteCourse.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\EditCourse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\EditCourse.Designer.cs">
       <DependentUpon>EditCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewCourses.Designer.cs">
+      <DependentUpon>ViewCourses.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\adminServicesReference\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -113,23 +113,17 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Admin.cs">
+    <Compile Include="Admin\AdminHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Admin.Designer.cs">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <Compile Include="Admin\AdminHomePage.Designer.cs">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\Addcourse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\Addcourse.Designer.cs">
       <DependentUpon>Addcourse.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\ViewCourse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\ViewCourse.Designer.cs">
-      <DependentUpon>ViewCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,11 +148,11 @@
     <EmbeddedResource Include="Admin\Addcourse.resx">
       <DependentUpon>Addcourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\DeleteCourse.resx">
-      <DependentUpon>DeleteCourse.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\EditCourse.resx">
       <DependentUpon>EditCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ViewCourses.resx">
+      <DependentUpon>ViewCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
@@ -175,8 +169,8 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Admin.resx">
-      <DependentUpon>Admin.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\AdminHomePage.resx">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -189,9 +183,6 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\ViewCourse.resx">
-      <DependentUpon>ViewCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UserAccount.resx">
       <DependentUpon>UserAccount.cs</DependentUpon>
