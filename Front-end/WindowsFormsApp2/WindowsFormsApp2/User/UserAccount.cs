@@ -38,7 +38,7 @@ namespace WindowsFormsApp2
         {
             // load user data
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
-            UserData userData = usersServices.GetUserById(userId);
+            UserData userData = usersServices.getUserById(userId);
             firstNameTextBox.Text = userData.FirstName;
             lastNameTextBox.Text = userData.LastName;
             userNameTextBox.Text = userData.UserName;

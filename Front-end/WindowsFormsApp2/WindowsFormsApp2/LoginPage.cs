@@ -58,7 +58,7 @@ namespace WindowsFormsApp2
         private bool AuthenticateUser(string username, string password)
         {
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
-            user = usersServices.GetUserByUsername(username);
+            user = usersServices.getUserByUsername(username);
             if (user == null)
             {
                 return false;

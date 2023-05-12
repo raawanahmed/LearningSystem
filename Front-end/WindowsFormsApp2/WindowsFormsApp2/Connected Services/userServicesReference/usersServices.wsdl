@@ -33,31 +33,31 @@
       <s:element name="updateUserDataResponse">
         <s:complexType />
       </s:element>
-      <s:element name="GetUserById">
+      <s:element name="getUserById">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="GetUserByIdResponse">
+      <s:element name="getUserByIdResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetUserByIdResult" type="tns:UserData" />
+            <s:element minOccurs="0" maxOccurs="1" name="getUserByIdResult" type="tns:UserData" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="GetUserByUsername">
+      <s:element name="getUserByUsername">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="GetUserByUsernameResponse">
+      <s:element name="getUserByUsernameResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetUserByUsernameResult" type="tns:UserData" />
+            <s:element minOccurs="0" maxOccurs="1" name="getUserByUsernameResult" type="tns:UserData" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -231,17 +231,17 @@
   <wsdl:message name="updateUserDataSoapOut">
     <wsdl:part name="parameters" element="tns:updateUserDataResponse" />
   </wsdl:message>
-  <wsdl:message name="GetUserByIdSoapIn">
-    <wsdl:part name="parameters" element="tns:GetUserById" />
+  <wsdl:message name="getUserByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:getUserById" />
   </wsdl:message>
-  <wsdl:message name="GetUserByIdSoapOut">
-    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  <wsdl:message name="getUserByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserByIdResponse" />
   </wsdl:message>
-  <wsdl:message name="GetUserByUsernameSoapIn">
-    <wsdl:part name="parameters" element="tns:GetUserByUsername" />
+  <wsdl:message name="getUserByUsernameSoapIn">
+    <wsdl:part name="parameters" element="tns:getUserByUsername" />
   </wsdl:message>
-  <wsdl:message name="GetUserByUsernameSoapOut">
-    <wsdl:part name="parameters" element="tns:GetUserByUsernameResponse" />
+  <wsdl:message name="getUserByUsernameSoapOut">
+    <wsdl:part name="parameters" element="tns:getUserByUsernameResponse" />
   </wsdl:message>
   <wsdl:message name="getAllCoursesSoapIn">
     <wsdl:part name="parameters" element="tns:getAllCourses" />
@@ -312,13 +312,13 @@
       <wsdl:input message="tns:updateUserDataSoapIn" />
       <wsdl:output message="tns:updateUserDataSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetUserById">
-      <wsdl:input message="tns:GetUserByIdSoapIn" />
-      <wsdl:output message="tns:GetUserByIdSoapOut" />
+    <wsdl:operation name="getUserById">
+      <wsdl:input message="tns:getUserByIdSoapIn" />
+      <wsdl:output message="tns:getUserByIdSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="GetUserByUsername">
-      <wsdl:input message="tns:GetUserByUsernameSoapIn" />
-      <wsdl:output message="tns:GetUserByUsernameSoapOut" />
+    <wsdl:operation name="getUserByUsername">
+      <wsdl:input message="tns:getUserByUsernameSoapIn" />
+      <wsdl:output message="tns:getUserByUsernameSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="getAllCourses">
       <wsdl:input message="tns:getAllCoursesSoapIn" />
@@ -381,8 +381,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUserById">
-      <soap:operation soapAction="http://tempuri.org/GetUserById" style="document" />
+    <wsdl:operation name="getUserById">
+      <soap:operation soapAction="http://tempuri.org/getUserById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -390,8 +390,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUserByUsername">
-      <soap:operation soapAction="http://tempuri.org/GetUserByUsername" style="document" />
+    <wsdl:operation name="getUserByUsername">
+      <soap:operation soapAction="http://tempuri.org/getUserByUsername" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -510,8 +510,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUserById">
-      <soap12:operation soapAction="http://tempuri.org/GetUserById" style="document" />
+    <wsdl:operation name="getUserById">
+      <soap12:operation soapAction="http://tempuri.org/getUserById" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -519,8 +519,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUserByUsername">
-      <soap12:operation soapAction="http://tempuri.org/GetUserByUsername" style="document" />
+    <wsdl:operation name="getUserByUsername">
+      <soap12:operation soapAction="http://tempuri.org/getUserByUsername" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

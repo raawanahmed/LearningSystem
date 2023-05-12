@@ -71,7 +71,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\HelperFunctions.cs" />
+    <Compile Include="Helpers\HelperFunctionsForAdmin.cs" />
+    <Compile Include="Helpers\HelperFunctionsForUser.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,10 +242,10 @@
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.GetUserByIdResponse.datasource">
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getUserByIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.GetUserByUsernameResponse.datasource">
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getUserByUsernameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.insertUserResponse.datasource">

@@ -54,7 +54,7 @@ namespace Elearning_ASMX_Services
         }
 
         [WebMethod]
-        public UserData GetUserById(int userId)
+        public UserData getUserById(int userId)
         {
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
             string query = string.Format("SELECT * FROM UsersTable WHERE id = {0}", userId);
@@ -80,7 +80,7 @@ namespace Elearning_ASMX_Services
 
 
         [WebMethod]
-        public UserData GetUserByUsername(string username)
+        public UserData getUserByUsername(string username)
         {
             // Query database for user by username
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
