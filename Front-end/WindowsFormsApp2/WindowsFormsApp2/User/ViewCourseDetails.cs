@@ -8,6 +8,7 @@ namespace WindowsFormsApp2.User
     public partial class ViewCourseDetails : Form
     {
         private int userId;
+        private int courseId;
         public ViewCourseDetails(CourseData course, int userId)
         {
 
@@ -15,6 +16,7 @@ namespace WindowsFormsApp2.User
             viewCourseGridView.ReadOnly = true;
             Viewdetails(course.Id);
             this.userId = userId;
+            this.courseId = course.Id;
         }
         /*public void Viewdetails(int courseId)
         {
@@ -68,11 +70,36 @@ namespace WindowsFormsApp2.User
 
         private void onAddRateToCourseBtn(object sender, EventArgs e)
         {
-            // todo
+            userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
+            if (float.TryParse(rateTextBox.Text, out float rate))
+            {
+                if (rate >= 0 && rate <= 10)
+                {
+                    usersServices.addRatingScoreToCourse(rate, this.userId, this.courseId);
+                    MessageBox.Show("Rating added to course successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a number between 0 and 10 for the rating.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid number for the rating.");
+            }
         }
         private void onAddCommentToCourseBtn(object sender, EventArgs e)
         {
-            // todo
+            userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
+            string comment = commentTextBox.Text;
+            if (string.IsNullOrEmpty(comment))
+            {
+                MessageBox.Show("Comment cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            usersServices.addCommentToCourse(comment, this.userId, this.courseId);
+            MessageBox.Show("Comment added to course successfully.");
         }
+
     }
 }

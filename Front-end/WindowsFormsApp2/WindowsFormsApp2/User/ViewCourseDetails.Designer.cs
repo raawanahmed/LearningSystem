@@ -99,7 +99,7 @@
             this.button3.Location = new System.Drawing.Point(136, 119);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 40);
+            this.button3.Size = new System.Drawing.Size(147, 40);
             this.button3.TabIndex = 31;
             this.button3.Text = "Add rate";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -118,7 +118,7 @@
             this.button4.Location = new System.Drawing.Point(586, 119);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 40);
+            this.button4.Size = new System.Drawing.Size(198, 40);
             this.button4.TabIndex = 32;
             this.button4.Text = "Add comment";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
