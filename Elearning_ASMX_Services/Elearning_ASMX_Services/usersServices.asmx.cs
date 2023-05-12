@@ -308,7 +308,7 @@ namespace Elearning_ASMX_Services
         }
 
         [WebMethod]
-        public void addUserToCourseWithStatus(int userId, int courseId, string courseStatus)
+        public bool addUserToCourseWithStatus(int userId, int courseId, string courseStatus)
         {
             // Check if user is already enrolled in the course
             SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True");
@@ -322,7 +322,9 @@ namespace Elearning_ASMX_Services
             cmd.Parameters.Add(p2);
             cmd.Parameters.Add(p3);
             cmd.ExecuteNonQuery();
+            int rowsAffected = cmd.ExecuteNonQuery();
             conn.Close();
+            return (rowsAffected > 0); // returns true if at least one row was updated
         }
 
 

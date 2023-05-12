@@ -1147,10 +1147,17 @@ namespace WindowsFormsApp2.userServicesReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
     public partial class addUserToCourseWithStatusResponseBody {
         
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool addUserToCourseWithStatusResult;
+        
         public addUserToCourseWithStatusResponseBody() {
+        }
+        
+        public addUserToCourseWithStatusResponseBody(bool addUserToCourseWithStatusResult) {
+            this.addUserToCourseWithStatusResult = addUserToCourseWithStatusResult;
         }
     }
     
@@ -1552,13 +1559,14 @@ namespace WindowsFormsApp2.userServicesReference {
             return base.Channel.addUserToCourseWithStatus(request);
         }
         
-        public void addUserToCourseWithStatus(int userId, int courseId, string courseStatus) {
+        public bool addUserToCourseWithStatus(int userId, int courseId, string courseStatus) {
             WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest inValue = new WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequest();
             inValue.Body = new WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusRequestBody();
             inValue.Body.userId = userId;
             inValue.Body.courseId = courseId;
             inValue.Body.courseStatus = courseStatus;
             WindowsFormsApp2.userServicesReference.addUserToCourseWithStatusResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).addUserToCourseWithStatus(inValue);
+            return retVal.Body.addUserToCourseWithStatusResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

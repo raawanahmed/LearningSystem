@@ -29,7 +29,7 @@ namespace WindowsFormsApp2
             courseData.CourseInstructor = courseInstructorNameTextBox.Text;
             courseData.CourseGenre = courseGenre.Text;
             courseData.CreatedAt = DateTime.Now;
-            if (helperFunctionsForAdmin.validateCourseData(courseData))
+            if (helperFunctionsForAdmin.validateCourseData(courseData, coursePriceTextBox.Text))
             {
                 adminServices.addCourse(courseData);
                 MessageBox.Show("Course Add successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

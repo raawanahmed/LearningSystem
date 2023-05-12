@@ -5,15 +5,11 @@ namespace WindowsFormsApp2.Helpers
 {
     internal class HelperFunctionsForAdmin
     {
-        public bool validateCourseData(CourseData course)
+        public bool validateCourseData(CourseData course, string coursePrice)
         {
             bool tmam = true;
-            if (course == null)
-            {
-                MessageBox.Show("Please fill all the fields.");
-                tmam = false;
-            }
-            else if (string.IsNullOrEmpty(course.CourseName))
+
+            if (string.IsNullOrEmpty(course.CourseName))
             {
                 MessageBox.Show("Please enter the course name.");
                 tmam = false;
@@ -23,9 +19,10 @@ namespace WindowsFormsApp2.Helpers
                 MessageBox.Show("Please enter the course description.");
                 tmam = false;
             }
-            else if (course.CoursePrice <= 0)
+            else if (!int.TryParse(coursePrice, out int price))
             {
-                MessageBox.Show("Please enter the course price.");
+                // there is a problem here
+                MessageBox.Show("Please enter valid course price.");
                 tmam = false;
             }
             else if (string.IsNullOrEmpty(course.CourseGenre))

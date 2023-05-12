@@ -34,7 +34,7 @@ namespace WindowsFormsApp2
             courseData.CourseInstructor = courseInstructorNameTextBox.Text;
             courseData.CourseGenre = courseGenreTextBox.Text;
             courseData.CreatedAt = DateTime.Now;
-            if (helperFunctionsForAdmin.validateCourseData(courseData))
+            if (helperFunctionsForAdmin.validateCourseData(courseData, coursePriceTextBox.Text))
             {
                 adminServices.editCourse(this.courseToBeEdited.Id, courseData);
                 MessageBox.Show("Course Edit successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

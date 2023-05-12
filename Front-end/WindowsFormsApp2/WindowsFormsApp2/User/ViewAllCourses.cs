@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using WindowsFormsApp2.User;
 using WindowsFormsApp2.userServicesReference;
@@ -29,9 +30,37 @@ namespace WindowsFormsApp2
             GridViewData(courses);
         }
 
-        public void GridViewData(CourseData[] courses)
-        {
+        /* public void GridViewData(CourseData[] courses)
+         {
 
+             allCoursesGridView.DataSource = courses;
+
+             DataGridViewButtonColumn viewCourseDetailsBtn = new DataGridViewButtonColumn();
+             viewCourseDetailsBtn.HeaderText = "View Course Details";
+             viewCourseDetailsBtn.Name = "View Course Details";
+             viewCourseDetailsBtn.Text = "View Course Details";
+             viewCourseDetailsBtn.UseColumnTextForButtonValue = true;
+             allCoursesGridView.Columns.Add(viewCourseDetailsBtn);
+
+
+             DataGridViewButtonColumn addToCartBtn = new DataGridViewButtonColumn();
+             addToCartBtn.HeaderText = "Add To Cart";
+             addToCartBtn.Name = "Add To Cart";
+             addToCartBtn.Text = "Add To Cart";
+             addToCartBtn.UseColumnTextForButtonValue = true;
+             allCoursesGridView.Columns.Add(addToCartBtn);
+
+         }*/
+        private void GridViewData(CourseData[] courses)
+        {
+            // Filter courses based on search text
+            string search = searchTextBox.Text.Trim().ToLower();
+            if (!string.IsNullOrEmpty(search))
+            {
+                courses = courses.Where(c => c.CourseName.ToLower().Contains(search)).ToArray();
+            }
+
+            // Bind filtered courses to grid view
             allCoursesGridView.DataSource = courses;
 
             DataGridViewButtonColumn viewCourseDetailsBtn = new DataGridViewButtonColumn();
@@ -41,15 +70,19 @@ namespace WindowsFormsApp2
             viewCourseDetailsBtn.UseColumnTextForButtonValue = true;
             allCoursesGridView.Columns.Add(viewCourseDetailsBtn);
 
-
             DataGridViewButtonColumn addToCartBtn = new DataGridViewButtonColumn();
             addToCartBtn.HeaderText = "Add To Cart";
             addToCartBtn.Name = "Add To Cart";
             addToCartBtn.Text = "Add To Cart";
             addToCartBtn.UseColumnTextForButtonValue = true;
             allCoursesGridView.Columns.Add(addToCartBtn);
-
         }
+
+        private void onSearchTextChange(object sender, EventArgs e)
+        {
+            GridViewData(courses);
+        }
+
 
         private void allCoursesGridViewCellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -59,18 +92,14 @@ namespace WindowsFormsApp2
 
             if (e.ColumnIndex == 7)
             {
-                // view course details
-                if (searchTextBox.Text == "")
+                for (int i = 0; i < courses.Length; i++)
                 {
-                    for (int i = 0; i < courses.Length; i++)
+                    if (e.RowIndex == i)
                     {
-                        if (e.RowIndex == i)
-                        {
-                            courseView = new ViewCourseRatingsAndComments(courses[i], this.userId);
-                            courseView.Show();
-                            this.Hide();
-                            break;
-                        }
+                        courseView = new ViewCourseRatingsAndComments(courses[i], this.userId);
+                        courseView.Show();
+                        this.Hide();
+                        break;
                     }
                 }
             }
@@ -82,22 +111,21 @@ namespace WindowsFormsApp2
                 {
                     if (e.RowIndex == i)
                     {
-                        searchTextBox.Text = courses[i].Id.ToString();
-                        usersServices.addUserToCourseWithStatus(this.userId, courses[i].Id, "in cart");
-                        // update status of course to inCart if it already in the users table
-                        usersServices.updateCourseStatus(this.userId, courses[i].Id, "in cart");
+                        // this function check if user is already has a relation with this course before, if not it will insert it
+                        bool isAdded = usersServices.addUserToCourseWithStatus(this.userId, courses[i].Id, "in cart");
+                        if (isAdded)
+                        {
+                            MessageBox.Show("Course Added to cart successfully!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("You are already enrolled in the course or the course already in the cart");
+                        }
                         break;
                     }
                 }
-                MessageBox.Show("Course Added to cart successfully!");
             }
         }
-
-        private void onSearchTextChange(object sender, EventArgs e)
-        {
-
-        }
-
         private void onLogoutBtn(object sender, EventArgs e)
         {
             LoginPage loginPage = new LoginPage();
