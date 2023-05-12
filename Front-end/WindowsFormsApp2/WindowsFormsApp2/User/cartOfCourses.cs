@@ -22,14 +22,16 @@ namespace WindowsFormsApp2.User
         }
         private void onCartOfCoursesFormLoad(object sender, EventArgs e)
         {
+            //userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
+            //coursesInCart = usersServices.getCoursesInCart(this.userId);
+            GridViewData();
+        }
+        public void GridViewData()
+        {
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
             coursesInCart = usersServices.getCoursesInCart(this.userId);
-            GridViewData(coursesInCart);
-        }
-        public void GridViewData(CourseData[] courses)
-        {
-
-            coursesInCartGridView.DataSource = courses;
+            coursesInCartGridView.Columns.Clear();
+            coursesInCartGridView.DataSource = coursesInCart;
             // enroll into course update the course status to enrolled
             DataGridViewButtonColumn enrollInCourseBtn = new DataGridViewButtonColumn();
             enrollInCourseBtn.HeaderText = "Enroll in the course";
@@ -76,10 +78,12 @@ namespace WindowsFormsApp2.User
                     if (e.RowIndex == i)
                     {
                         usersServices.removeCourseFromCart(this.userId, coursesInCart[i].Id);
+                        GridViewData();
+                        MessageBox.Show("Course removed from cart successfully!");
                         break;
                     }
                 }
-                MessageBox.Show("Course removed from cart successfully!");
+
             }
         }
         private void onLogoutBtn(object sender, EventArgs e)

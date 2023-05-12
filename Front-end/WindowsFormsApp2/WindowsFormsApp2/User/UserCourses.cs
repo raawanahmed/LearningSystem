@@ -17,7 +17,6 @@ namespace WindowsFormsApp2.User
         {
             InitializeComponent();
             this.userId = userId;
-            textBox1.Text = this.userId.ToString();
             allCoursesGridView.ReadOnly = true;
         }
         private void onUserCoursesFormLoad(object sender, EventArgs e)

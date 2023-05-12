@@ -77,6 +77,7 @@ namespace WindowsFormsApp2.User
                 {
                     usersServices.addRatingScoreToCourse(rate, this.userId, this.courseId);
                     MessageBox.Show("Rating added to course successfully.");
+                    Viewdetails(courseId); // Reload the data
                 }
                 else
                 {
@@ -99,6 +100,7 @@ namespace WindowsFormsApp2.User
             }
             usersServices.addCommentToCourse(comment, this.userId, this.courseId);
             MessageBox.Show("Comment added to course successfully.");
+            Viewdetails(courseId); // Reload the data
         }
 
     }

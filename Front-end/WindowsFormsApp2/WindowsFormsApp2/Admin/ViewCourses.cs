@@ -13,12 +13,16 @@ namespace WindowsFormsApp2.Admin
         }
         private void onViewCoursesFormLoad(object sender, EventArgs e)
         {
+            // adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
+            //courses = adminServices.getAllCourses();
+            GridViewData();
+        }
+        public void GridViewData()
+        {
             adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
             courses = adminServices.getAllCourses();
-            GridViewData(courses);
-        }
-        public void GridViewData(CourseData[] courses)
-        {
+
+            allCoursesGridView.Columns.Clear();
             allCoursesGridView.DataSource = courses;
 
             DataGridViewButtonColumn editCourseBtn = new DataGridViewButtonColumn();
@@ -72,10 +76,10 @@ namespace WindowsFormsApp2.Admin
                         // there is an error in passing the selected id
                         adminServices.deleteCourse(courses[i].Id);
                         MessageBox.Show("Course Deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GridViewData();
                         break;
                     }
                 }
-                MessageBox.Show("Course has been deleted successfully!");
             }
         }
 
