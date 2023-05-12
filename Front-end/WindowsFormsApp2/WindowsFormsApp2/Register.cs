@@ -11,6 +11,8 @@ namespace WindowsFormsApp2
         public Register()
         {
             InitializeComponent();
+            passwordTextBox.PasswordChar = '*';
+            confirmPasswordTextBox.PasswordChar = '*';
         }
 
         private void onSignupBtn(object sender, EventArgs e)
@@ -24,8 +26,8 @@ namespace WindowsFormsApp2
             user.LastName = lastNameTextBox.Text;
             user.UserName = userNameTextBox.Text;
             user.Email = emailTextBox.Text;
-            user.Password = passwordTeaxtBox.Text;
-            string comfirmPassword = comfirmPasswordTextBox.Text;
+            user.Password = passwordTextBox.Text;
+            string comfirmPassword = confirmPasswordTextBox.Text;
 
             if (string.IsNullOrWhiteSpace(user.FirstName) ||
                 string.IsNullOrWhiteSpace(user.Email) ||

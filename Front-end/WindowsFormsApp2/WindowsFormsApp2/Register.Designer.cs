@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTeaxtBox = new System.Windows.Forms.TextBox();
-            this.comfirmPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.confirmPasswordTextBox = new System.Windows.Forms.TextBox();
             this.emailAlertLabel = new System.Windows.Forms.Label();
             this.confirmPasswordAlertLabel = new System.Windows.Forms.Label();
             this.allFieldsAlertLabel = new System.Windows.Forms.Label();
@@ -67,17 +67,17 @@
             // 
             // passwordTeaxtBox
             // 
-            this.passwordTeaxtBox.Location = new System.Drawing.Point(394, 337);
-            this.passwordTeaxtBox.Name = "passwordTeaxtBox";
-            this.passwordTeaxtBox.Size = new System.Drawing.Size(226, 22);
-            this.passwordTeaxtBox.TabIndex = 5;
+            this.passwordTextBox.Location = new System.Drawing.Point(394, 337);
+            this.passwordTextBox.Name = "passwordTeaxtBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(226, 22);
+            this.passwordTextBox.TabIndex = 5;
             // 
             // comfirmPasswordTextBox
             // 
-            this.comfirmPasswordTextBox.Location = new System.Drawing.Point(394, 408);
-            this.comfirmPasswordTextBox.Name = "comfirmPasswordTextBox";
-            this.comfirmPasswordTextBox.Size = new System.Drawing.Size(226, 22);
-            this.comfirmPasswordTextBox.TabIndex = 7;
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(394, 408);
+            this.confirmPasswordTextBox.Name = "comfirmPasswordTextBox";
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(226, 22);
+            this.confirmPasswordTextBox.TabIndex = 7;
             // 
             // emailAlertLabel
             // 
@@ -274,8 +274,8 @@
             this.Controls.Add(this.allFieldsAlertLabel);
             this.Controls.Add(this.confirmPasswordAlertLabel);
             this.Controls.Add(this.emailAlertLabel);
-            this.Controls.Add(this.comfirmPasswordTextBox);
-            this.Controls.Add(this.passwordTeaxtBox);
+            this.Controls.Add(this.confirmPasswordTextBox);
+            this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.userNameTextBox);
             this.Name = "Register";
@@ -290,8 +290,8 @@
 
         private System.Windows.Forms.TextBox userNameTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox passwordTeaxtBox;
-        private System.Windows.Forms.TextBox comfirmPasswordTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox confirmPasswordTextBox;
         private System.Windows.Forms.Label emailAlertLabel;
         private System.Windows.Forms.Label confirmPasswordAlertLabel;
         private System.Windows.Forms.Label allFieldsAlertLabel;

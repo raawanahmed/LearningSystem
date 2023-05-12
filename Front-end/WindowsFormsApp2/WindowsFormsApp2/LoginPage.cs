@@ -12,6 +12,7 @@ namespace WindowsFormsApp2
         public LoginPage()
         {
             InitializeComponent();
+            passwordTextBox.PasswordChar = '*';
         }
         public bool Islogin = false;
         public bool IsAdmin = false;
