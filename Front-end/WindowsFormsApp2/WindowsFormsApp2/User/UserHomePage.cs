@@ -24,7 +24,7 @@ namespace WindowsFormsApp2.User
 
         private void onViewMyCoursesBtn(object sender, EventArgs e)
         {
-            UserCourses userCourses = new UserCourses(this.UserId);
+            UserEnrolledCourses userCourses = new UserEnrolledCourses(this.UserId);
             userCourses.Show();
             this.Hide();
         }
@@ -47,6 +47,13 @@ namespace WindowsFormsApp2.User
         {
             UserAccount myaccount = new UserAccount(this.UserId);
             myaccount.Show();
+            this.Hide();
+        }
+
+        private void onViewBoughtCourses(object sender, EventArgs e)
+        {
+            UserBoughtCourses userBoughtCourses = new UserBoughtCourses(this.UserId);
+            userBoughtCourses.Show();
             this.Hide();
         }
     }

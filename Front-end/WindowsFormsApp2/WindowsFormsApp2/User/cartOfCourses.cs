@@ -33,12 +33,12 @@ namespace WindowsFormsApp2.User
             coursesInCartGridView.Columns.Clear();
             coursesInCartGridView.DataSource = coursesInCart;
             // enroll into course update the course status to enrolled
-            DataGridViewButtonColumn enrollInCourseBtn = new DataGridViewButtonColumn();
-            enrollInCourseBtn.HeaderText = "Enroll in the course";
-            enrollInCourseBtn.Name = "Enroll in the course";
-            enrollInCourseBtn.Text = "Enroll in the course";
-            enrollInCourseBtn.UseColumnTextForButtonValue = true;
-            coursesInCartGridView.Columns.Add(enrollInCourseBtn);
+            DataGridViewButtonColumn buyCourseBtn = new DataGridViewButtonColumn();
+            buyCourseBtn.HeaderText = "Buy the course";
+            buyCourseBtn.Name = "Buy the course";
+            buyCourseBtn.Text = "Buy the course";
+            buyCourseBtn.UseColumnTextForButtonValue = true;
+            coursesInCartGridView.Columns.Add(buyCourseBtn);
 
             // remove from cart
             DataGridViewButtonColumn removeCourseFromCartBtn = new DataGridViewButtonColumn();

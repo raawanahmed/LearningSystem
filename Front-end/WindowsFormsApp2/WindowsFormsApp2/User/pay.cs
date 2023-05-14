@@ -109,7 +109,7 @@ namespace WindowsFormsApp2.User
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
             if (validateCreditCard())
             {
-                bool updated = usersServices.updateCourseStatus(this.userId, this.courseId, "enrolled");
+                bool updated = usersServices.updateCourseStatus(this.userId, this.courseId, "bought");
                 if (updated)
                 {
                     MessageBox.Show("Payment successfully!");

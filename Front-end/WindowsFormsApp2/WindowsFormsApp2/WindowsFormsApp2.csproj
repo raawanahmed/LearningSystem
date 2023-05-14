@@ -79,6 +79,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\UserBoughtCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserBoughtCourses.Designer.cs">
+      <DependentUpon>UserBoughtCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\ViewCourseRatingsAndComments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,11 +147,11 @@
     <Compile Include="User\Pay.Designer.cs">
       <DependentUpon>Pay.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\UserCourses.cs">
+    <Compile Include="User\UserEnrolledCourses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\UserCourses.Designer.cs">
-      <DependentUpon>UserCourses.cs</DependentUpon>
+    <Compile Include="User\UserEnrolledCourses.Designer.cs">
+      <DependentUpon>UserEnrolledCourses.cs</DependentUpon>
     </Compile>
     <Compile Include="User\UserHomePage.cs">
       <SubType>Form</SubType>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserBoughtCourses.resx">
+      <DependentUpon>UserBoughtCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\ViewCourseRatingsAndComments.resx">
       <DependentUpon>ViewCourseRatingsAndComments.cs</DependentUpon>
@@ -201,8 +210,8 @@
     <EmbeddedResource Include="User\Pay.resx">
       <DependentUpon>Pay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\UserCourses.resx">
-      <DependentUpon>UserCourses.cs</DependentUpon>
+    <EmbeddedResource Include="User\UserEnrolledCourses.resx">
+      <DependentUpon>UserEnrolledCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\UserHomePage.resx">
       <DependentUpon>UserHomePage.cs</DependentUpon>
@@ -240,6 +249,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getAllCoursesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getCourseDetailsResponse.datasource">

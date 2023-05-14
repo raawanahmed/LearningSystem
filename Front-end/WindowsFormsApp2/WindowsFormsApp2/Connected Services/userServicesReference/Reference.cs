@@ -456,6 +456,13 @@ namespace WindowsFormsApp2.userServicesReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getEnrolledCoursesForUser", ReplyAction="*")]
         System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserResponse> getEnrolledCoursesForUserAsync(WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequest request);
         
+        // CODEGEN: Generating message contract since element name getBoughtCoursesForUserResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getBoughtCoursesForUser", ReplyAction="*")]
+        WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponse getBoughtCoursesForUser(WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getBoughtCoursesForUser", ReplyAction="*")]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponse> getBoughtCoursesForUserAsync(WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequest request);
+        
         // CODEGEN: Generating message contract since element name getCoursesInCartResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getCoursesInCart", ReplyAction="*")]
         WindowsFormsApp2.userServicesReference.getCoursesInCartResponse getCoursesInCart(WindowsFormsApp2.userServicesReference.getCoursesInCartRequest request);
@@ -1021,6 +1028,74 @@ namespace WindowsFormsApp2.userServicesReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getBoughtCoursesForUserRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getBoughtCoursesForUser", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequestBody Body;
+        
+        public getBoughtCoursesForUserRequest() {
+        }
+        
+        public getBoughtCoursesForUserRequest(WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getBoughtCoursesForUserRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int userId;
+        
+        public getBoughtCoursesForUserRequestBody() {
+        }
+        
+        public getBoughtCoursesForUserRequestBody(int userId) {
+            this.userId = userId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getBoughtCoursesForUserResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getBoughtCoursesForUserResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponseBody Body;
+        
+        public getBoughtCoursesForUserResponse() {
+        }
+        
+        public getBoughtCoursesForUserResponse(WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getBoughtCoursesForUserResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public WindowsFormsApp2.userServicesReference.CourseData[] getBoughtCoursesForUserResult;
+        
+        public getBoughtCoursesForUserResponseBody() {
+        }
+        
+        public getBoughtCoursesForUserResponseBody(WindowsFormsApp2.userServicesReference.CourseData[] getBoughtCoursesForUserResult) {
+            this.getBoughtCoursesForUserResult = getBoughtCoursesForUserResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
     public partial class getCoursesInCartRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="getCoursesInCart", Namespace="http://tempuri.org/", Order=0)]
@@ -1527,6 +1602,31 @@ namespace WindowsFormsApp2.userServicesReference {
             inValue.Body = new WindowsFormsApp2.userServicesReference.getEnrolledCoursesForUserRequestBody();
             inValue.Body.userId = userId;
             return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getEnrolledCoursesForUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.getBoughtCoursesForUser(WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequest request) {
+            return base.Channel.getBoughtCoursesForUser(request);
+        }
+        
+        public WindowsFormsApp2.userServicesReference.CourseData[] getBoughtCoursesForUser(int userId) {
+            WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequest inValue = new WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequestBody();
+            inValue.Body.userId = userId;
+            WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getBoughtCoursesForUser(inValue);
+            return retVal.Body.getBoughtCoursesForUserResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.getBoughtCoursesForUserAsync(WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequest request) {
+            return base.Channel.getBoughtCoursesForUserAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponse> getBoughtCoursesForUserAsync(int userId) {
+            WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequest inValue = new WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequest();
+            inValue.Body = new WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserRequestBody();
+            inValue.Body.userId = userId;
+            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getBoughtCoursesForUserAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

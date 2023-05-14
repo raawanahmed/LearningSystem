@@ -200,16 +200,17 @@ namespace Elearning_ASMX_Services
             return courseDetailsOfAllUsers.ToArray();
         }
 
-        public int[] getAllCoursesIDsForUser(int userId)
+        public int[] getAllCoursesIDsForUser(int userId, string courseStatus)
         {
             // helper function
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
-            string query = "SELECT * FROM UserCoursesTable WHERE userId = @userId AND courseStatus = 'enrolled'";
+            string query = "SELECT * FROM UserCoursesTable WHERE userId = @userId AND courseStatus = @courseStatus";
             List<int> coursesIDs = new List<int>();
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@userId", userId); // set parameter value
+                command.Parameters.AddWithValue("@courseStatus", courseStatus);
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -225,7 +226,39 @@ namespace Elearning_ASMX_Services
         public CourseData[] getEnrolledCoursesForUser(int userId)
         {
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
-            int[] courseIds = getAllCoursesIDsForUser(userId);
+            int[] courseIds = getAllCoursesIDsForUser(userId, "enrolled");
+            if (courseIds.Length == 0)
+            {
+                return new CourseData[0]; // return empty array if no course IDs found
+            }
+            string query = "SELECT * FROM CoursesTable WHERE Id IN (" + string.Join(",", courseIds) + ")";
+            List<CourseData> courses = new List<CourseData>();
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    CourseData course = new CourseData();
+                    course.Id = reader.GetInt32(0);
+                    course.CourseName = reader.GetString(1);
+                    course.CourseDescription = reader.GetString(2);
+                    course.CoursePrice = reader.GetInt32(3);
+                    course.CourseInstructor = reader.GetString(4);
+                    course.CourseGenre = reader.GetString(5);
+                    course.CreatedAt = reader.GetDateTime(6);
+                    courses.Add(course);
+                }
+            }
+            return courses.ToArray();
+        }
+
+        [WebMethod]
+        public CourseData[] getBoughtCoursesForUser(int userId)
+        {
+            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
+            int[] courseIds = getAllCoursesIDsForUser(userId, "bought");
             if (courseIds.Length == 0)
             {
                 return new CourseData[0]; // return empty array if no course IDs found

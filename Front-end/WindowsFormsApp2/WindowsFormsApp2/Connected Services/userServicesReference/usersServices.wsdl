@@ -140,6 +140,20 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="getBoughtCoursesForUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBoughtCoursesForUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBoughtCoursesForUserResult" type="tns:ArrayOfCourseData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="getCoursesInCart">
         <s:complexType>
           <s:sequence>
@@ -271,6 +285,12 @@
   <wsdl:message name="getEnrolledCoursesForUserSoapOut">
     <wsdl:part name="parameters" element="tns:getEnrolledCoursesForUserResponse" />
   </wsdl:message>
+  <wsdl:message name="getBoughtCoursesForUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getBoughtCoursesForUser" />
+  </wsdl:message>
+  <wsdl:message name="getBoughtCoursesForUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getBoughtCoursesForUserResponse" />
+  </wsdl:message>
   <wsdl:message name="getCoursesInCartSoapIn">
     <wsdl:part name="parameters" element="tns:getCoursesInCart" />
   </wsdl:message>
@@ -339,6 +359,10 @@
     <wsdl:operation name="getEnrolledCoursesForUser">
       <wsdl:input message="tns:getEnrolledCoursesForUserSoapIn" />
       <wsdl:output message="tns:getEnrolledCoursesForUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBoughtCoursesForUser">
+      <wsdl:input message="tns:getBoughtCoursesForUserSoapIn" />
+      <wsdl:output message="tns:getBoughtCoursesForUserSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="getCoursesInCart">
       <wsdl:input message="tns:getCoursesInCartSoapIn" />
@@ -432,6 +456,15 @@
     </wsdl:operation>
     <wsdl:operation name="getEnrolledCoursesForUser">
       <soap:operation soapAction="http://tempuri.org/getEnrolledCoursesForUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBoughtCoursesForUser">
+      <soap:operation soapAction="http://tempuri.org/getBoughtCoursesForUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -561,6 +594,15 @@
     </wsdl:operation>
     <wsdl:operation name="getEnrolledCoursesForUser">
       <soap12:operation soapAction="http://tempuri.org/getEnrolledCoursesForUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBoughtCoursesForUser">
+      <soap12:operation soapAction="http://tempuri.org/getBoughtCoursesForUser" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
