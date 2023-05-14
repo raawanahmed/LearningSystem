@@ -158,22 +158,22 @@ namespace WindowsFormsApp2.adminServicesReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="adminServicesReference.IadminServices")]
     public interface IadminServices {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IadminServices/addCourse", ReplyAction="http://tempuri.org/IadminServices/addCourseResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IadminServices/addCourse")]
         void addCourse(WindowsFormsApp2.adminServicesReference.CourseData course);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IadminServices/addCourse", ReplyAction="http://tempuri.org/IadminServices/addCourseResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IadminServices/addCourse")]
         System.Threading.Tasks.Task addCourseAsync(WindowsFormsApp2.adminServicesReference.CourseData course);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IadminServices/editCourse", ReplyAction="http://tempuri.org/IadminServices/editCourseResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IadminServices/editCourse")]
         void editCourse(int courseId, WindowsFormsApp2.adminServicesReference.CourseData course);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IadminServices/editCourse", ReplyAction="http://tempuri.org/IadminServices/editCourseResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IadminServices/editCourse")]
         System.Threading.Tasks.Task editCourseAsync(int courseId, WindowsFormsApp2.adminServicesReference.CourseData course);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IadminServices/deleteCourse", ReplyAction="http://tempuri.org/IadminServices/deleteCourseResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IadminServices/deleteCourse")]
         void deleteCourse(int courseId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IadminServices/deleteCourse", ReplyAction="http://tempuri.org/IadminServices/deleteCourseResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IadminServices/deleteCourse")]
         System.Threading.Tasks.Task deleteCourseAsync(int courseId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IadminServices/getAllCourses", ReplyAction="http://tempuri.org/IadminServices/getAllCoursesResponse")]

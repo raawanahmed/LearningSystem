@@ -7,13 +7,13 @@ namespace Elearning_WCF_Services
     [ServiceContract]
     public interface IadminServices
     {
-        [OperationContract]
+        [OperationContract(IsOneWay = true)]
         void addCourse(CourseData course);
 
-        [OperationContract]
+        [OperationContract(IsOneWay = true)]
         void editCourse(int courseId, CourseData course);
 
-        [OperationContract]
+        [OperationContract(IsOneWay = true)]
         void deleteCourse(int courseId);
 
         [OperationContract]

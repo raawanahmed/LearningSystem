@@ -11,20 +11,11 @@
   <wsdl:message name="IadminServices_addCourse_InputMessage">
     <wsdl:part name="parameters" element="tns:addCourse" />
   </wsdl:message>
-  <wsdl:message name="IadminServices_addCourse_OutputMessage">
-    <wsdl:part name="parameters" element="tns:addCourseResponse" />
-  </wsdl:message>
   <wsdl:message name="IadminServices_editCourse_InputMessage">
     <wsdl:part name="parameters" element="tns:editCourse" />
   </wsdl:message>
-  <wsdl:message name="IadminServices_editCourse_OutputMessage">
-    <wsdl:part name="parameters" element="tns:editCourseResponse" />
-  </wsdl:message>
   <wsdl:message name="IadminServices_deleteCourse_InputMessage">
     <wsdl:part name="parameters" element="tns:deleteCourse" />
-  </wsdl:message>
-  <wsdl:message name="IadminServices_deleteCourse_OutputMessage">
-    <wsdl:part name="parameters" element="tns:deleteCourseResponse" />
   </wsdl:message>
   <wsdl:message name="IadminServices_getAllCourses_InputMessage">
     <wsdl:part name="parameters" element="tns:getAllCourses" />
@@ -47,15 +38,12 @@
   <wsdl:portType name="IadminServices">
     <wsdl:operation name="addCourse">
       <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/addCourse" message="tns:IadminServices_addCourse_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/addCourseResponse" message="tns:IadminServices_addCourse_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="editCourse">
       <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/editCourse" message="tns:IadminServices_editCourse_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/editCourseResponse" message="tns:IadminServices_editCourse_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="deleteCourse">
       <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/deleteCourse" message="tns:IadminServices_deleteCourse_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IadminServices/deleteCourseResponse" message="tns:IadminServices_deleteCourse_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getAllCourses">
       <wsdl:input wsaw:Action="http://tempuri.org/IadminServices/getAllCourses" message="tns:IadminServices_getAllCourses_InputMessage" />
@@ -77,27 +65,18 @@
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="editCourse">
       <soap:operation soapAction="http://tempuri.org/IadminServices/editCourse" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="deleteCourse">
       <soap:operation soapAction="http://tempuri.org/IadminServices/deleteCourse" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getAllCourses">
       <soap:operation soapAction="http://tempuri.org/IadminServices/getAllCourses" style="document" />
