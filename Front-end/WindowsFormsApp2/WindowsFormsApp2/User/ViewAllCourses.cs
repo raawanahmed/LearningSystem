@@ -29,28 +29,6 @@ namespace WindowsFormsApp2
             courses = usersServices.getAllCoursesForUser();
             GridViewData(courses);
         }
-
-        /* public void GridViewData(CourseData[] courses)
-         {
-
-             allCoursesGridView.DataSource = courses;
-
-             DataGridViewButtonColumn viewCourseDetailsBtn = new DataGridViewButtonColumn();
-             viewCourseDetailsBtn.HeaderText = "View Course Details";
-             viewCourseDetailsBtn.Name = "View Course Details";
-             viewCourseDetailsBtn.Text = "View Course Details";
-             viewCourseDetailsBtn.UseColumnTextForButtonValue = true;
-             allCoursesGridView.Columns.Add(viewCourseDetailsBtn);
-
-
-             DataGridViewButtonColumn addToCartBtn = new DataGridViewButtonColumn();
-             addToCartBtn.HeaderText = "Add To Cart";
-             addToCartBtn.Name = "Add To Cart";
-             addToCartBtn.Text = "Add To Cart";
-             addToCartBtn.UseColumnTextForButtonValue = true;
-             allCoursesGridView.Columns.Add(addToCartBtn);
-
-         }*/
         private void GridViewData(CourseData[] courses)
         {
             // Filter courses based on search text
@@ -83,7 +61,6 @@ namespace WindowsFormsApp2
             GridViewData(courses);
         }
 
-
         private void allCoursesGridViewCellClick(object sender, DataGridViewCellEventArgs e)
         {
             // AddRatingsAndCommentsToCourse courseView;
@@ -106,13 +83,16 @@ namespace WindowsFormsApp2
             else if (e.ColumnIndex == 8)
             {
                 // add course to cart 
-                // todo add check to database add course if the course is not already added
                 for (int i = 0; i < courses.Length; i++)
                 {
                     if (e.RowIndex == i)
                     {
                         // this function check if user is already has a relation with this course before, if not it will insert it
-                        bool isAdded = usersServices.addUserToCourseWithStatus(this.userId, courses[i].Id, "in cart");
+                        UserCoursesData userCourseData = new UserCoursesData();
+                        userCourseData.UserId = this.userId;
+                        userCourseData.CourseId = courses[i].Id;
+                        userCourseData.CourseStatus = "in cart";
+                        bool isAdded = usersServices.addUserToCourseWithStatus(userCourseData);
                         if (isAdded)
                         {
                             MessageBox.Show("Course Added to cart successfully!");

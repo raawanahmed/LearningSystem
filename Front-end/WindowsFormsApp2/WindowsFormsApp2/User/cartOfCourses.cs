@@ -77,7 +77,10 @@ namespace WindowsFormsApp2.User
                 {
                     if (e.RowIndex == i)
                     {
-                        usersServices.removeCourseFromCart(this.userId, coursesInCart[i].Id);
+                        UserCoursesData userCourseData = new UserCoursesData();
+                        userCourseData.UserId = this.userId;
+                        userCourseData.CourseId = coursesInCart[i].Id;
+                        usersServices.removeCourseFromCart(userCourseData);
                         GridViewData();
                         MessageBox.Show("Course removed from cart successfully!");
                         break;

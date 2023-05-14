@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using WindowsFormsApp2.userServicesReference;
 
 namespace WindowsFormsApp2.User
 {
@@ -109,7 +110,11 @@ namespace WindowsFormsApp2.User
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
             if (validateCreditCard())
             {
-                bool updated = usersServices.updateCourseStatus(this.userId, this.courseId, "bought");
+                UserCoursesData userCourseData = new UserCoursesData();
+                userCourseData.UserId = this.userId;
+                userCourseData.CourseId = this.courseId;
+                userCourseData.CourseStatus = "bought";
+                bool updated = usersServices.updateCourseStatus(userCourseData);
                 if (updated)
                 {
                     MessageBox.Show("Payment successfully!");

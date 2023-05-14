@@ -341,16 +341,16 @@ namespace Elearning_ASMX_Services
         }
 
         [WebMethod]
-        public bool addUserToCourseWithStatus(int userId, int courseId, string courseStatus)
+        public bool addUserToCourseWithStatus(UserCoursesData userCourseData)
         {
             // Check if user is already enrolled in the course
             SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True");
             conn.Open();
             SqlCommand cmd = new SqlCommand("IF NOT EXISTS (SELECT * FROM UserCoursesTable WHERE userId = @userId AND courseId = @courseId) " +
                                              "INSERT INTO UserCoursesTable (courseId, userId, courseStatus) VALUES (@courseId, @userId, @courseStatus)", conn);
-            SqlParameter p1 = new SqlParameter("@courseId", courseId);
-            SqlParameter p2 = new SqlParameter("@userId", userId);
-            SqlParameter p3 = new SqlParameter("@courseStatus", courseStatus);
+            SqlParameter p1 = new SqlParameter("@courseId", userCourseData.CourseId);
+            SqlParameter p2 = new SqlParameter("@userId", userCourseData.UserId);
+            SqlParameter p3 = new SqlParameter("@courseStatus", userCourseData.CourseStatus);
             cmd.Parameters.Add(p1);
             cmd.Parameters.Add(p2);
             cmd.Parameters.Add(p3);
@@ -362,7 +362,7 @@ namespace Elearning_ASMX_Services
 
 
         [WebMethod]
-        public void addRatingScoreToCourse(float courseRatingScore, int userId, int courseId)
+        public void addRatingScoreToCourse(UserCoursesData userCourseData)
         {
             // edit in rating score in row of userId
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
@@ -370,15 +370,15 @@ namespace Elearning_ASMX_Services
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@userId", userId);
-                command.Parameters.AddWithValue("@courseId", courseId);
-                command.Parameters.AddWithValue("@courseRatingScore", courseRatingScore);
+                command.Parameters.AddWithValue("@userId", userCourseData.UserId);
+                command.Parameters.AddWithValue("@courseId", userCourseData.CourseId);
+                command.Parameters.AddWithValue("@courseStatus", userCourseData.CourseStatus);
                 connection.Open();
                 command.ExecuteNonQuery();
             }
         }
         [WebMethod]
-        public void addCommentToCourse(string courseComments, int userId, int courseId)
+        public void addCommentToCourse(UserCoursesData userCourseData)
         {
             // edit in comment score in row of userId
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
@@ -386,16 +386,16 @@ namespace Elearning_ASMX_Services
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@userId", userId);
-                command.Parameters.AddWithValue("@courseId", courseId);
-                command.Parameters.AddWithValue("@courseComments", courseComments);
+                command.Parameters.AddWithValue("@userId", userCourseData.UserId);
+                command.Parameters.AddWithValue("@courseId", userCourseData.CourseId);
+                command.Parameters.AddWithValue("@courseComments", userCourseData.CourseComments);
                 connection.Open();
                 command.ExecuteNonQuery();
             }
         }
 
         [WebMethod]
-        public bool updateCourseStatus(int userId, int courseId, string courseStatus)
+        public bool updateCourseStatus(UserCoursesData userCourseData)
         {
             // edit in course status to incart
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
@@ -403,9 +403,9 @@ namespace Elearning_ASMX_Services
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@userId", userId);
-                command.Parameters.AddWithValue("@courseId", courseId);
-                command.Parameters.AddWithValue("@courseStatus", courseStatus);
+                command.Parameters.AddWithValue("@userId", userCourseData.UserId);
+                command.Parameters.AddWithValue("@courseId", userCourseData.CourseId);
+                command.Parameters.AddWithValue("@courseStatus", userCourseData.CourseStatus);
                 connection.Open();
                 int rowsAffected = command.ExecuteNonQuery();
                 return (rowsAffected > 0); // returns true if at least one row was updated
@@ -413,7 +413,7 @@ namespace Elearning_ASMX_Services
         }
 
         [WebMethod]
-        public void removeCourseFromCart(int userId, int courseId)
+        public void removeCourseFromCart(UserCoursesData userCourseData)
         {
             // remove the course from user's cart
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
@@ -421,8 +421,8 @@ namespace Elearning_ASMX_Services
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@userId", userId);
-                command.Parameters.AddWithValue("@courseId", courseId);
+                command.Parameters.AddWithValue("@userId", userCourseData.UserId);
+                command.Parameters.AddWithValue("@courseId", userCourseData.CourseId);
                 connection.Open();
                 command.ExecuteNonQuery();
             }

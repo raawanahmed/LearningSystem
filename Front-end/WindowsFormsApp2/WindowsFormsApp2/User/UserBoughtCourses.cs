@@ -46,7 +46,11 @@ namespace WindowsFormsApp2.User
                     if (e.RowIndex == i)
                     {
                         userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
-                        bool updated = usersServices.updateCourseStatus(this.userId, userBoughtCourses[i].Id, "enrolled");
+                        UserCoursesData userCourseData = new UserCoursesData();
+                        userCourseData.UserId = this.userId;
+                        userCourseData.CourseId = userBoughtCourses[i].Id;
+                        userCourseData.CourseStatus = "enrolled";
+                        bool updated = usersServices.updateCourseStatus(userCourseData);
                         GridViewData();
                         MessageBox.Show("You have enrolled to the course successfully!");
                         break;

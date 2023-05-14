@@ -73,7 +73,11 @@ namespace WindowsFormsApp2.User
             {
                 if (rate >= 0 && rate <= 10)
                 {
-                    usersServices.addRatingScoreToCourse(rate, this.userId, this.courseId);
+                    UserCoursesData userCourseData = new UserCoursesData();
+                    userCourseData.UserId = this.userId;
+                    userCourseData.CourseId = this.courseId;
+                    userCourseData.CourseRatingScore = rate;
+                    usersServices.addRatingScoreToCourse(userCourseData);
                     MessageBox.Show("Rating added to course successfully.");
                     Viewdetails(courseId); // Reload the data
                 }
@@ -96,7 +100,11 @@ namespace WindowsFormsApp2.User
                 MessageBox.Show("Comment cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            usersServices.addCommentToCourse(comment, this.userId, this.courseId);
+            UserCoursesData userCourseData = new UserCoursesData();
+            userCourseData.UserId = this.userId;
+            userCourseData.CourseId = this.courseId;
+            userCourseData.CourseComments = comment;
+            usersServices.addCommentToCourse(userCourseData);
             MessageBox.Show("Comment added to course successfully.");
             Viewdetails(courseId); // Reload the data
         }
