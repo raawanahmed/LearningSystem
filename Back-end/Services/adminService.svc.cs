@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Back_end.DAL;
+using Back_end.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -11,8 +14,36 @@ namespace Back_end.Services
     // NOTE: In order to launch WCF Test Client for testing this service, please select adminService.svc or adminService.svc.cs at the Solution Explorer and start debugging.
     public class adminService : IadminService
     {
-        public void DoWork()
+        private readonly CourseDAL _courseDAL;
+
+        public void addCourse(CourseModel course)
         {
+            _courseDAL.addCourse(course);
+        }
+
+        public void editCourse(int courseId, CourseModel course)
+        {
+            _courseDAL.editCourse(courseId, course);
+        }
+
+        public void deleteCourse(int courseId)
+        {
+            _courseDAL.deleteCourse(courseId);
+        }
+
+        public CourseModel[] getAllCourses()
+        {
+            return _courseDAL.getAllCourses();
+        }
+
+        public int[] getAllCoursesIDs()
+        {
+            return _courseDAL.getAllCoursesIDs();
+        }
+
+        public CourseModel getCourseData(int courseId)
+        {
+            return _courseDAL.getCourse(courseId);
         }
     }
 }
