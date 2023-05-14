@@ -24,5 +24,12 @@ namespace WindowsFormsApp2
             viewAllCourses.Show();
             this.Hide();
         }
+
+        private void onLogoutBtn(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
     }
 }

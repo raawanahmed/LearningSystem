@@ -354,8 +354,8 @@ namespace Elearning_ASMX_Services
             cmd.Parameters.Add(p1);
             cmd.Parameters.Add(p2);
             cmd.Parameters.Add(p3);
-            cmd.ExecuteNonQuery();
             int rowsAffected = cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             conn.Close();
             return (rowsAffected > 0); // returns true if at least one row was updated
         }
