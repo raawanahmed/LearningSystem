@@ -49,7 +49,7 @@
             this.button4.Location = new System.Drawing.Point(494, 472);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(192, 56);
+            this.button4.Size = new System.Drawing.Size(204, 56);
             this.button4.TabIndex = 33;
             this.button4.Text = "My account";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -65,10 +65,10 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(139, 380);
+            this.button2.Location = new System.Drawing.Point(126, 380);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(305, 81);
+            this.button2.Size = new System.Drawing.Size(318, 65);
             this.button2.TabIndex = 32;
             this.button2.Text = "View enrolled courses";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -106,7 +106,7 @@
             this.button1.Location = new System.Drawing.Point(369, 319);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 72);
+            this.button1.Size = new System.Drawing.Size(267, 63);
             this.button1.TabIndex = 30;
             this.button1.Text = "View all courses";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,10 +122,10 @@
             this.SignUp.ForeColor = System.Drawing.Color.White;
             this.SignUp.Image = ((System.Drawing.Image)(resources.GetObject("SignUp.Image")));
             this.SignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SignUp.Location = new System.Drawing.Point(213, 469);
+            this.SignUp.Location = new System.Drawing.Point(195, 469);
             this.SignUp.Margin = new System.Windows.Forms.Padding(4);
             this.SignUp.Name = "SignUp";
-            this.SignUp.Size = new System.Drawing.Size(207, 62);
+            this.SignUp.Size = new System.Drawing.Size(225, 59);
             this.SignUp.TabIndex = 29;
             this.SignUp.Text = "View my cart";
             this.SignUp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -144,7 +144,7 @@
             this.button5.Location = new System.Drawing.Point(536, 380);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(291, 81);
+            this.button5.Size = new System.Drawing.Size(325, 65);
             this.button5.TabIndex = 34;
             this.button5.Text = "View bought courses";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

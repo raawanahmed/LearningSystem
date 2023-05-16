@@ -10,7 +10,6 @@ namespace WindowsFormsApp2.User
         private int courseId;
         public ViewCourseRatingsAndComments(CourseData course, int userId)
         {
-
             InitializeComponent();
             viewCourseGridView.ReadOnly = true;
             Viewdetails(course.Id);
