@@ -6,10 +6,6 @@ namespace WindowsFormsApp2.User
     public partial class UserHomePage : Form
     {
         public int UserId { get; set; }
-        public UserHomePage()
-        {
-            InitializeComponent();
-        }
         public UserHomePage(int userId)
         {
             InitializeComponent();

@@ -10,10 +10,6 @@ namespace WindowsFormsApp2
     {
         private int userId;
         HelperFunctionsForUser helperFunctions = new HelperFunctionsForUser();
-        public UserAccount()
-        {
-            InitializeComponent();
-        }
         public UserAccount(int userId)
         {
             InitializeComponent();

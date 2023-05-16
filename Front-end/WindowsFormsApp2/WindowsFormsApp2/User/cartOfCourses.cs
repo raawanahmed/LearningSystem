@@ -9,11 +9,6 @@ namespace WindowsFormsApp2.User
 
         CourseData[] coursesInCart;
         private int userId;
-        public CartOfCourses()
-        {
-            InitializeComponent();
-            coursesInCartGridView.ReadOnly = true;
-        }
         public CartOfCourses(int userId)
         {
             InitializeComponent();

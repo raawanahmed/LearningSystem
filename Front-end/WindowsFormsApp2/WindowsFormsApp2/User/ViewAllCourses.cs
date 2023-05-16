@@ -11,11 +11,6 @@ namespace WindowsFormsApp2
 
         CourseData[] courses;
         private int userId;
-        public ViewAllCourses()
-        {
-            InitializeComponent();
-            allCoursesGridView.ReadOnly = true;
-        }
         public ViewAllCourses(int userId)
         {
             InitializeComponent();

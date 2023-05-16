@@ -8,10 +8,6 @@ namespace WindowsFormsApp2.User
     {
         private int userId;
         CourseData[] userBoughtCourses;
-        public UserBoughtCourses()
-        {
-            InitializeComponent();
-        }
         public UserBoughtCourses(int userId)
         {
             InitializeComponent();

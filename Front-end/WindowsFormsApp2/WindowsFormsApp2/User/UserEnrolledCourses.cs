@@ -8,16 +8,12 @@ namespace WindowsFormsApp2.User
     {
         private int userId;
         CourseData[] coursesForUser;
-        public UserEnrolledCourses()
-        {
-            InitializeComponent();
-            allCoursesGridView.ReadOnly = true;
-        }
         public UserEnrolledCourses(int userId)
         {
             InitializeComponent();
             this.userId = userId;
             allCoursesGridView.ReadOnly = true;
+
         }
         private void onUserCoursesFormLoad(object sender, EventArgs e)
         {

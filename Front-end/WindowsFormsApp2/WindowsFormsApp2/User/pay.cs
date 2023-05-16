@@ -9,10 +9,6 @@ namespace WindowsFormsApp2.User
         private int userId;
         private int courseId;
         private int coursePrice;
-        public Pay()
-        {
-            InitializeComponent();
-        }
         public Pay(int userId, int courseId, int coursePrice)
         {
             InitializeComponent();
