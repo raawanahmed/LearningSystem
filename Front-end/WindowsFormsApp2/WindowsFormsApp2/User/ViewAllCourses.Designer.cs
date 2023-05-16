@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllCourses));
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.allCoursesGridView = new System.Windows.Forms.DataGridView();
@@ -37,12 +37,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.viewCart = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(335, 101);
+            this.searchTextBox.Location = new System.Drawing.Point(384, 101);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(252, 22);
             this.searchTextBox.TabIndex = 3;
@@ -51,30 +52,30 @@
             // allCoursesGridView
             // 
             this.allCoursesGridView.BackgroundColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle1.NullValue = null;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.allCoursesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.allCoursesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.allCoursesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.allCoursesGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.allCoursesGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.allCoursesGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.allCoursesGridView.Location = new System.Drawing.Point(12, 151);
             this.allCoursesGridView.Name = "allCoursesGridView";
             this.allCoursesGridView.RowHeadersWidth = 51;
             this.allCoursesGridView.RowTemplate.Height = 24;
-            this.allCoursesGridView.Size = new System.Drawing.Size(809, 316);
+            this.allCoursesGridView.Size = new System.Drawing.Size(970, 405);
             this.allCoursesGridView.TabIndex = 5;
             this.allCoursesGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allCoursesGridViewCellClick);
             // 
@@ -84,7 +85,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(216, 87);
+            this.label2.Location = new System.Drawing.Point(265, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 38);
@@ -100,10 +101,10 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(675, 13);
+            this.button3.Location = new System.Drawing.Point(809, 13);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 61);
+            this.button3.Size = new System.Drawing.Size(172, 55);
             this.button3.TabIndex = 24;
             this.button3.Text = "Logout";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -119,10 +120,10 @@
             this.viewCart.ForeColor = System.Drawing.Color.White;
             this.viewCart.Image = ((System.Drawing.Image)(resources.GetObject("viewCart.Image")));
             this.viewCart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.viewCart.Location = new System.Drawing.Point(650, 82);
+            this.viewCart.Location = new System.Drawing.Point(800, 76);
             this.viewCart.Margin = new System.Windows.Forms.Padding(4);
             this.viewCart.Name = "viewCart";
-            this.viewCart.Size = new System.Drawing.Size(169, 62);
+            this.viewCart.Size = new System.Drawing.Size(181, 62);
             this.viewCart.TabIndex = 23;
             this.viewCart.Text = "View Cart";
             this.viewCart.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,12 +142,27 @@
             this.button1.Location = new System.Drawing.Point(12, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 61);
+            this.button1.Size = new System.Drawing.Size(139, 61);
             this.button1.TabIndex = 28;
             this.button1.Text = "Back";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.onBackBtn);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label3.Location = new System.Drawing.Point(349, 23);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(287, 45);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "List of all courses";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ViewAllCourses
             // 
@@ -154,7 +170,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(832, 485);
+            this.ClientSize = new System.Drawing.Size(994, 568);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.viewCart);
@@ -177,5 +194,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button viewCart;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }

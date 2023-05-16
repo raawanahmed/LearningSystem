@@ -428,13 +428,6 @@ namespace WindowsFormsApp2.userServicesReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getUserByUsername", ReplyAction="*")]
         System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getUserByUsernameResponse> getUserByUsernameAsync(WindowsFormsApp2.userServicesReference.getUserByUsernameRequest request);
         
-        // CODEGEN: Generating message contract since element name getAllCoursesResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAllCourses", ReplyAction="*")]
-        WindowsFormsApp2.userServicesReference.getAllCoursesResponse getAllCourses(WindowsFormsApp2.userServicesReference.getAllCoursesRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAllCourses", ReplyAction="*")]
-        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesResponse> getAllCoursesAsync(WindowsFormsApp2.userServicesReference.getAllCoursesRequest request);
-        
         // CODEGEN: Generating message contract since element name getAllCoursesForUserResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getAllCoursesForUser", ReplyAction="*")]
         WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse getAllCoursesForUser(WindowsFormsApp2.userServicesReference.getAllCoursesForUserRequest request);
@@ -765,67 +758,6 @@ namespace WindowsFormsApp2.userServicesReference {
         
         public getUserByUsernameResponseBody(WindowsFormsApp2.userServicesReference.UserData getUserByUsernameResult) {
             this.getUserByUsernameResult = getUserByUsernameResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getAllCoursesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getAllCourses", Namespace="http://tempuri.org/", Order=0)]
-        public WindowsFormsApp2.userServicesReference.getAllCoursesRequestBody Body;
-        
-        public getAllCoursesRequest() {
-        }
-        
-        public getAllCoursesRequest(WindowsFormsApp2.userServicesReference.getAllCoursesRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class getAllCoursesRequestBody {
-        
-        public getAllCoursesRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class getAllCoursesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="getAllCoursesResponse", Namespace="http://tempuri.org/", Order=0)]
-        public WindowsFormsApp2.userServicesReference.getAllCoursesResponseBody Body;
-        
-        public getAllCoursesResponse() {
-        }
-        
-        public getAllCoursesResponse(WindowsFormsApp2.userServicesReference.getAllCoursesResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class getAllCoursesResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public WindowsFormsApp2.userServicesReference.CourseData[] getAllCoursesResult;
-        
-        public getAllCoursesResponseBody() {
-        }
-        
-        public getAllCoursesResponseBody(WindowsFormsApp2.userServicesReference.CourseData[] getAllCoursesResult) {
-            this.getAllCoursesResult = getAllCoursesResult;
         }
     }
     
@@ -1606,29 +1538,6 @@ namespace WindowsFormsApp2.userServicesReference {
             inValue.Body = new WindowsFormsApp2.userServicesReference.getUserByUsernameRequestBody();
             inValue.Body.username = username;
             return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getUserByUsernameAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WindowsFormsApp2.userServicesReference.getAllCoursesResponse WindowsFormsApp2.userServicesReference.usersServicesSoap.getAllCourses(WindowsFormsApp2.userServicesReference.getAllCoursesRequest request) {
-            return base.Channel.getAllCourses(request);
-        }
-        
-        public WindowsFormsApp2.userServicesReference.CourseData[] getAllCourses() {
-            WindowsFormsApp2.userServicesReference.getAllCoursesRequest inValue = new WindowsFormsApp2.userServicesReference.getAllCoursesRequest();
-            inValue.Body = new WindowsFormsApp2.userServicesReference.getAllCoursesRequestBody();
-            WindowsFormsApp2.userServicesReference.getAllCoursesResponse retVal = ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getAllCourses(inValue);
-            return retVal.Body.getAllCoursesResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesResponse> WindowsFormsApp2.userServicesReference.usersServicesSoap.getAllCoursesAsync(WindowsFormsApp2.userServicesReference.getAllCoursesRequest request) {
-            return base.Channel.getAllCoursesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WindowsFormsApp2.userServicesReference.getAllCoursesResponse> getAllCoursesAsync() {
-            WindowsFormsApp2.userServicesReference.getAllCoursesRequest inValue = new WindowsFormsApp2.userServicesReference.getAllCoursesRequest();
-            inValue.Body = new WindowsFormsApp2.userServicesReference.getAllCoursesRequestBody();
-            return ((WindowsFormsApp2.userServicesReference.usersServicesSoap)(this)).getAllCoursesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

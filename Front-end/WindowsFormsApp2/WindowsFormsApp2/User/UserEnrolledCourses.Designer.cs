@@ -34,6 +34,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.allCoursesGridView = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,10 +47,10 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(711, 26);
+            this.button3.Location = new System.Drawing.Point(830, 13);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 61);
+            this.button3.Size = new System.Drawing.Size(151, 61);
             this.button3.TabIndex = 33;
             this.button3.Text = "Logout";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -65,10 +66,10 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(13, 26);
+            this.button2.Location = new System.Drawing.Point(13, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 61);
+            this.button2.Size = new System.Drawing.Size(128, 61);
             this.button2.TabIndex = 32;
             this.button2.Text = "Back";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -97,29 +98,46 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.allCoursesGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.allCoursesGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.allCoursesGridView.Location = new System.Drawing.Point(12, 142);
+            this.allCoursesGridView.Location = new System.Drawing.Point(12, 154);
             this.allCoursesGridView.Name = "allCoursesGridView";
             this.allCoursesGridView.RowHeadersWidth = 51;
             this.allCoursesGridView.RowTemplate.Height = 24;
-            this.allCoursesGridView.Size = new System.Drawing.Size(846, 354);
+            this.allCoursesGridView.Size = new System.Drawing.Size(970, 402);
             this.allCoursesGridView.TabIndex = 34;
             this.allCoursesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allUserCoursesGridViewCellClick);
             // 
-            // UserCourses
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label3.Location = new System.Drawing.Point(270, 93);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(378, 45);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "List of enrolled courses";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // UserEnrolledCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(870, 508);
+            this.ClientSize = new System.Drawing.Size(994, 568);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.allCoursesGridView);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Name = "UserCourses";
-            this.Text = "UserCourses";
+            this.Name = "UserEnrolledCourses";
+            this.Text = "UserEnrolledCourses";
             this.Load += new System.EventHandler(this.onUserCoursesFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.allCoursesGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,5 +146,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView allCoursesGridView;
+        private System.Windows.Forms.Label label3;
     }
 }

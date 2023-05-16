@@ -33,31 +33,21 @@ namespace Elearning_WCF_Services
         {
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
             string query = "DELETE FROM CoursesTable WHERE id = @courseId";
-            // Create a new SqlConnection object inside a using block to ensure it is disposed of correctly when finished
             using (SqlConnection connection = new SqlConnection(conn))
             {
-                // Create a new SqlCommand object with the query and connection
                 SqlCommand command = new SqlCommand(query, connection);
-
-                // Add the courseId parameter to the SqlCommand object
                 command.Parameters.AddWithValue("@courseId", courseId);
-
-                // Open the connection to the database
                 connection.Open();
-
-                // Execute the command to delete the row
                 command.ExecuteNonQuery();
-                // The connection will automatically be closed and disposed of when the using block is exited
+                // connection will be closed auto
             }
         }
 
         public void editCourse(int courseId, CourseData course)
         {
-            // check this function
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
             string query = "UPDATE CoursesTable SET courseName = @courseName, courseDescription = @courseDescription, coursePrice = @coursePrice, courseInstructor = @courseInstructor, courseGenre = @courseGenre WHERE id = @courseId";
 
-            // Create a new SqlConnection object inside a using block to ensure it is disposed of correctly when finished
             using (SqlConnection connection = new SqlConnection(conn))
             {
                 SqlCommand command = new SqlCommand(query, connection);

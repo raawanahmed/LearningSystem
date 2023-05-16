@@ -45,7 +45,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(224, 86);
+            this.label3.Location = new System.Drawing.Point(279, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(410, 45);
@@ -62,10 +62,10 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(35, 4);
+            this.button2.Location = new System.Drawing.Point(13, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 61);
+            this.button2.Size = new System.Drawing.Size(124, 61);
             this.button2.TabIndex = 29;
             this.button2.Text = "Back";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -81,10 +81,10 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(723, 13);
+            this.button3.Location = new System.Drawing.Point(826, 13);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 61);
+            this.button3.Size = new System.Drawing.Size(155, 61);
             this.button3.TabIndex = 32;
             this.button3.Text = "Logout";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,11 +113,11 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.coursesInCartGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.coursesInCartGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.coursesInCartGridView.Location = new System.Drawing.Point(35, 167);
+            this.coursesInCartGridView.Location = new System.Drawing.Point(12, 163);
             this.coursesInCartGridView.Name = "coursesInCartGridView";
             this.coursesInCartGridView.RowHeadersWidth = 51;
             this.coursesInCartGridView.RowTemplate.Height = 24;
-            this.coursesInCartGridView.Size = new System.Drawing.Size(809, 316);
+            this.coursesInCartGridView.Size = new System.Drawing.Size(970, 393);
             this.coursesInCartGridView.TabIndex = 33;
             this.coursesInCartGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.coursesInCartGridViewCellClick);
             // 
@@ -127,7 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(882, 509);
+            this.ClientSize = new System.Drawing.Size(994, 568);
             this.Controls.Add(this.coursesInCartGridView);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

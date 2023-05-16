@@ -53,28 +53,28 @@
             // 
             // userNameTextBox
             // 
-            this.userNameTextBox.Location = new System.Drawing.Point(394, 219);
+            this.userNameTextBox.Location = new System.Drawing.Point(519, 234);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(226, 22);
             this.userNameTextBox.TabIndex = 0;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(394, 276);
+            this.emailTextBox.Location = new System.Drawing.Point(519, 291);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(226, 22);
             this.emailTextBox.TabIndex = 3;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(394, 337);
+            this.passwordTextBox.Location = new System.Drawing.Point(519, 352);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(226, 22);
             this.passwordTextBox.TabIndex = 5;
             // 
             // confirmPasswordTextBox
             // 
-            this.confirmPasswordTextBox.Location = new System.Drawing.Point(394, 408);
+            this.confirmPasswordTextBox.Location = new System.Drawing.Point(519, 423);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
             this.confirmPasswordTextBox.Size = new System.Drawing.Size(226, 22);
             this.confirmPasswordTextBox.TabIndex = 7;
@@ -85,7 +85,7 @@
             this.emailAlertLabel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.emailAlertLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailAlertLabel.ForeColor = System.Drawing.Color.Red;
-            this.emailAlertLabel.Location = new System.Drawing.Point(395, 302);
+            this.emailAlertLabel.Location = new System.Drawing.Point(520, 317);
             this.emailAlertLabel.Name = "emailAlertLabel";
             this.emailAlertLabel.Size = new System.Drawing.Size(13, 20);
             this.emailAlertLabel.TabIndex = 11;
@@ -97,7 +97,7 @@
             this.confirmPasswordAlertLabel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.confirmPasswordAlertLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmPasswordAlertLabel.ForeColor = System.Drawing.Color.Red;
-            this.confirmPasswordAlertLabel.Location = new System.Drawing.Point(395, 434);
+            this.confirmPasswordAlertLabel.Location = new System.Drawing.Point(520, 449);
             this.confirmPasswordAlertLabel.Name = "confirmPasswordAlertLabel";
             this.confirmPasswordAlertLabel.Size = new System.Drawing.Size(13, 20);
             this.confirmPasswordAlertLabel.TabIndex = 12;
@@ -109,7 +109,7 @@
             this.allFieldsAlertLabel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.allFieldsAlertLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allFieldsAlertLabel.ForeColor = System.Drawing.Color.Red;
-            this.allFieldsAlertLabel.Location = new System.Drawing.Point(395, 480);
+            this.allFieldsAlertLabel.Location = new System.Drawing.Point(520, 495);
             this.allFieldsAlertLabel.Name = "allFieldsAlertLabel";
             this.allFieldsAlertLabel.Size = new System.Drawing.Size(13, 20);
             this.allFieldsAlertLabel.TabIndex = 13;
@@ -121,7 +121,7 @@
             this.passwordAlertLabel.BackColor = System.Drawing.Color.LightSteelBlue;
             this.passwordAlertLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordAlertLabel.ForeColor = System.Drawing.Color.Red;
-            this.passwordAlertLabel.Location = new System.Drawing.Point(395, 363);
+            this.passwordAlertLabel.Location = new System.Drawing.Point(520, 378);
             this.passwordAlertLabel.Name = "passwordAlertLabel";
             this.passwordAlertLabel.Size = new System.Drawing.Size(13, 20);
             this.passwordAlertLabel.TabIndex = 14;
@@ -133,7 +133,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(112, 323);
+            this.label6.Location = new System.Drawing.Point(237, 338);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 38);
@@ -146,7 +146,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(112, 203);
+            this.label2.Location = new System.Drawing.Point(237, 218);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 38);
@@ -159,7 +159,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(112, 262);
+            this.label1.Location = new System.Drawing.Point(237, 277);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 38);
@@ -172,7 +172,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(112, 394);
+            this.label7.Location = new System.Drawing.Point(237, 409);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(262, 38);
@@ -188,7 +188,7 @@
             this.SignUp.ForeColor = System.Drawing.Color.White;
             this.SignUp.Image = ((System.Drawing.Image)(resources.GetObject("SignUp.Image")));
             this.SignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.SignUp.Location = new System.Drawing.Point(554, 474);
+            this.SignUp.Location = new System.Drawing.Point(679, 489);
             this.SignUp.Margin = new System.Windows.Forms.Padding(4);
             this.SignUp.Name = "SignUp";
             this.SignUp.Size = new System.Drawing.Size(180, 75);
@@ -205,7 +205,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(326, 9);
+            this.label3.Location = new System.Drawing.Point(467, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 45);
@@ -218,7 +218,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(287, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(428, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 42);
             this.pictureBox1.TabIndex = 23;
@@ -230,7 +230,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(112, 95);
+            this.label4.Location = new System.Drawing.Point(237, 110);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 38);
@@ -243,7 +243,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(112, 150);
+            this.label5.Location = new System.Drawing.Point(237, 165);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 38);
@@ -252,14 +252,14 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(394, 109);
+            this.firstNameTextBox.Location = new System.Drawing.Point(519, 124);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(226, 22);
             this.firstNameTextBox.TabIndex = 26;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(394, 166);
+            this.lastNameTextBox.Location = new System.Drawing.Point(519, 181);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(226, 22);
             this.lastNameTextBox.TabIndex = 27;
@@ -270,7 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(831, 562);
+            this.ClientSize = new System.Drawing.Size(994, 568);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.label5);

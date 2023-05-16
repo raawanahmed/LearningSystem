@@ -22,8 +22,6 @@ namespace WindowsFormsApp2.User
         }
         private void onCartOfCoursesFormLoad(object sender, EventArgs e)
         {
-            //userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
-            //coursesInCart = usersServices.getCoursesInCart(this.userId);
             GridViewData();
         }
         public void GridViewData()
@@ -35,16 +33,16 @@ namespace WindowsFormsApp2.User
             // enroll into course update the course status to enrolled
             DataGridViewButtonColumn buyCourseBtn = new DataGridViewButtonColumn();
             buyCourseBtn.HeaderText = "Buy the course";
-            buyCourseBtn.Name = "Buy the course";
-            buyCourseBtn.Text = "Buy the course";
+            buyCourseBtn.Name = "Buy";
+            buyCourseBtn.Text = "Buy";
             buyCourseBtn.UseColumnTextForButtonValue = true;
             coursesInCartGridView.Columns.Add(buyCourseBtn);
 
             // remove from cart
             DataGridViewButtonColumn removeCourseFromCartBtn = new DataGridViewButtonColumn();
             removeCourseFromCartBtn.HeaderText = "Remove course From Cart";
-            removeCourseFromCartBtn.Name = "Remove course From Cart";
-            removeCourseFromCartBtn.Text = "Remove course From Cart";
+            removeCourseFromCartBtn.Name = "Remove";
+            removeCourseFromCartBtn.Text = "Remove";
             removeCourseFromCartBtn.UseColumnTextForButtonValue = true;
             coursesInCartGridView.Columns.Add(removeCourseFromCartBtn);
 
@@ -58,34 +56,19 @@ namespace WindowsFormsApp2.User
             if (e.ColumnIndex == 7)
             {
                 // enroll for course -> pay for it
-                for (int i = 0; i < coursesInCart.Length; i++)
-                {
-                    if (e.RowIndex == i)
-                    {
-                        payForCourse = new Pay(this.userId, coursesInCart[i].Id, coursesInCart[i].CoursePrice);
-                        payForCourse.Show();
-                        this.Hide();
-                        break;
-                    }
-                }
-
+                payForCourse = new Pay(this.userId, coursesInCart[e.RowIndex].Id, coursesInCart[e.RowIndex].CoursePrice);
+                payForCourse.Show();
+                this.Hide();
             }
             else if (e.ColumnIndex == 8)
             {
                 // remove course from cart
-                for (int i = 0; i < coursesInCart.Length; i++)
-                {
-                    if (e.RowIndex == i)
-                    {
-                        UserCoursesData userCourseData = new UserCoursesData();
-                        userCourseData.UserId = this.userId;
-                        userCourseData.CourseId = coursesInCart[i].Id;
-                        usersServices.removeCourseFromCart(userCourseData);
-                        GridViewData();
-                        MessageBox.Show("Course removed from cart successfully!");
-                        break;
-                    }
-                }
+                UserCoursesData userCourseData = new UserCoursesData();
+                userCourseData.UserId = this.userId;
+                userCourseData.CourseId = coursesInCart[e.RowIndex].Id;
+                usersServices.removeCourseFromCart(userCourseData);
+                GridViewData();
+                MessageBox.Show("Course removed from cart successfully!");
 
             }
         }

@@ -19,21 +19,6 @@ namespace WindowsFormsApp2
             InitializeComponent();
             this.userId = userId;
         }
-
-        private void onLogoutBtn(object sender, EventArgs e)
-        {
-            LoginPage loginPage = new LoginPage();
-            loginPage.Show();
-            this.Hide();
-
-        }
-        private void onBackBtn(object sender, EventArgs e)
-        {
-            UserHomePage userHomePage = new UserHomePage(this.userId);
-            userHomePage.Show();
-            this.Hide();
-        }
-
         private void onUserAccountFormLoad(object sender, EventArgs e)
         {
             // load user data
@@ -56,7 +41,6 @@ namespace WindowsFormsApp2
 
         private void onEditBtn(object sender, EventArgs e)
         {
-            // todo add validations
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
             UserData userData = new UserData();
             userData.FirstName = firstNameTextBox.Text;
@@ -70,5 +54,19 @@ namespace WindowsFormsApp2
                 MessageBox.Show("User Edited successfully!");
             }
         }
+        private void onLogoutBtn(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+
+        }
+        private void onBackBtn(object sender, EventArgs e)
+        {
+            UserHomePage userHomePage = new UserHomePage(this.userId);
+            userHomePage.Show();
+            this.Hide();
+        }
+
     }
 }

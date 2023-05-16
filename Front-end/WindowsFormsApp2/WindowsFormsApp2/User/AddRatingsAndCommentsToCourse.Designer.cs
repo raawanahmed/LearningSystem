@@ -36,17 +36,20 @@
             this.button4 = new System.Windows.Forms.Button();
             this.rateTextBox = new System.Windows.Forms.TextBox();
             this.commentTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.courseDetailsLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.viewCourseGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // viewCourseGridView
             // 
             this.viewCourseGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.viewCourseGridView.Location = new System.Drawing.Point(12, 176);
+            this.viewCourseGridView.Location = new System.Drawing.Point(12, 237);
             this.viewCourseGridView.Name = "viewCourseGridView";
             this.viewCourseGridView.RowHeadersWidth = 51;
             this.viewCourseGridView.RowTemplate.Height = 24;
-            this.viewCourseGridView.Size = new System.Drawing.Size(795, 262);
+            this.viewCourseGridView.Size = new System.Drawing.Size(970, 319);
             this.viewCourseGridView.TabIndex = 0;
             // 
             // button1
@@ -58,7 +61,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(661, 4);
+            this.button1.Location = new System.Drawing.Point(827, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 61);
@@ -80,7 +83,7 @@
             this.button2.Location = new System.Drawing.Point(29, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 61);
+            this.button2.Size = new System.Drawing.Size(123, 61);
             this.button2.TabIndex = 30;
             this.button2.Text = "Back";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -96,7 +99,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(136, 119);
+            this.button3.Location = new System.Drawing.Point(735, 129);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 40);
@@ -115,7 +118,7 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(586, 119);
+            this.button4.Location = new System.Drawing.Point(735, 177);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(198, 40);
@@ -127,17 +130,61 @@
             // 
             // rateTextBox
             // 
-            this.rateTextBox.Location = new System.Drawing.Point(29, 132);
+            this.rateTextBox.Location = new System.Drawing.Point(628, 142);
             this.rateTextBox.Name = "rateTextBox";
             this.rateTextBox.Size = new System.Drawing.Size(100, 22);
             this.rateTextBox.TabIndex = 33;
             // 
             // commentTextBox
             // 
-            this.commentTextBox.Location = new System.Drawing.Point(465, 129);
+            this.commentTextBox.Location = new System.Drawing.Point(628, 190);
             this.commentTextBox.Name = "commentTextBox";
             this.commentTextBox.Size = new System.Drawing.Size(100, 22);
             this.commentTextBox.TabIndex = 34;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label3.Location = new System.Drawing.Point(6, 99);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 31);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Course Details: ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // courseDetailsLabel
+            // 
+            this.courseDetailsLabel.AutoSize = true;
+            this.courseDetailsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.courseDetailsLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.courseDetailsLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.courseDetailsLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.courseDetailsLabel.Location = new System.Drawing.Point(209, 99);
+            this.courseDetailsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.courseDetailsLabel.Name = "courseDetailsLabel";
+            this.courseDetailsLabel.Size = new System.Drawing.Size(0, 31);
+            this.courseDetailsLabel.TabIndex = 36;
+            this.courseDetailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label1.Location = new System.Drawing.Point(359, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 45);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Course Details";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // AddRatingsAndCommentsToCourse
             // 
@@ -145,7 +192,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(818, 452);
+            this.ClientSize = new System.Drawing.Size(994, 568);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.courseDetailsLabel);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.commentTextBox);
             this.Controls.Add(this.rateTextBox);
             this.Controls.Add(this.button4);
@@ -170,5 +220,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox rateTextBox;
         private System.Windows.Forms.TextBox commentTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label courseDetailsLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

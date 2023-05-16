@@ -56,7 +56,7 @@
             this.button2.Location = new System.Drawing.Point(13, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 61);
+            this.button2.Size = new System.Drawing.Size(145, 61);
             this.button2.TabIndex = 30;
             this.button2.Text = "Back";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -72,10 +72,10 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(641, 13);
+            this.button3.Location = new System.Drawing.Point(822, 13);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 61);
+            this.button3.Size = new System.Drawing.Size(159, 61);
             this.button3.TabIndex = 31;
             this.button3.Text = "Logout";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -152,7 +152,7 @@
             this.onPayBtn.ForeColor = System.Drawing.Color.White;
             this.onPayBtn.Image = ((System.Drawing.Image)(resources.GetObject("onPayBtn.Image")));
             this.onPayBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.onPayBtn.Location = new System.Drawing.Point(505, 387);
+            this.onPayBtn.Location = new System.Drawing.Point(441, 468);
             this.onPayBtn.Margin = new System.Windows.Forms.Padding(4);
             this.onPayBtn.Name = "onPayBtn";
             this.onPayBtn.Size = new System.Drawing.Size(102, 50);
@@ -165,7 +165,7 @@
             // totalTextBox
             // 
             this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTextBox.Location = new System.Drawing.Point(343, 74);
+            this.totalTextBox.Location = new System.Drawing.Point(442, 156);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.Size = new System.Drawing.Size(128, 27);
             this.totalTextBox.TabIndex = 39;
@@ -177,7 +177,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label4.Location = new System.Drawing.Point(371, 28);
+            this.label4.Location = new System.Drawing.Point(470, 110);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 31);
@@ -196,7 +196,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(29, 102);
+            this.groupBox1.Location = new System.Drawing.Point(128, 188);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(726, 259);
             this.groupBox1.TabIndex = 42;
@@ -217,7 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(994, 568);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.totalTextBox);

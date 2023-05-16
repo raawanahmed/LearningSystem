@@ -61,13 +61,13 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="getAllCourses">
+      <s:element name="getAllCoursesForUser">
         <s:complexType />
       </s:element>
-      <s:element name="getAllCoursesResponse">
+      <s:element name="getAllCoursesForUserResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="getAllCoursesResult" type="tns:ArrayOfCourseData" />
+            <s:element minOccurs="0" maxOccurs="1" name="getAllCoursesForUserResult" type="tns:ArrayOfCourseData" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -87,16 +87,6 @@
           <s:element minOccurs="1" maxOccurs="1" name="CreatedAt" type="s:dateTime" />
         </s:sequence>
       </s:complexType>
-      <s:element name="getAllCoursesForUser">
-        <s:complexType />
-      </s:element>
-      <s:element name="getAllCoursesForUserResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="getAllCoursesForUserResult" type="tns:ArrayOfCourseData" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="getCourseDetails">
         <s:complexType>
           <s:sequence>
@@ -252,12 +242,6 @@
   <wsdl:message name="getUserByUsernameSoapOut">
     <wsdl:part name="parameters" element="tns:getUserByUsernameResponse" />
   </wsdl:message>
-  <wsdl:message name="getAllCoursesSoapIn">
-    <wsdl:part name="parameters" element="tns:getAllCourses" />
-  </wsdl:message>
-  <wsdl:message name="getAllCoursesSoapOut">
-    <wsdl:part name="parameters" element="tns:getAllCoursesResponse" />
-  </wsdl:message>
   <wsdl:message name="getAllCoursesForUserSoapIn">
     <wsdl:part name="parameters" element="tns:getAllCoursesForUser" />
   </wsdl:message>
@@ -335,10 +319,6 @@
       <wsdl:input message="tns:getUserByUsernameSoapIn" />
       <wsdl:output message="tns:getUserByUsernameSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="getAllCourses">
-      <wsdl:input message="tns:getAllCoursesSoapIn" />
-      <wsdl:output message="tns:getAllCoursesSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="getAllCoursesForUser">
       <wsdl:input message="tns:getAllCoursesForUserSoapIn" />
       <wsdl:output message="tns:getAllCoursesForUserSoapOut" />
@@ -411,15 +391,6 @@
     </wsdl:operation>
     <wsdl:operation name="getUserByUsername">
       <soap:operation soapAction="http://tempuri.org/getUserByUsername" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getAllCourses">
-      <soap:operation soapAction="http://tempuri.org/getAllCourses" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -549,15 +520,6 @@
     </wsdl:operation>
     <wsdl:operation name="getUserByUsername">
       <soap12:operation soapAction="http://tempuri.org/getUserByUsername" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getAllCourses">
-      <soap12:operation soapAction="http://tempuri.org/getAllCourses" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

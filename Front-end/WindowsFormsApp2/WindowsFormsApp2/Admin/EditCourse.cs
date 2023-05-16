@@ -13,6 +13,7 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
             this.courseToBeEdited = course;
+            courseIdTextBox.Enabled = false;
         }
 
         private void onEditCourseBtn(object sender, EventArgs e)

@@ -42,7 +42,7 @@
             this.SignUp.ForeColor = System.Drawing.Color.White;
             this.SignUp.Image = ((System.Drawing.Image)(resources.GetObject("SignUp.Image")));
             this.SignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SignUp.Location = new System.Drawing.Point(405, 274);
+            this.SignUp.Location = new System.Drawing.Point(507, 351);
             this.SignUp.Margin = new System.Windows.Forms.Padding(4);
             this.SignUp.Name = "SignUp";
             this.SignUp.Size = new System.Drawing.Size(197, 57);
@@ -61,7 +61,7 @@
             this.LogIn.ForeColor = System.Drawing.Color.White;
             this.LogIn.Image = ((System.Drawing.Image)(resources.GetObject("LogIn.Image")));
             this.LogIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogIn.Location = new System.Drawing.Point(191, 274);
+            this.LogIn.Location = new System.Drawing.Point(293, 351);
             this.LogIn.Margin = new System.Windows.Forms.Padding(4);
             this.LogIn.Name = "LogIn";
             this.LogIn.Size = new System.Drawing.Size(176, 57);
@@ -77,7 +77,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(994, 568);
             this.Controls.Add(this.SignUp);
             this.Controls.Add(this.LogIn);
             this.Name = "HomePage";

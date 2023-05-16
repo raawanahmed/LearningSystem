@@ -251,9 +251,6 @@
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getAllCoursesForUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getAllCoursesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\userServicesReference\WindowsFormsApp2.userServicesReference.getBoughtCoursesForUserResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

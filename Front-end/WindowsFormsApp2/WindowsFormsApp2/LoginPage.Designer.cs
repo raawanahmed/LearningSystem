@@ -42,14 +42,14 @@
             // 
             // userNameTextBox
             // 
-            this.userNameTextBox.Location = new System.Drawing.Point(332, 117);
+            this.userNameTextBox.Location = new System.Drawing.Point(430, 223);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(259, 22);
             this.userNameTextBox.TabIndex = 2;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(332, 174);
+            this.passwordTextBox.Location = new System.Drawing.Point(430, 280);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(259, 22);
             this.passwordTextBox.TabIndex = 3;
@@ -60,7 +60,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(160, 103);
+            this.label3.Location = new System.Drawing.Point(258, 209);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 38);
@@ -73,7 +73,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(169, 160);
+            this.label6.Location = new System.Drawing.Point(267, 266);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 38);
@@ -89,7 +89,7 @@
             this.SignUp.ForeColor = System.Drawing.Color.White;
             this.SignUp.Image = ((System.Drawing.Image)(resources.GetObject("SignUp.Image")));
             this.SignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SignUp.Location = new System.Drawing.Point(425, 247);
+            this.SignUp.Location = new System.Drawing.Point(523, 353);
             this.SignUp.Margin = new System.Windows.Forms.Padding(4);
             this.SignUp.Name = "SignUp";
             this.SignUp.Size = new System.Drawing.Size(192, 64);
@@ -108,7 +108,7 @@
             this.LogIn.ForeColor = System.Drawing.Color.White;
             this.LogIn.Image = ((System.Drawing.Image)(resources.GetObject("LogIn.Image")));
             this.LogIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogIn.Location = new System.Drawing.Point(165, 247);
+            this.LogIn.Location = new System.Drawing.Point(263, 353);
             this.LogIn.Margin = new System.Windows.Forms.Padding(4);
             this.LogIn.Name = "LogIn";
             this.LogIn.Size = new System.Drawing.Size(171, 64);
@@ -125,7 +125,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(198, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(308, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 52);
             this.pictureBox1.TabIndex = 25;
@@ -138,7 +138,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(261, 9);
+            this.label1.Location = new System.Drawing.Point(371, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 45);
@@ -146,13 +146,13 @@
             this.label1.Text = "ELearning System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Login_page
+            // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(994, 568);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SignUp);
@@ -161,7 +161,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.userNameTextBox);
-            this.Name = "Login_page";
+            this.Name = "LoginPage";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

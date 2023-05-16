@@ -43,10 +43,10 @@
             this.addCourse.ForeColor = System.Drawing.Color.White;
             this.addCourse.Image = ((System.Drawing.Image)(resources.GetObject("addCourse.Image")));
             this.addCourse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addCourse.Location = new System.Drawing.Point(122, 270);
+            this.addCourse.Location = new System.Drawing.Point(214, 367);
             this.addCourse.Margin = new System.Windows.Forms.Padding(4);
             this.addCourse.Name = "addCourse";
-            this.addCourse.Size = new System.Drawing.Size(211, 71);
+            this.addCourse.Size = new System.Drawing.Size(228, 71);
             this.addCourse.TabIndex = 21;
             this.addCourse.Text = "Add Course";
             this.addCourse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -62,10 +62,10 @@
             this.viewCourses.ForeColor = System.Drawing.Color.White;
             this.viewCourses.Image = ((System.Drawing.Image)(resources.GetObject("viewCourses.Image")));
             this.viewCourses.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.viewCourses.Location = new System.Drawing.Point(427, 279);
+            this.viewCourses.Location = new System.Drawing.Point(519, 376);
             this.viewCourses.Margin = new System.Windows.Forms.Padding(4);
             this.viewCourses.Name = "viewCourses";
-            this.viewCourses.Size = new System.Drawing.Size(234, 71);
+            this.viewCourses.Size = new System.Drawing.Size(242, 71);
             this.viewCourses.TabIndex = 22;
             this.viewCourses.Text = "View Courses";
             this.viewCourses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -81,10 +81,10 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(641, 13);
+            this.button1.Location = new System.Drawing.Point(807, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 61);
+            this.button1.Size = new System.Drawing.Size(174, 61);
             this.button1.TabIndex = 47;
             this.button1.Text = "Logout";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -98,7 +98,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(994, 568);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.viewCourses);
             this.Controls.Add(this.addCourse);

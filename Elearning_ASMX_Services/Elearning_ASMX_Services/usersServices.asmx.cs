@@ -107,33 +107,6 @@ namespace Elearning_ASMX_Services
         }
 
         [WebMethod]
-        public CourseData[] getAllCourses()
-        {
-            string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";
-            string query = "SELECT * FROM CoursesTable";
-            List<CourseData> courses = new List<CourseData>();
-            using (SqlConnection connection = new SqlConnection(conn))
-            {
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    CourseData course = new CourseData();
-                    course.Id = reader.GetInt32(0);
-                    course.CourseName = reader.GetString(1);
-                    course.CourseDescription = reader.GetString(2);
-                    course.CoursePrice = reader.GetInt32(3);
-                    course.CourseInstructor = reader.GetString(4);
-                    course.CourseGenre = reader.GetString(5);
-                    course.CreatedAt = reader.GetDateTime(6);
-                    courses.Add(course);
-                }
-            }
-            return courses.ToArray();
-        }
-
-        [WebMethod]
         public CourseData[] getAllCoursesForUser()
         {
             string conn = "Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True";

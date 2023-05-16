@@ -31,8 +31,8 @@ namespace WindowsFormsApp2.User
             allCoursesGridView.DataSource = courses;
             DataGridViewButtonColumn addRatingAndComments = new DataGridViewButtonColumn();
             addRatingAndComments.HeaderText = "Add rating and comment To Course";
-            addRatingAndComments.Name = "Add rating and comment To Course";
-            addRatingAndComments.Text = "Add rating and comment To Course";
+            addRatingAndComments.Name = "Add";
+            addRatingAndComments.Text = "Add";
             addRatingAndComments.UseColumnTextForButtonValue = true;
             allCoursesGridView.Columns.Add(addRatingAndComments);
 
@@ -42,16 +42,9 @@ namespace WindowsFormsApp2.User
             AddRatingsAndCommentsToCourse courseView;
             if (e.ColumnIndex == 7)
             {
-                for (int i = 0; i < coursesForUser.Length; i++)
-                {
-                    if (e.RowIndex == i)
-                    {
-                        courseView = new AddRatingsAndCommentsToCourse(coursesForUser[i], this.userId);
-                        courseView.Show();
-                        this.Hide();
-                        break;
-                    }
-                }
+                courseView = new AddRatingsAndCommentsToCourse(coursesForUser[e.RowIndex], this.userId);
+                courseView.Show();
+                this.Hide();
             }
         }
         private void onLogoutBtn(object sender, EventArgs e)

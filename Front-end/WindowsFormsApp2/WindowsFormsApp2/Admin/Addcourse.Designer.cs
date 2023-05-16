@@ -47,21 +47,21 @@
             // 
             // coursePriceTextBox
             // 
-            this.coursePriceTextBox.Location = new System.Drawing.Point(554, 221);
+            this.coursePriceTextBox.Location = new System.Drawing.Point(640, 295);
             this.coursePriceTextBox.Name = "coursePriceTextBox";
             this.coursePriceTextBox.Size = new System.Drawing.Size(100, 22);
             this.coursePriceTextBox.TabIndex = 2;
             // 
             // courseDescriptionTextBox
             // 
-            this.courseDescriptionTextBox.Location = new System.Drawing.Point(655, 142);
+            this.courseDescriptionTextBox.Location = new System.Drawing.Point(741, 216);
             this.courseDescriptionTextBox.Name = "courseDescriptionTextBox";
             this.courseDescriptionTextBox.Size = new System.Drawing.Size(100, 22);
             this.courseDescriptionTextBox.TabIndex = 1;
             // 
             // courseNameTextBox
             // 
-            this.courseNameTextBox.Location = new System.Drawing.Point(196, 137);
+            this.courseNameTextBox.Location = new System.Drawing.Point(282, 211);
             this.courseNameTextBox.Name = "courseNameTextBox";
             this.courseNameTextBox.Size = new System.Drawing.Size(100, 22);
             this.courseNameTextBox.TabIndex = 0;
@@ -75,10 +75,10 @@
             this.homePage.ForeColor = System.Drawing.Color.White;
             this.homePage.Image = ((System.Drawing.Image)(resources.GetObject("homePage.Image")));
             this.homePage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.homePage.Location = new System.Drawing.Point(291, 38);
+            this.homePage.Location = new System.Drawing.Point(377, 44);
             this.homePage.Margin = new System.Windows.Forms.Padding(4);
             this.homePage.Name = "homePage";
-            this.homePage.Size = new System.Drawing.Size(211, 71);
+            this.homePage.Size = new System.Drawing.Size(232, 71);
             this.homePage.TabIndex = 22;
             this.homePage.Text = "Home Page";
             this.homePage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -94,7 +94,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(291, 345);
+            this.button3.Location = new System.Drawing.Point(377, 419);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(211, 71);
@@ -110,7 +110,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(13, 128);
+            this.label2.Location = new System.Drawing.Point(99, 202);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(162, 31);
@@ -123,7 +123,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(474, 128);
+            this.label1.Location = new System.Drawing.Point(560, 202);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 31);
@@ -136,7 +136,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(13, 214);
+            this.label3.Location = new System.Drawing.Point(99, 288);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(195, 31);
@@ -149,7 +149,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(474, 212);
+            this.label4.Location = new System.Drawing.Point(560, 286);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 31);
@@ -158,14 +158,14 @@
             // 
             // courseInstructorNameTextBox
             // 
-            this.courseInstructorNameTextBox.Location = new System.Drawing.Point(215, 221);
+            this.courseInstructorNameTextBox.Location = new System.Drawing.Point(301, 295);
             this.courseInstructorNameTextBox.Name = "courseInstructorNameTextBox";
             this.courseInstructorNameTextBox.Size = new System.Drawing.Size(100, 22);
             this.courseInstructorNameTextBox.TabIndex = 28;
             // 
             // courseGenre
             // 
-            this.courseGenre.Location = new System.Drawing.Point(103, 297);
+            this.courseGenre.Location = new System.Drawing.Point(189, 371);
             this.courseGenre.Name = "courseGenre";
             this.courseGenre.Size = new System.Drawing.Size(100, 22);
             this.courseGenre.TabIndex = 30;
@@ -176,7 +176,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(13, 288);
+            this.label5.Location = new System.Drawing.Point(99, 362);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 31);
@@ -192,10 +192,10 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(641, 13);
+            this.button1.Location = new System.Drawing.Point(814, 19);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 61);
+            this.button1.Size = new System.Drawing.Size(167, 61);
             this.button1.TabIndex = 46;
             this.button1.Text = "Logout";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -211,10 +211,10 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(9, 13);
+            this.button2.Location = new System.Drawing.Point(13, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 61);
+            this.button2.Size = new System.Drawing.Size(133, 61);
             this.button2.TabIndex = 45;
             this.button2.Text = "Back";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -227,7 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(994, 568);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.courseGenre);
@@ -243,7 +243,7 @@
             this.Controls.Add(this.courseDescriptionTextBox);
             this.Controls.Add(this.coursePriceTextBox);
             this.Name = "Addcourse";
-            this.Text = "Form2";
+            this.Text = "AddCourse";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -31,8 +31,8 @@ namespace WindowsFormsApp2.User
             userBoughtCoursesGridView.DataSource = userBoughtCourses;
             DataGridViewButtonColumn enrollToTheCourse = new DataGridViewButtonColumn();
             enrollToTheCourse.HeaderText = "Enroll to the Course";
-            enrollToTheCourse.Name = "Enroll to the Course";
-            enrollToTheCourse.Text = "Enroll to the Course";
+            enrollToTheCourse.Name = "Enroll";
+            enrollToTheCourse.Text = "Enroll";
             enrollToTheCourse.UseColumnTextForButtonValue = true;
             userBoughtCoursesGridView.Columns.Add(enrollToTheCourse);
 
@@ -41,21 +41,14 @@ namespace WindowsFormsApp2.User
         {
             if (e.ColumnIndex == 7)
             {
-                for (int i = 0; i < userBoughtCourses.Length; i++)
-                {
-                    if (e.RowIndex == i)
-                    {
-                        userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
-                        UserCoursesData userCourseData = new UserCoursesData();
-                        userCourseData.UserId = this.userId;
-                        userCourseData.CourseId = userBoughtCourses[i].Id;
-                        userCourseData.CourseStatus = "enrolled";
-                        bool updated = usersServices.updateCourseStatus(userCourseData);
-                        GridViewData();
-                        MessageBox.Show("You have enrolled to the course successfully!");
-                        break;
-                    }
-                }
+                userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
+                UserCoursesData userCourseData = new UserCoursesData();
+                userCourseData.UserId = this.userId;
+                userCourseData.CourseId = userBoughtCourses[e.RowIndex].Id;
+                userCourseData.CourseStatus = "enrolled";
+                bool updated = usersServices.updateCourseStatus(userCourseData);
+                GridViewData();
+                MessageBox.Show("You have enrolled to the course successfully!");
             }
 
         }

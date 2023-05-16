@@ -16,6 +16,7 @@ namespace WindowsFormsApp2.User
             Viewdetails(course.Id);
             this.userId = userId;
             this.courseId = course.Id;
+            courseDetailsLabel.Text = course.CourseDescription.ToString();
         }
         public void Viewdetails(int courseId)
         {
@@ -27,7 +28,7 @@ namespace WindowsFormsApp2.User
             viewCourseGridView.DataSource = detailsOfCourse;
             DataGridViewTextBoxColumn ratingColumn = new DataGridViewTextBoxColumn();
             ratingColumn.DataPropertyName = "CourseRatingScore";
-            ratingColumn.HeaderText = "Rating Scores";
+            ratingColumn.HeaderText = "Course Rating";
             viewCourseGridView.Columns.Add(ratingColumn);
 
             DataGridViewTextBoxColumn commentsColumn = new DataGridViewTextBoxColumn();

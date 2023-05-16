@@ -17,14 +17,8 @@ namespace WindowsFormsApp2.User
             Viewdetails(course.Id);
             this.userId = userId;
             this.courseId = course.Id;
+            courseDetailsLabel.Text = course.CourseDescription.ToString();
         }
-        /*public void Viewdetails(int courseId)
-        {
-            UserCoursesData[] detailsOfCourse;
-            userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
-            detailsOfCourse = usersServices.getCourseDetails(courseId);
-            viewCourseGridView.DataSource = detailsOfCourse;
-        }*/
         public void Viewdetails(int courseId)
         {
             UserCoursesData[] detailsOfCourse;
@@ -46,21 +40,6 @@ namespace WindowsFormsApp2.User
 
 
         }
-        private void onLogoutBtn(object sender, EventArgs e)
-        {
-            LoginPage login_Page = new LoginPage();
-            login_Page.Show();
-            this.Hide();
-        }
-
-        private void onBackBtn(object sender, EventArgs e)
-        {
-            this.Hide();
-            UserEnrolledCourses userEnrolledCourses = new UserEnrolledCourses(this.userId);
-            userEnrolledCourses.ShowDialog();
-            this.Close();
-        }
-
         private void onAddRateToCourseBtn(object sender, EventArgs e)
         {
             userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
@@ -102,6 +81,19 @@ namespace WindowsFormsApp2.User
             usersServices.addCommentToCourse(userCourseData);
             MessageBox.Show("Comment added to course successfully.");
             Viewdetails(courseId); // Reload the data
+        }
+        private void onLogoutBtn(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
+
+        private void onBackBtn(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserEnrolledCourses userEnrolledCourses = new UserEnrolledCourses(this.userId);
+            userEnrolledCourses.ShowDialog();
         }
 
     }
