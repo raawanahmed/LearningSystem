@@ -9,32 +9,31 @@ namespace WindowsFormsApp2
     {
         CourseData courseToBeEdited;
         HelperFunctionsForAdmin helperFunctionsForAdmin = new HelperFunctionsForAdmin();
-        public EditCourse()
-        {
-            InitializeComponent();
-        }
         public EditCourse(CourseData course)
         {
             InitializeComponent();
             this.courseToBeEdited = course;
         }
-        private void onHomePageBtn(object sender, EventArgs e)
-        {
-            AdminHomePage admin = new AdminHomePage();
-            admin.Show();
-            this.Hide();
-        }
+
         private void onEditCourseBtn(object sender, EventArgs e)
         {
             adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
             CourseData courseData = new CourseData();
             courseData.CourseName = courseNameTextBox.Text;
             courseData.CourseDescription = courseDescriptionTextBox.Text;
-            courseData.CoursePrice = int.Parse(coursePriceTextBox.Text);
+            try
+            {
+                courseData.CoursePrice = int.Parse(coursePriceTextBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter valid course price.");
+                return;
+            }
             courseData.CourseInstructor = courseInstructorNameTextBox.Text;
             courseData.CourseGenre = courseGenreTextBox.Text;
             courseData.CreatedAt = DateTime.Now;
-            if (helperFunctionsForAdmin.validateCourseData(courseData, coursePriceTextBox.Text))
+            if (helperFunctionsForAdmin.validateCourseData(courseData))
             {
                 adminServices.editCourse(this.courseToBeEdited.Id, courseData);
                 MessageBox.Show("Course Edit successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,7 +51,12 @@ namespace WindowsFormsApp2
             courseInstructorNameTextBox.Text = this.courseToBeEdited.CourseInstructor;
             courseGenreTextBox.Text = this.courseToBeEdited.CourseGenre;
         }
-
+        private void onHomePageBtn(object sender, EventArgs e)
+        {
+            AdminHomePage admin = new AdminHomePage();
+            admin.Show();
+            this.Hide();
+        }
         private void onLogoutBtn(object sender, EventArgs e)
         {
             LoginPage loginPage = new LoginPage();

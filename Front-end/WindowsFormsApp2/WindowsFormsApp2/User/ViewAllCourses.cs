@@ -25,13 +25,15 @@ namespace WindowsFormsApp2
 
         private void onViewAllCoursesFormLoad(object sender, EventArgs e)
         {
-            userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
-            courses = usersServices.getAllCoursesForUser();
-            GridViewData(courses);
+
+            GridViewData();
         }
-        private void GridViewData(CourseData[] courses)
+        private void GridViewData()
         {
             // Filter courses based on search text
+            userServicesReference.usersServicesSoapClient usersServices = new userServicesReference.usersServicesSoapClient();
+            courses = usersServices.getAllCoursesForUser();
+            allCoursesGridView.Columns.Clear();
             string search = searchTextBox.Text.Trim().ToLower();
             if (!string.IsNullOrEmpty(search))
             {
@@ -58,7 +60,7 @@ namespace WindowsFormsApp2
 
         private void onSearchTextChange(object sender, EventArgs e)
         {
-            GridViewData(courses);
+            GridViewData();
         }
 
         private void allCoursesGridViewCellClick(object sender, DataGridViewCellEventArgs e)

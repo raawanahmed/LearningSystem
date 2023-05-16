@@ -103,7 +103,7 @@
             this.Controls.Add(this.viewCourses);
             this.Controls.Add(this.addCourse);
             this.Name = "AdminHomePage";
-            this.Text = "Form2";
+            this.Text = "AdminHomePage";
             this.ResumeLayout(false);
 
         }

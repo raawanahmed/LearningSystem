@@ -48,6 +48,7 @@ namespace WindowsFormsApp2.User
                     {
                         courseView = new AddRatingsAndCommentsToCourse(coursesForUser[i], this.userId);
                         courseView.Show();
+                        this.Hide();
                         break;
                     }
                 }

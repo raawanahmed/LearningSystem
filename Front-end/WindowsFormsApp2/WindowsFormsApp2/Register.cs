@@ -64,10 +64,9 @@ namespace WindowsFormsApp2
             // All validation and verification passed, so proceed with signup
             SignupUser(user);
             MessageBox.Show("Signup successful!");
-            LoginPage login_Page = new LoginPage();
-            login_Page.Show();
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
             this.Hide();
-
         }
         private void SignupUser(UserData user)
         {

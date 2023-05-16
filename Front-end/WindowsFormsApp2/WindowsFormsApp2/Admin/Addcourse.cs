@@ -12,30 +12,36 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-
-        private void onHomePageBtn(object sender, EventArgs e)
-        {
-            AdminHomePage admin = new AdminHomePage();
-            admin.Show();
-            this.Hide();
-        }
         private void onAddCourseBtn(object sender, EventArgs e)
         {
             adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
             CourseData courseData = new CourseData();
             courseData.CourseName = courseNameTextBox.Text;
             courseData.CourseDescription = courseDescriptionTextBox.Text;
-            courseData.CoursePrice = int.Parse(coursePriceTextBox.Text);
+            try
+            {
+                courseData.CoursePrice = int.Parse(coursePriceTextBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please enter valid course price.");
+                return;
+            }
             courseData.CourseInstructor = courseInstructorNameTextBox.Text;
             courseData.CourseGenre = courseGenre.Text;
             courseData.CreatedAt = DateTime.Now;
-            if (helperFunctionsForAdmin.validateCourseData(courseData, coursePriceTextBox.Text))
+            if (helperFunctionsForAdmin.validateCourseData(courseData))
             {
                 adminServices.addCourse(courseData);
                 MessageBox.Show("Course Add successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
+        private void onHomePageBtn(object sender, EventArgs e)
+        {
+            AdminHomePage admin = new AdminHomePage();
+            admin.Show();
+            this.Hide();
+        }
         private void onLogoutBtn(object sender, EventArgs e)
         {
             LoginPage loginPage = new LoginPage();

@@ -372,7 +372,7 @@ namespace Elearning_ASMX_Services
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@userId", userCourseData.UserId);
                 command.Parameters.AddWithValue("@courseId", userCourseData.CourseId);
-                command.Parameters.AddWithValue("@courseStatus", userCourseData.CourseStatus);
+                command.Parameters.AddWithValue("@courseRatingScore", userCourseData.CourseRatingScore);
                 connection.Open();
                 command.ExecuteNonQuery();
             }

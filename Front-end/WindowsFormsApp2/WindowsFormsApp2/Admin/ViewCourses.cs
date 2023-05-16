@@ -13,15 +13,13 @@ namespace WindowsFormsApp2.Admin
         }
         private void onViewCoursesFormLoad(object sender, EventArgs e)
         {
-            // adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
-            //courses = adminServices.getAllCourses();
             GridViewData();
         }
         public void GridViewData()
         {
             adminServicesReference.IadminServicesClient adminServices = new adminServicesReference.IadminServicesClient();
             courses = adminServices.getAllCourses();
-
+            // clear columns first before reloading it
             allCoursesGridView.Columns.Clear();
             allCoursesGridView.DataSource = courses;
 
@@ -54,32 +52,17 @@ namespace WindowsFormsApp2.Admin
             if (e.ColumnIndex == 7)
             {
                 // edit course details
-                for (int i = 0; i < courses.Length; i++)
-                {
-                    if (e.RowIndex == i)
-                    {
-                        editCourse = new EditCourse(courses[i]);
-                        editCourse.Show();
-                        this.Hide();
-                        break;
-                    }
-                }
+                editCourse = new EditCourse(courses[e.RowIndex]);
+                editCourse.Show();
+                this.Hide();
 
             }
             else if (e.ColumnIndex == 8)
             {
                 // delete course from database
-                for (int i = 0; i < courses.Length; i++)
-                {
-                    if (e.RowIndex == i)
-                    {
-                        // there is an error in passing the selected id
-                        adminServices.deleteCourse(courses[i].Id);
-                        MessageBox.Show("Course Deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        GridViewData();
-                        break;
-                    }
-                }
+                adminServices.deleteCourse(courses[e.RowIndex].Id);
+                MessageBox.Show("Course Deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GridViewData();
             }
         }
 

@@ -33,12 +33,7 @@ namespace WindowsFormsApp2.User
 
             viewCourseGridView.AutoGenerateColumns = false;
             viewCourseGridView.Columns.Clear();
-
-            /*DataGridViewTextBoxColumn userIdColumn = new DataGridViewTextBoxColumn();
-            userIdColumn.DataPropertyName = "UserId";
-            userIdColumn.HeaderText = "User ID";
-            viewCourseGridView.Columns.Add(userIdColumn);*/
-
+            viewCourseGridView.DataSource = detailsOfCourse;
             DataGridViewTextBoxColumn ratingColumn = new DataGridViewTextBoxColumn();
             ratingColumn.DataPropertyName = "CourseRatingScore";
             ratingColumn.HeaderText = "Rating Scores";
@@ -49,7 +44,7 @@ namespace WindowsFormsApp2.User
             commentsColumn.HeaderText = "Course Comments";
             viewCourseGridView.Columns.Add(commentsColumn);
 
-            viewCourseGridView.DataSource = detailsOfCourse;
+
         }
         private void onLogoutBtn(object sender, EventArgs e)
         {
@@ -61,8 +56,8 @@ namespace WindowsFormsApp2.User
         private void onBackBtn(object sender, EventArgs e)
         {
             this.Hide();
-            ViewAllCourses viewAllCourses = new ViewAllCourses(this.userId);
-            viewAllCourses.ShowDialog();
+            UserEnrolledCourses userEnrolledCourses = new UserEnrolledCourses(this.userId);
+            userEnrolledCourses.ShowDialog();
             this.Close();
         }
 
