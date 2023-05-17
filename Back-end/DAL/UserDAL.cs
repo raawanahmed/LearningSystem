@@ -28,15 +28,12 @@ namespace Back_end.DAL
                 cmd.Parameters.Add(p5);
                 Database.connection.Open();
                 cmd.ExecuteNonQuery();
-
             }
-
         }
 
-        //No need to send ID it's fine to only send user obj
-        public void updateUser(int userId, UserModel user){
+        public void updateUser(UserModel user){
 
-            string query = string.Format("UPDATE UsersTable SET firstName=@FirstName, lastName=@LastName, userName=@UserName, email=@Email, password=@Password WHERE id = {0}", userId);
+            string query = string.Format("UPDATE UsersTable SET firstName=@FirstName, lastName=@LastName, userName=@UserName, email=@Email, password=@Password WHERE id = {0}", user.Id);
             using (Database.connection)
             {
                 SqlCommand cmd = new SqlCommand(query, Database.connection);
@@ -96,6 +93,7 @@ namespace Back_end.DAL
                     return user;
                 }
             }
+
             return null;
         }
 

@@ -37,10 +37,8 @@ namespace Back_end.DAL
 
         public void editCourse(int courseId, CourseModel course)
         {
-            // check this function
             string query = "UPDATE CoursesTable SET courseName = @courseName, courseDescription = @courseDescription, coursePrice = @coursePrice, courseInstructor = @courseInstructor, courseGenre = @courseGenre WHERE id = @courseId";
 
-            // Create a new SqlConnection object inside a using block to ensure it is disposed of correctly when finished
             using (Database.connection)
             {
                 SqlCommand cmd = new SqlCommand(query, Database.connection);
@@ -61,22 +59,16 @@ namespace Back_end.DAL
         public void deleteCourse(int courseId)
         {
             string query = "DELETE FROM CoursesTable WHERE id = @courseId";
-            // Create a new SqlConnection object inside a using block to ensure it is disposed of correctly when finished
+
             using (Database.connection)
             {
-                // Create a new SqlCommand object with the query and connection
                 SqlCommand cmd = new SqlCommand(query, Database.connection);
 
-                // Add the courseId parameter to the SqlCommand object
                 cmd.Parameters.AddWithValue("@courseId", courseId);
 
-
-                // Open the connection to the database
                 Database.connection.Open();
 
-                // Execute the command to delete the row
                 cmd.ExecuteNonQuery();
-                // The connection will automatically be closed and disposed of when the using block is exited
             }
         }
 

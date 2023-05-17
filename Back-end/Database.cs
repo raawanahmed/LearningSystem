@@ -8,7 +8,7 @@ namespace Back_end
 {
     public static class Database
     {
-        public static SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=ElearningSystem;Integrated Security=True");
+        public static SqlConnection connection = new SqlConnection("Data Source=BEDOAZIM;Initial Catalog=ElearningSystem;Integrated Security=True");
 
     }
 }

@@ -17,6 +17,8 @@ namespace Back_end.Services
     public class userService : System.Web.Services.WebService
     {
         private readonly UserDAL _userDAL = new UserDAL();
+        private readonly UserCourseDAL _userCourseDAL = new UserCourseDAL();
+        private readonly CourseDAL _courseDAL = new CourseDAL();
 
         [WebMethod]
         public void insertUser(UserModel user)
@@ -25,9 +27,9 @@ namespace Back_end.Services
         }
 
         [WebMethod]
-        public void updateUserData(int userId, UserModel user)
+        public void updateUserData(UserModel user)
         {
-            _userDAL.updateUser(userId, user);
+            _userDAL.updateUser(user);
         }
 
         [WebMethod]
@@ -41,6 +43,72 @@ namespace Back_end.Services
         {
             return _userDAL.getUserByUsername(username);
         }
-        
+
+        [WebMethod]
+        public bool addCourseToUserWithStatus(UserCourseModel userCourse)
+        {
+            return _userCourseDAL.addUserCourse(userCourse);
+        }
+
+        [WebMethod]
+        public bool updateCourseStatus(UserCourseModel userCourse)
+        {
+            return _userCourseDAL.updateUserCourse(userCourse);
+        }
+
+        [WebMethod]
+        public void addRatingScoreToCourse(UserCourseModel userCourse)
+        {
+            _userCourseDAL.updateUserCourse(userCourse);
+        }
+
+
+        [WebMethod]
+        public void addCommentToCourse(UserCourseModel userCourse)
+        {
+            _userCourseDAL.updateUserCourse(userCourse);
+        }
+
+
+        [WebMethod]
+        public void removeCourseFromCart(UserCourseModel userCourse)
+        {
+            _userCourseDAL.deleteUserCourse(userCourse);
+        }
+
+        [WebMethod]
+        public UserCourseModel[] getCourseDetails(int courseId)
+        {
+            return _userCourseDAL.getCourseDetails(courseId);
+        }
+
+        [WebMethod]
+        public CourseModel[] getCoursesInCart(int userId)
+        {
+            return _userCourseDAL.getCoursesWithSpecificStatus(userId, "in cart");
+        }
+
+
+        [WebMethod]
+        public CourseModel[] getEnrolledCoursesForUser(int userId)
+        {
+            return _userCourseDAL.getCoursesWithSpecificStatus(userId, "enrolled");
+        }
+
+        [WebMethod]
+        public CourseModel[] getBoughtCoursesForUser(int userId)
+        {
+            return _userCourseDAL.getCoursesWithSpecificStatus(userId, "bought");
+        }
+
+
+        [WebMethod]
+        public CourseModel[] getAllCoursesForUser()
+        {
+            return _courseDAL.getAllCourses();
+        }
+
+
+
     }
 }
